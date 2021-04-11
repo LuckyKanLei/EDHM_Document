@@ -1,0 +1,40 @@
+--- 
+title: "Editable Distributed Hydrological Model"
+author: "Kan Lei"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = F)
+library(HMtools)
+library(EDHM)
+library(knitr)
+library(kableExtra)
+library(bookdown)
+```
+
+# The Document and the EDHM Package {-}
+
+## The Document {-}
+
+This document is the use guide for EDHM and some other information about the hydrological models (**HM**) building.
+
+## EDHM {-}
+
+EDHM is a R package for hydrological models in order to simplify the models building, specially the distributed hydrological model. In the package contain many complete **MODEL** that can used directly, and many **MODULE** that can a new MODEL to building. All of the MODELs and MODULEs are build with matrix-arithmetic, that can good deal with the distributed situation. In the package there are many tools to calibrate the parameters or build a new MODEL or a new MODULE. The Package is only in GitHub published, for the first time use, please install the package [EDHM](https://github.com/LuckyKanLei/EDHM) and [HMtools](https://github.com/LuckyKanLei/HMtools) use the following code:
+
+```
+install.packages("devtools")
+library(devtools)
+install_github("LuckyKanLei/HMtools")
+install_github("LuckyKanLei/EDHM")
+```
+
+

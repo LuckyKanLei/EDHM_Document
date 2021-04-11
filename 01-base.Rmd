@@ -1,0 +1,29 @@
+# Basic Concept {#base}
+
+## Hydrological Cycle
+
+Process
+
+## Important Concept of EDHM
+
+Process
+
+Method
+
+Module
+
+Model
+
+Run_Model
+
+Evaluate
+
+Calibrate
+
+## Data and Parameter
+
+### Variable naming
+
+### Data Structure
+
+### Data or Parameter

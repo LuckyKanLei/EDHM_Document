@@ -1,0 +1,246 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Editable Distributed Hydrological Model},
+  pdfauthor={Kan Lei},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\usepackage{amsthm}
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
+
+\title{Editable Distributed Hydrological Model}
+\author{Kan Lei}
+\date{2021-04-12}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{the-document-and-the-edhm-package}{%
+\chapter*{The Document and the EDHM Package}\label{the-document-and-the-edhm-package}}
+\addcontentsline{toc}{chapter}{The Document and the EDHM Package}
+
+\hypertarget{the-document}{%
+\section*{The Document}\label{the-document}}
+\addcontentsline{toc}{section}{The Document}
+
+This document is the use guide for EDHM and some other information about the hydrological models (\textbf{HM}) building.
+
+\hypertarget{edhm}{%
+\section*{EDHM}\label{edhm}}
+\addcontentsline{toc}{section}{EDHM}
+
+EDHM is a R package for hydrological models in order to simplify the models building, specially the distributed hydrological model. In the package contain many complete \textbf{MODEL} that can used directly, and many \textbf{MODULE} that can a new MODEL to building. All of the MODELs and MODULEs are build with matrix-arithmetic, that can good deal with the distributed situation. In the package there are many tools to calibrate the parameters or build a new MODEL or a new MODULE. The Package is only in GitHub published, for the first time use, please install the package \href{https://github.com/LuckyKanLei/EDHM}{EDHM} and \href{https://github.com/LuckyKanLei/HMtools}{HMtools} use the following code:
+
+\begin{verbatim}
+install.packages("devtools")
+library(devtools)
+install_github("LuckyKanLei/HMtools")
+install_github("LuckyKanLei/EDHM")
+\end{verbatim}
+
+\hypertarget{base}{%
+\chapter{Basic Concept}\label{base}}
+
+\hypertarget{hydrological-cycle}{%
+\section{Hydrological Cycle}\label{hydrological-cycle}}
+
+Process
+
+\hypertarget{important-concept-of-edhm}{%
+\section{Important Concept of EDHM}\label{important-concept-of-edhm}}
+
+Process
+
+Method
+
+Module
+
+Model
+
+Run\_Model
+
+Evaluate
+
+Calibrate
+
+\hypertarget{data-and-parameter}{%
+\section{Data and Parameter}\label{data-and-parameter}}
+
+\hypertarget{variable-naming}{%
+\subsection{Variable naming}\label{variable-naming}}
+
+\hypertarget{data-structure}{%
+\subsection{Data Structure}\label{data-structure}}
+
+\hypertarget{data-or-parameter}{%
+\subsection{Data or Parameter}\label{data-or-parameter}}
+
+\hypertarget{develop}{%
+\chapter{Model Use and Develop}\label{develop}}
+
+Choose a Model
+
+virtue: convenience
+
+shortage: poor adaptability
+
+\hypertarget{model-structure-or-concept}{%
+\section{Model Structure or Concept}\label{model-structure-or-concept}}
+
+Design a Model
+
+\hypertarget{use-model-with-a-model-or-run_model}{%
+\section{Use Model with a MODEL or Run\_MODEL}\label{use-model-with-a-model-or-run_model}}
+
+\hypertarget{check-the-indata-list}{%
+\subsection{Check the InData list}\label{check-the-indata-list}}
+
+\hypertarget{data-preparation}{%
+\subsection{Data Preparation}\label{data-preparation}}
+
+\hypertarget{evaluate}{%
+\subsection{Evaluate}\label{evaluate}}
+
+\hypertarget{calibrate}{%
+\subsection{Calibrate}\label{calibrate}}
+
+\hypertarget{copuling-a-new-model-with-module}{%
+\section{Copuling a new Model with MODULE}\label{copuling-a-new-model-with-module}}
+
+\hypertarget{choose-module}{%
+\subsection{Choose MODULE}\label{choose-module}}
+
+\hypertarget{set-the-data-flow}{%
+\subsection{Set the Data-FLow}\label{set-the-data-flow}}
+
+\hypertarget{build-the-model-and-run_model}{%
+\subsection{Build the MODEL and Run\_MODEL}\label{build-the-model-and-run_model}}
+
+\hypertarget{design-a-new-module}{%
+\section{Design a new MODULE}\label{design-a-new-module}}
+
+\hypertarget{method-and-formula}{%
+\subsection{Method and Formula}\label{method-and-formula}}
+
+\hypertarget{coding-the-inhalt}{%
+\subsection{Coding the Inhalt}\label{coding-the-inhalt}}
+
+\hypertarget{set-inoutdata-and-parameter}{%
+\subsection{Set In/OutData and Parameter}\label{set-inoutdata-and-parameter}}
+
+Here is a review of existing methods.
+
+\hypertarget{module}{%
+\chapter{Modules}\label{module}}
+
+\hypertarget{et}{%
+\section{ET}\label{et}}
+
+\hypertarget{baseflow}{%
+\section{Baseflow}\label{baseflow}}
+
+\hypertarget{model}{%
+\chapter{Model}\label{model}}
+
+\hypertarget{classical-vic}{%
+\section{Classical VIC}\label{classical-vic}}
+
+\hypertarget{gr4j}{%
+\section{GR4J}\label{gr4j}}
+
+\hypertarget{final-words}{%
+\chapter{Final Words}\label{final-words}}
+
+We have finished a nice book.
+
+  \bibliography{book.bib,packages.bib}
+
+\end{document}

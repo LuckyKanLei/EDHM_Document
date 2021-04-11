@@ -1,0 +1,43 @@
+# Model Use and Develop {#develop}
+
+Choose a Model 
+
+virtue: convenience
+
+shortage: poor adaptability
+
+## Model Structure or Concept
+
+Design a Model
+
+## Use Model with a MODEL or Run_MODEL
+
+### Check the InData list
+
+### Data Preparation
+
+### Evaluate
+
+### Calibrate
+
+## Copuling a new Model with MODULE
+
+### Choose MODULE
+
+### Set the Data-FLow
+
+### Build the MODEL and Run_MODEL
+
+## Design a new MODULE
+
+### Method and Formula
+
+### Coding the Inhalt
+
+### Set In/OutData and Parameter
+
+
+
+
+
+Here is a review of existing methods.
