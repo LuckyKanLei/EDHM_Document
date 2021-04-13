@@ -94,7 +94,7 @@
 
 \title{Editable Distributed Hydrological Model}
 \author{Kan Lei}
-\date{2021-04-12}
+\date{2021-04-13}
 
 \begin{document}
 \maketitle
@@ -121,9 +121,8 @@ EDHM is a R package for hydrological models in order to simplify the models buil
 
 \begin{verbatim}
 install.packages("devtools")
-library(devtools)
-install_github("LuckyKanLei/HMtools")
-install_github("LuckyKanLei/EDHM")
+devtools::install_github("LuckyKanLei/HMtools")
+devtools::install_github("LuckyKanLei/EDHM")
 \end{verbatim}
 
 \hypertarget{base}{%
@@ -221,11 +220,1219 @@ Here is a review of existing methods.
 \hypertarget{module}{%
 \chapter{Modules}\label{module}}
 
-\hypertarget{et}{%
-\section{ET}\label{et}}
+\hypertarget{referenceet}{%
+\section{ReferenceET}\label{referenceet}}
+
+\hypertarget{referenceet.hargreaves}{%
+\subsection{ReferenceET.Hargreaves}\label{referenceet.hargreaves}}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_In\_ReferenceET.Hargreaves)InData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+ & TAir & Cel & Average Air temperature in Timestep\\
+\cline{2-4}
+ & TMax & Cel & Maximal Air temperature in one day\\
+\cline{2-4}
+\multirow{-3}{*}{\raggedright\arraybackslash MetData} & TMin & Cel & Minimul Air temperature in one day\\
+\cline{1-4}
+GeoData & Latitude & deg & Latitude\\
+\cline{1-4}
+TimeData & NDay & - & Day nummer in one year\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_P\_ReferenceET.Hargreaves)Param\}
+\centering
+
+\begin{tabular}[t]{l|r|r}
+\hline
+Paramter & Min & Max\\
+\hline
+PeriodN & 0 & 0\\
+\cline{1-3}
+GridN & 0 & 0\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_Out\_ReferenceET.Hargreaves)OutData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+Evatrans & RET & mm & Reference evapotranspiration\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\hypertarget{referenceet.linacre}{%
+\subsection{ReferenceET.Linacre}\label{referenceet.linacre}}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_In\_ReferenceET.Linacre)InData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+ & TAir & Cel & Average Air temperature in Timestep\\
+\cline{2-4}
+\multirow{-2}{*}{\raggedright\arraybackslash MetData} & Actual\_vapor\_press & mPa & Actual vapor press\\
+\cline{1-4}
+ & Latitude & deg & Latitude\\
+\cline{2-4}
+\multirow{-2}{*}{\raggedright\arraybackslash GeoData} & Elevation & m & Elevation\\
+\cline{1-4}
+TimeData & NDay & - & Day nummer in one year\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_P\_ReferenceET.Linacre)Param\}
+\centering
+
+\begin{tabular}[t]{l|r|r}
+\hline
+Paramter & Min & Max\\
+\hline
+PeriodN & 0 & 0\\
+\cline{1-3}
+GridN & 0 & 0\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_Out\_ReferenceET.Linacre)OutData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+Evatrans & RET & mm & Reference evapotranspiration\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\hypertarget{referenceet.penmon}{%
+\subsection{ReferenceET.PenMon}\label{referenceet.penmon}}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_In\_ReferenceET.PenMon)InData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+ & TAir & Cel & Average Air temperature in Timestep\\
+\cline{2-4}
+ & TMax & Cel & Maximal Air temperature in one day\\
+\cline{2-4}
+ & TMin & Cel & Minimul Air temperature in one day\\
+\cline{2-4}
+ & RelativeHumidity & \% & Relative Humidity, not greater than 100\\
+\cline{2-4}
+ & WindSpeed & m/s & Average Wind Speed\\
+\cline{2-4}
+ & WindH & m & The hight to mess the WindSpeed\\
+\cline{2-4}
+\multirow{-7}{*}{\raggedright\arraybackslash MetData} & SunHour & h & Sunshine duration in one day\\
+\cline{1-4}
+ & Latitude & deg & Latitude\\
+\cline{2-4}
+\multirow{-2}{*}{\raggedright\arraybackslash GeoData} & Elevation & m & Elevation\\
+\cline{1-4}
+TimeData & NDay & - & Day nummer in one year\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_P\_ReferenceET.PenMon)Param\}
+\centering
+
+\begin{tabular}[t]{l|r|r}
+\hline
+Paramter & Min & Max\\
+\hline
+PeriodN & 0 & 0\\
+\cline{1-3}
+GridN & 0 & 0\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_Out\_ReferenceET.PenMon)OutData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+Evatrans & RET & mm & Reference evapotranspiration\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\hypertarget{actualet}{%
+\section{ActualET}\label{actualet}}
+
+\hypertarget{actualet.gr4j}{%
+\subsection{ActualET.Gr4j}\label{actualet.gr4j}}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_In\_ActualET.Gr4j)InData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+Evatrans & RET & mm & Reference evapotranspiration\\
+\cline{1-4}
+Ground & MoistureVolume & mm & Moisture volume\\
+\cline{1-4}
+Prec & Precipitation & mm & Precipitation, summe of rain and snow\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_P\_ActualET.Gr4j)Param\}
+\centering
+
+\begin{tabular}[t]{l|r|r}
+\hline
+Paramter & Min & Max\\
+\hline
+Gr4j\_X1 & 0 & 0\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_Out\_ActualET.Gr4j)OutData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+Evatrans & AET & mm & Actual evapotranspiration\\
+\cline{1-4}
+Prec & Precipitation & mm & Precipitation, summe of rain and snow\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\hypertarget{actualet.vic}{%
+\subsection{ActualET.Vic}\label{actualet.vic}}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_In\_ActualET.Vic)InData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+ & AerodynaResist & s/m & Aerodyna Resist\\
+\cline{2-4}
+ & ArchitecturalResist & s/m & Architectural Resist\\
+\cline{2-4}
+\multirow{-3}{*}{\raggedright\arraybackslash Aerodyna} & StomatalResist & s/m & Stomatal Resist\\
+\cline{1-4}
+Canopy & StorageCapacity & mm & Canopy Storage Capacity for Intercept and Evaporation from Canopy\\
+\cline{1-4}
+Evatrans & RET & mm & Reference evapotranspiration\\
+\cline{1-4}
+ & MoistureVolume & mm & Moisture volume\\
+\cline{2-4}
+\multirow{-2}{*}{\raggedright\arraybackslash Ground} & MoistureCapacityMax & mm & Maximal Moisture Capacity\\
+\cline{1-4}
+Intercept & Interception & mm & Interception in Canopy\\
+\cline{1-4}
+Prec & Precipitation & mm & Precipitation, summe of rain and snow\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_P\_ActualET.Vic)Param\}
+\centering
+
+\begin{tabular}[t]{l|r|r}
+\hline
+Paramter & Min & Max\\
+\hline
+SoilMoistureCapacityB & 0 & 0\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_Out\_ActualET.Vic)OutData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+ & EvaporationCanopy & mm & Evaporation from Canopy\\
+\cline{2-4}
+ & Transpiration & mm & Transpiration (water from Root layer of vegetation)\\
+\cline{2-4}
+\multirow{-3}{*}{\raggedright\arraybackslash Evatrans} & EvaporationLand & mm & Evaporation from Landsurface (sometimes cotain the Evaporation from Watersurface like Lake)\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\hypertarget{snow}{%
+\section{SNOW}\label{snow}}
+
+\hypertarget{snow.17}{%
+\subsection{SNOW.17}\label{snow.17}}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_In\_SNOW.17)InData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+MetData & TAir & Cel & Average Air temperature in Timestep\\
+\cline{1-4}
+ & Ice\_Volume & mm & Soild Ice Volume, not depth\\
+\cline{2-4}
+ & Liquid\_Volume & mm & Liquid Volume\\
+\cline{2-4}
+ & SN17\_ATI & - & -\\
+\cline{2-4}
+\multirow{-4}{*}{\raggedright\arraybackslash Snow} & SN17\_HD & mm & -\\
+\cline{1-4}
+ & SnowFall & mm & Snow\\
+\cline{2-4}
+\multirow{-2}{*}{\raggedright\arraybackslash Prec} & RainFall & mm & Rain\\
+\cline{1-4}
+GeoData & Elevation & m & Elevation\\
+\cline{1-4}
+TimeData & NDay & - & Day nummer in one year\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_P\_SNOW.17)Param\}
+\centering
+
+\begin{tabular}[t]{l|r|r}
+\hline
+Paramter & Min & Max\\
+\hline
+SN17\_SCF & 0 & 0\\
+\cline{1-3}
+SN17\_MFMAX & 0 & 0\\
+\cline{1-3}
+SN17\_MFMIN & 0 & 0\\
+\cline{1-3}
+SN17\_UADJ & 0 & 0\\
+\cline{1-3}
+SN17\_NMF & 0 & 0\\
+\cline{1-3}
+SN17\_TIPM & 0 & 0\\
+\cline{1-3}
+SN17\_PXTEMP & 0 & 0\\
+\cline{1-3}
+SN17\_MBASE & 0 & 0\\
+\cline{1-3}
+SN17\_PLWHC & 0 & 0\\
+\cline{1-3}
+SN17\_DAYGM & 0 & 0\\
+\cline{1-3}
+TimeStepSec & 0 & 0\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_Out\_SNOW.17)OutData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+ & Ice\_Volume & mm & Soild Ice Volume, not depth\\
+\cline{2-4}
+ & Liquid\_Volume & mm & Liquid Volume\\
+\cline{2-4}
+ & SN17\_ATI & - & -\\
+\cline{2-4}
+\multirow{-4}{*}{\raggedright\arraybackslash Snow} & SN17\_HD & mm & -\\
+\cline{1-4}
+Prec & Precipitation & mm & Precipitation, summe of rain and snow\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\hypertarget{snow.ddf}{%
+\subsection{SNOW.Ddf}\label{snow.ddf}}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_In\_SNOW.Ddf)InData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+Ground & MoistureVolume & mm & Moisture volume\\
+\cline{1-4}
+Snow & Volume & mm & Summe Volume of Ice and liquid water, not depth\\
+\cline{1-4}
+ & SnowFall & mm & Snow\\
+\cline{2-4}
+\multirow{-2}{*}{\raggedright\arraybackslash Prec} & RainFall & mm & Rain\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_P\_SNOW.Ddf)Param\}
+\centering
+
+\begin{tabular}[t]{l|r|r}
+\hline
+Paramter & Min & Max\\
+\hline
+Factor\_Day\_degree & 0 & 0\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_Out\_SNOW.Ddf)OutData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+Snow & Volume & mm & Summe Volume of Ice and liquid water, not depth\\
+\cline{1-4}
+Prec & Precipitation & mm & Precipitation, summe of rain and snow\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
 
 \hypertarget{baseflow}{%
-\section{Baseflow}\label{baseflow}}
+\section{BASEFLOW}\label{baseflow}}
+
+\hypertarget{baseflow.arno}{%
+\subsection{BASEFLOW.ARNO}\label{baseflow.arno}}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_In\_BASEFLOW.ARNO)InData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+ & MoistureVolume & mm & Moisture volume\\
+\cline{2-4}
+\multirow{-2}{*}{\raggedright\arraybackslash Ground} & MoistureCapacityMax & mm & Maximal Moisture Capacity\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_P\_BASEFLOW.ARNO)Param\}
+\centering
+
+\begin{tabular}[t]{l|r|r}
+\hline
+Paramter & Min & Max\\
+\hline
+ExponentARNOBase & 0 & 0\\
+\cline{1-3}
+ARNOBaseThresholdRadio & 0 & 0\\
+\cline{1-3}
+DrainageLossMax & 0 & 0\\
+\cline{1-3}
+DrainageLossMin & 0 & 0\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_Out\_BASEFLOW.ARNO)OutData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+Ground & BaseFlow & mm & Base Flow\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\hypertarget{interception}{%
+\section{INTERCEPTION}\label{interception}}
+
+\hypertarget{interception.gash}{%
+\subsection{INTERCEPTION.Gash}\label{interception.gash}}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_In\_INTERCEPTION.Gash)InData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+Canopy & StorageCapacity & mm & Canopy Storage Capacity for Intercept and Evaporation from Canopy\\
+\cline{1-4}
+Evatrans & EvaporationCanopy & mm & Evaporation from Canopy\\
+\cline{1-4}
+Intercept & Interception & mm & Interception in Canopy\\
+\cline{1-4}
+Prec & Precipitation & mm & Precipitation, summe of rain and snow\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_P\_INTERCEPTION.Gash)Param\}
+\centering
+
+\begin{tabular}[t]{l|r|r}
+\hline
+Paramter & Min & Max\\
+\hline
+CoefficientFreeThroughfall & 0 & 0\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_Out\_INTERCEPTION.Gash)OutData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+Intercept & Interception & mm & Interception in Canopy\\
+\cline{1-4}
+Prec & Precipitation & mm & Precipitation, summe of rain and snow\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\hypertarget{infiltratrat}{%
+\section{InfiltratRat}\label{infiltratrat}}
+
+\hypertarget{infiltratrat.greenampt}{%
+\subsection{InfiltratRat.GreenAmpt}\label{infiltratrat.greenampt}}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_In\_InfiltratRat.GreenAmpt)InData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+ & MoistureVolume & mm & Moisture volume\\
+\cline{2-4}
+\multirow{-2}{*}{\raggedright\arraybackslash Ground} & Depth & mm & Ground Depth\\
+\cline{1-4}
+ & Conductivity & m/s & Soil actual Conductivity\\
+\cline{2-4}
+ & WettingFrontSuction & m/s & Wetting Front Suction\\
+\cline{2-4}
+\multirow{-3}{*}{\raggedright\arraybackslash SoilData} & Porosity & 100\% & Soil Porosity, not greater than 1\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_P\_InfiltratRat.GreenAmpt)Param\}
+\centering
+
+\begin{tabular}[t]{l|r|r}
+\hline
+Paramter & Min & Max\\
+\hline
+GridN & 1 & 9999\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_Out\_InfiltratRat.GreenAmpt)OutData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+Infilt & InfiltrationRat & mm & Infiltration Rate (for some INFITRATION Module)\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\hypertarget{infiltration}{%
+\section{Infiltration}\label{infiltration}}
+
+\hypertarget{infiltration.oier}{%
+\subsection{Infiltration.OIER}\label{infiltration.oier}}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_In\_Infiltration.OIER)InData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+Infilt & InfiltrationRat & mm & Infiltration Rate (for some INFITRATION Module)\\
+\cline{1-4}
+Prec & Precipitation & mm & Precipitation, summe of rain and snow\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_P\_Infiltration.OIER)Param\}
+\centering
+
+\begin{tabular}[t]{l|r|r}
+\hline
+Paramter & Min & Max\\
+\hline
+InfiltrationRateB & 0 & 0\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_Out\_Infiltration.OIER)OutData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+Infilt & Infiltration & mm & Infiltration\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\hypertarget{infiltration.ser}{%
+\subsection{Infiltration.SER}\label{infiltration.ser}}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_In\_Infiltration.SER)InData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+ & MoistureCapacityMax & mm & Maximal Moisture Capacity\\
+\cline{2-4}
+\multirow{-2}{*}{\raggedright\arraybackslash Ground} & MoistureCapacity & mm & Moisture Capacity\\
+\cline{1-4}
+Prec & Precipitation & mm & Precipitation, summe of rain and snow\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_P\_Infiltration.SER)Param\}
+\centering
+
+\begin{tabular}[t]{l|r|r}
+\hline
+Paramter & Min & Max\\
+\hline
+SoilMoistureCapacityB & 0 & 0\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_Out\_Infiltration.SER)OutData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+Infilt & Infiltration & mm & Infiltration\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\hypertarget{runoff}{%
+\section{RUNOFF}\label{runoff}}
+
+\hypertarget{runoff.gr4j}{%
+\subsection{RUNOFF.Gr4j}\label{runoff.gr4j}}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_In\_RUNOFF.Gr4j)InData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+Ground & MoistureVolume & mm & Moisture volume\\
+\cline{1-4}
+Evatrans & AET & mm & Actual evapotranspiration\\
+\cline{1-4}
+Prec & Precipitation & mm & Precipitation, summe of rain and snow\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_P\_RUNOFF.Gr4j)Param\}
+\centering
+
+\begin{tabular}[t]{l|r|r}
+\hline
+Paramter & Min & Max\\
+\hline
+Gr4j\_X1 & 0 & 0\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_Out\_RUNOFF.Gr4j)OutData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+ & Runoff & mm & Runoff, it will be more wert, when the Runoff is in different form divided\\
+\cline{2-4}
+\multirow{-2}{*}{\raggedright\arraybackslash Ground} & MoistureVolume & mm & Moisture volume\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\hypertarget{runoff.oier}{%
+\subsection{RUNOFF.OIER}\label{runoff.oier}}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_In\_RUNOFF.OIER)InData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+Infilt & InfiltrationRateMax & mm & Maximal Infiltration Rate (for some INFITRATION Module)\\
+\cline{1-4}
+Prec & Precipitation & mm & Precipitation, summe of rain and snow\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_P\_RUNOFF.OIER)Param\}
+\centering
+
+\begin{tabular}[t]{l|r|r}
+\hline
+Paramter & Min & Max\\
+\hline
+InfiltrationRateB & 0 & 0\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_Out\_RUNOFF.OIER)OutData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+Ground & Runoff & mm & Runoff, it will be more wert, when the Runoff is in different form divided\\
+\cline{1-4}
+Infilt & Infiltration & mm & Infiltration\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\hypertarget{runoff.ser}{%
+\subsection{RUNOFF.SER}\label{runoff.ser}}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_In\_RUNOFF.SER)InData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+ & MoistureCapacityMax & mm & Maximal Moisture Capacity\\
+\cline{2-4}
+\multirow{-2}{*}{\raggedright\arraybackslash Ground} & MoistureVolume & mm & Moisture volume\\
+\cline{1-4}
+Prec & Precipitation & mm & Precipitation, summe of rain and snow\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_P\_RUNOFF.SER)Param\}
+\centering
+
+\begin{tabular}[t]{l|r|r}
+\hline
+Paramter & Min & Max\\
+\hline
+SoilMoistureCapacityB & 0 & 0\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_Out\_RUNOFF.SER)OutData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+Ground & Runoff & mm & Runoff, it will be more wert, when the Runoff is in different form divided\\
+\cline{1-4}
+Infilt & Infiltration & mm & Infiltration\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\hypertarget{runoff.vic}{%
+\subsection{RUNOFF.Vic}\label{runoff.vic}}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_In\_RUNOFF.Vic)InData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+ & MoistureCapacityMax & mm & Maximal Moisture Capacity\\
+\cline{2-4}
+\multirow{-2}{*}{\raggedright\arraybackslash Ground} & MoistureVolume & mm & Moisture volume\\
+\cline{1-4}
+Infilt & InfiltrationRat & mm & Infiltration Rate (for some INFITRATION Module)\\
+\cline{1-4}
+Prec & Precipitation & mm & Precipitation, summe of rain and snow\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_P\_RUNOFF.Vic)Param\}
+\centering
+
+\begin{tabular}[t]{l|r|r}
+\hline
+Paramter & Min & Max\\
+\hline
+SoilMoistureCapacityB & 0 & 0\\
+\cline{1-3}
+InfiltrationRateB & 0 & 0\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_Out\_RUNOFF.Vic)OutData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+Ground & Runoff & mm & Runoff, it will be more wert, when the Runoff is in different form divided\\
+\cline{1-4}
+Infilt & Infiltration & mm & Infiltration\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\hypertarget{runoff.vm}{%
+\subsection{RUNOFF.VM}\label{runoff.vm}}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_In\_RUNOFF.VM)InData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+ & MoistureCapacity & mm & Moisture Capacity\\
+\cline{2-4}
+\multirow{-2}{*}{\raggedright\arraybackslash Ground} & MoistureCapacityMax & mm & Maximal Moisture Capacity\\
+\cline{1-4}
+Infilt & InfiltrationRateMax & mm & Maximal Infiltration Rate (for some INFITRATION Module)\\
+\cline{1-4}
+Prec & Precipitation & mm & Precipitation, summe of rain and snow\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_P\_RUNOFF.VM)Param\}
+\centering
+
+\begin{tabular}[t]{l|r|r}
+\hline
+Paramter & Min & Max\\
+\hline
+SoilMoistureCapacityB & 0 & 0\\
+\cline{1-3}
+InfiltrationRateB & 0 & 0\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_Out\_RUNOFF.VM)OutData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+Ground & Runoff & mm & Runoff, it will be more wert, when the Runoff is in different form divided\\
+\cline{1-4}
+Infilt & Infiltration & mm & Infiltration\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\hypertarget{groundwater}{%
+\section{GROUNDWATER}\label{groundwater}}
+
+\hypertarget{groundwater.vic}{%
+\subsection{GROUNDWATER.Vic}\label{groundwater.vic}}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_In\_GROUNDWATER.Vic)InData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+ & ZoneMoistureVolume & mm & Moisture volume, when the Ground is in more than one Layer divided\\
+\cline{2-4}
+ & ZoneDepth & mm & Ground Depth, , when the Ground is in more than one Layer divided\\
+\cline{2-4}
+\multirow{-3}{*}{\raggedright\arraybackslash Ground} & BaseFlow & mm & Base Flow\\
+\cline{1-4}
+Infilt & Infiltration & mm & Infiltration\\
+\cline{1-4}
+Intercept & Interception & mm & Interception in Canopy\\
+\cline{1-4}
+ & Porosity & 100\% & Soil Porosity, not greater than 1\\
+\cline{2-4}
+\multirow{-2}{*}{\raggedright\arraybackslash SoilData} & SaturatedConductivity & m/s & Soil Saturated Conductivity\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_P\_GROUNDWATER.Vic)Param\}
+\centering
+
+\begin{tabular}[t]{l|r|r}
+\hline
+Paramter & Min & Max\\
+\hline
+GridN & 1 & 9999\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_Out\_GROUNDWATER.Vic)OutData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+ & Overflow & mm & Overflow, when the caculated water volume greater than Capacity\\
+\cline{2-4}
+\multirow{-2}{*}{\raggedright\arraybackslash Ground} & ZoneMoistureVolume & mm & Moisture volume, when the Ground is in more than one Layer divided\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\hypertarget{route}{%
+\section{ROUTE}\label{route}}
+
+\hypertarget{route.g2res}{%
+\subsection{ROUTE.G2RES}\label{route.g2res}}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_In\_ROUTE.G2RES)InData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+ & WaterSource & mm & Water Source for Routing, sometimes the same Data with the Runoff\\
+\cline{2-4}
+ & UHAll & - & All the UH data for all of the Grids for Routr with IUH\\
+\cline{2-4}
+ & TypeGridID & - & The grids type for Routr with IUH\\
+\cline{2-4}
+\multirow{-4}{*}{\raggedright\arraybackslash Route} & TransAll & - & All of the transform Matrix for all of the Grids for Routr with IUH\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_P\_ROUTE.G2RES)Param\}
+\centering
+
+\begin{tabular}[t]{l|r|r}
+\hline
+Paramter & Min & Max\\
+\hline
+Gr4j\_X2 & 0 & 0\\
+\cline{1-3}
+Gr4j\_X3 & 0 & 0\\
+\cline{1-3}
+Gr4j\_X4 & 0 & 0\\
+\cline{1-3}
+time\_step\_i & 0 & 0\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_Out\_ROUTE.G2RES)OutData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+Route & StaFlow & m3/s & Station Flow in the seted grid\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\hypertarget{route.gr4j}{%
+\subsection{ROUTE.Gr4j}\label{route.gr4j}}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_In\_ROUTE.Gr4j)InData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+ & WaterSource & mm & Water Source for Routing, sometimes the same Data with the Runoff\\
+\cline{2-4}
+ & Store & mm & Store in the Route (for some Module)\\
+\cline{2-4}
+ & Gr4j\_UH1 & - & UH form 1 only for Module ROUTE.Gr4j, made by the function\\
+\cline{2-4}
+\multirow{-4}{*}{\raggedright\arraybackslash Route} & Gr4j\_UH2 & - & UH form 1 only for Module ROUTE.Gr4j\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_P\_ROUTE.Gr4j)Param\}
+\centering
+
+\begin{tabular}[t]{l|r|r}
+\hline
+Paramter & Min & Max\\
+\hline
+Gr4j\_X2 & 0 & 0\\
+\cline{1-3}
+Gr4j\_X3 & 0 & 0\\
+\cline{1-3}
+Gr4j\_X4 & 0 & 0\\
+\cline{1-3}
+time\_step\_i & 0 & 0\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
+
+\textbackslash begin\{table\}{[}!h{]}
+
+\textbackslash caption\{(\#tab:t\_Out\_ROUTE.Gr4j)OutData\}
+\centering
+
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Group & Variable & Unit & Description\\
+\hline
+ & StaFlow & m3/s & Station Flow in the seted grid\\
+\cline{2-4}
+\multirow{-2}{*}{\raggedright\arraybackslash Route} & Store & mm & Store in the Route (for some Module)\\
+\hline
+\end{tabular}
+
+\textbackslash end\{table\}
 
 \hypertarget{model}{%
 \chapter{Model}\label{model}}
