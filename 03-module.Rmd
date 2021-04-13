@@ -4,6 +4,10 @@
 
 ### ReferenceET.Hargreaves
 
+This Module reference to the Literature: `r Data_ReferenceET.Hargreaves$ref_title` [@`r Data_ReferenceET.Hargreaves$ref_bib`].
+
+***InData***
+
 ```{r t_In_ReferenceET.Hargreaves, echo = FALSE}
 n_In <- as.numeric(map(Data_ReferenceET.Hargreaves$InData, length))
 Group_Name <- reduce(map2(names(Data_ReferenceET.Hargreaves$InData), n_In, rep), c)
@@ -14,26 +18,36 @@ In_ReferenceET.Hargreaves <- data.frame(Group = Group_Name, Variable = Variable_
 P_Name <- names(Data_ReferenceET.Hargreaves$Param)
 P_min <- as.numeric(map(Data_ReferenceET.Hargreaves$Param, function(a) a[1]))
 P_max <- as.numeric(map(Data_ReferenceET.Hargreaves$Param, function(a) a[2]))
-P_ReferenceET.Hargreaves <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max)
+P_unit <- as.character(map(Data_ReferenceET.Hargreaves$Param, function(a) a[3]))
+P_des <- as.character(map(Data_ReferenceET.Hargreaves$Param, function(a) a[4]))
+P_ReferenceET.Hargreaves <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max, Unit = P_unit, Description = P_des)
 n_Out <- as.numeric(map(Data_ReferenceET.Hargreaves$OutData, length))
 Group_Name <- reduce(map2(names(Data_ReferenceET.Hargreaves$OutData), n_Out, rep), c)
 Variable_Name <- reduce(map(Data_ReferenceET.Hargreaves$OutData, names), c)
 Unit_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Unit_dataset[[a]][[b]]))
 Des_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Des_dataset[[a]][[b]]))
 Out_ReferenceET.Hargreaves <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = Unit_, Description = Des_)
-kable(In_ReferenceET.Hargreaves, caption = 'InData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(In_ReferenceET.Hargreaves, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
+
+***Param***
 
 ```{r t_P_ReferenceET.Hargreaves, echo = FALSE}
-kable(P_ReferenceET.Hargreaves, caption = 'Param', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(P_ReferenceET.Hargreaves, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+***OutData***
+
 ```{r t_Out_ReferenceET.Hargreaves, echo = FALSE}
-kable(Out_ReferenceET.Hargreaves, caption = 'OutData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(Out_ReferenceET.Hargreaves, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
 
 ### ReferenceET.Linacre
+
+This Module reference to the Literature: `r Data_ReferenceET.Linacre$ref_title` [@`r Data_ReferenceET.Linacre$ref_bib`].
+
+***InData***
 
 ```{r t_In_ReferenceET.Linacre, echo = FALSE}
 n_In <- as.numeric(map(Data_ReferenceET.Linacre$InData, length))
@@ -45,26 +59,36 @@ In_ReferenceET.Linacre <- data.frame(Group = Group_Name, Variable = Variable_Nam
 P_Name <- names(Data_ReferenceET.Linacre$Param)
 P_min <- as.numeric(map(Data_ReferenceET.Linacre$Param, function(a) a[1]))
 P_max <- as.numeric(map(Data_ReferenceET.Linacre$Param, function(a) a[2]))
-P_ReferenceET.Linacre <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max)
+P_unit <- as.character(map(Data_ReferenceET.Linacre$Param, function(a) a[3]))
+P_des <- as.character(map(Data_ReferenceET.Linacre$Param, function(a) a[4]))
+P_ReferenceET.Linacre <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max, Unit = P_unit, Description = P_des)
 n_Out <- as.numeric(map(Data_ReferenceET.Linacre$OutData, length))
 Group_Name <- reduce(map2(names(Data_ReferenceET.Linacre$OutData), n_Out, rep), c)
 Variable_Name <- reduce(map(Data_ReferenceET.Linacre$OutData, names), c)
 Unit_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Unit_dataset[[a]][[b]]))
 Des_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Des_dataset[[a]][[b]]))
 Out_ReferenceET.Linacre <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = Unit_, Description = Des_)
-kable(In_ReferenceET.Linacre, caption = 'InData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(In_ReferenceET.Linacre, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
+
+***Param***
 
 ```{r t_P_ReferenceET.Linacre, echo = FALSE}
-kable(P_ReferenceET.Linacre, caption = 'Param', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(P_ReferenceET.Linacre, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+***OutData***
+
 ```{r t_Out_ReferenceET.Linacre, echo = FALSE}
-kable(Out_ReferenceET.Linacre, caption = 'OutData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(Out_ReferenceET.Linacre, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
 
 ### ReferenceET.PenMon
+
+This Module reference to the Literature: `r Data_ReferenceET.PenMon$ref_title` [@`r Data_ReferenceET.PenMon$ref_bib`].
+
+***InData***
 
 ```{r t_In_ReferenceET.PenMon, echo = FALSE}
 n_In <- as.numeric(map(Data_ReferenceET.PenMon$InData, length))
@@ -76,28 +100,38 @@ In_ReferenceET.PenMon <- data.frame(Group = Group_Name, Variable = Variable_Name
 P_Name <- names(Data_ReferenceET.PenMon$Param)
 P_min <- as.numeric(map(Data_ReferenceET.PenMon$Param, function(a) a[1]))
 P_max <- as.numeric(map(Data_ReferenceET.PenMon$Param, function(a) a[2]))
-P_ReferenceET.PenMon <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max)
+P_unit <- as.character(map(Data_ReferenceET.PenMon$Param, function(a) a[3]))
+P_des <- as.character(map(Data_ReferenceET.PenMon$Param, function(a) a[4]))
+P_ReferenceET.PenMon <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max, Unit = P_unit, Description = P_des)
 n_Out <- as.numeric(map(Data_ReferenceET.PenMon$OutData, length))
 Group_Name <- reduce(map2(names(Data_ReferenceET.PenMon$OutData), n_Out, rep), c)
 Variable_Name <- reduce(map(Data_ReferenceET.PenMon$OutData, names), c)
 Unit_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Unit_dataset[[a]][[b]]))
 Des_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Des_dataset[[a]][[b]]))
 Out_ReferenceET.PenMon <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = Unit_, Description = Des_)
-kable(In_ReferenceET.PenMon, caption = 'InData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(In_ReferenceET.PenMon, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
+
+***Param***
 
 ```{r t_P_ReferenceET.PenMon, echo = FALSE}
-kable(P_ReferenceET.PenMon, caption = 'Param', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(P_ReferenceET.PenMon, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+***OutData***
+
 ```{r t_Out_ReferenceET.PenMon, echo = FALSE}
-kable(Out_ReferenceET.PenMon, caption = 'OutData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(Out_ReferenceET.PenMon, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
 
 ## ActualET
 
 ### ActualET.Gr4j
+
+This Module reference to the Literature: `r Data_ActualET.Gr4j$ref_title` [@`r Data_ActualET.Gr4j$ref_bib`].
+
+***InData***
 
 ```{r t_In_ActualET.Gr4j, echo = FALSE}
 n_In <- as.numeric(map(Data_ActualET.Gr4j$InData, length))
@@ -109,26 +143,36 @@ In_ActualET.Gr4j <- data.frame(Group = Group_Name, Variable = Variable_Name, Uni
 P_Name <- names(Data_ActualET.Gr4j$Param)
 P_min <- as.numeric(map(Data_ActualET.Gr4j$Param, function(a) a[1]))
 P_max <- as.numeric(map(Data_ActualET.Gr4j$Param, function(a) a[2]))
-P_ActualET.Gr4j <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max)
+P_unit <- as.character(map(Data_ActualET.Gr4j$Param, function(a) a[3]))
+P_des <- as.character(map(Data_ActualET.Gr4j$Param, function(a) a[4]))
+P_ActualET.Gr4j <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max, Unit = P_unit, Description = P_des)
 n_Out <- as.numeric(map(Data_ActualET.Gr4j$OutData, length))
 Group_Name <- reduce(map2(names(Data_ActualET.Gr4j$OutData), n_Out, rep), c)
 Variable_Name <- reduce(map(Data_ActualET.Gr4j$OutData, names), c)
 Unit_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Unit_dataset[[a]][[b]]))
 Des_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Des_dataset[[a]][[b]]))
 Out_ActualET.Gr4j <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = Unit_, Description = Des_)
-kable(In_ActualET.Gr4j, caption = 'InData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(In_ActualET.Gr4j, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
+
+***Param***
 
 ```{r t_P_ActualET.Gr4j, echo = FALSE}
-kable(P_ActualET.Gr4j, caption = 'Param', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(P_ActualET.Gr4j, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+***OutData***
+
 ```{r t_Out_ActualET.Gr4j, echo = FALSE}
-kable(Out_ActualET.Gr4j, caption = 'OutData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(Out_ActualET.Gr4j, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
 
 ### ActualET.Vic
+
+This Module reference to the Literature: `r Data_ActualET.Vic$ref_title` [@`r Data_ActualET.Vic$ref_bib`].
+
+***InData***
 
 ```{r t_In_ActualET.Vic, echo = FALSE}
 n_In <- as.numeric(map(Data_ActualET.Vic$InData, length))
@@ -140,28 +184,38 @@ In_ActualET.Vic <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit
 P_Name <- names(Data_ActualET.Vic$Param)
 P_min <- as.numeric(map(Data_ActualET.Vic$Param, function(a) a[1]))
 P_max <- as.numeric(map(Data_ActualET.Vic$Param, function(a) a[2]))
-P_ActualET.Vic <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max)
+P_unit <- as.character(map(Data_ActualET.Vic$Param, function(a) a[3]))
+P_des <- as.character(map(Data_ActualET.Vic$Param, function(a) a[4]))
+P_ActualET.Vic <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max, Unit = P_unit, Description = P_des)
 n_Out <- as.numeric(map(Data_ActualET.Vic$OutData, length))
 Group_Name <- reduce(map2(names(Data_ActualET.Vic$OutData), n_Out, rep), c)
 Variable_Name <- reduce(map(Data_ActualET.Vic$OutData, names), c)
 Unit_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Unit_dataset[[a]][[b]]))
 Des_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Des_dataset[[a]][[b]]))
 Out_ActualET.Vic <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = Unit_, Description = Des_)
-kable(In_ActualET.Vic, caption = 'InData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(In_ActualET.Vic, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
+
+***Param***
 
 ```{r t_P_ActualET.Vic, echo = FALSE}
-kable(P_ActualET.Vic, caption = 'Param', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(P_ActualET.Vic, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+***OutData***
+
 ```{r t_Out_ActualET.Vic, echo = FALSE}
-kable(Out_ActualET.Vic, caption = 'OutData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(Out_ActualET.Vic, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
 
 ## SNOW
 
 ### SNOW.17
+
+This Module reference to the Literature: `r Data_SNOW.17$ref_title` [@`r Data_SNOW.17$ref_bib`].
+
+***InData***
 
 ```{r t_In_SNOW.17, echo = FALSE}
 n_In <- as.numeric(map(Data_SNOW.17$InData, length))
@@ -173,26 +227,36 @@ In_SNOW.17 <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = Un
 P_Name <- names(Data_SNOW.17$Param)
 P_min <- as.numeric(map(Data_SNOW.17$Param, function(a) a[1]))
 P_max <- as.numeric(map(Data_SNOW.17$Param, function(a) a[2]))
-P_SNOW.17 <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max)
+P_unit <- as.character(map(Data_SNOW.17$Param, function(a) a[3]))
+P_des <- as.character(map(Data_SNOW.17$Param, function(a) a[4]))
+P_SNOW.17 <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max, Unit = P_unit, Description = P_des)
 n_Out <- as.numeric(map(Data_SNOW.17$OutData, length))
 Group_Name <- reduce(map2(names(Data_SNOW.17$OutData), n_Out, rep), c)
 Variable_Name <- reduce(map(Data_SNOW.17$OutData, names), c)
 Unit_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Unit_dataset[[a]][[b]]))
 Des_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Des_dataset[[a]][[b]]))
 Out_SNOW.17 <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = Unit_, Description = Des_)
-kable(In_SNOW.17, caption = 'InData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(In_SNOW.17, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
+
+***Param***
 
 ```{r t_P_SNOW.17, echo = FALSE}
-kable(P_SNOW.17, caption = 'Param', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(P_SNOW.17, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+***OutData***
+
 ```{r t_Out_SNOW.17, echo = FALSE}
-kable(Out_SNOW.17, caption = 'OutData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(Out_SNOW.17, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
 
 ### SNOW.Ddf
+
+This Module reference to the Literature: `r Data_SNOW.Ddf$ref_title` [@`r Data_SNOW.Ddf$ref_bib`].
+
+***InData***
 
 ```{r t_In_SNOW.Ddf, echo = FALSE}
 n_In <- as.numeric(map(Data_SNOW.Ddf$InData, length))
@@ -204,28 +268,38 @@ In_SNOW.Ddf <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = U
 P_Name <- names(Data_SNOW.Ddf$Param)
 P_min <- as.numeric(map(Data_SNOW.Ddf$Param, function(a) a[1]))
 P_max <- as.numeric(map(Data_SNOW.Ddf$Param, function(a) a[2]))
-P_SNOW.Ddf <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max)
+P_unit <- as.character(map(Data_SNOW.Ddf$Param, function(a) a[3]))
+P_des <- as.character(map(Data_SNOW.Ddf$Param, function(a) a[4]))
+P_SNOW.Ddf <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max, Unit = P_unit, Description = P_des)
 n_Out <- as.numeric(map(Data_SNOW.Ddf$OutData, length))
 Group_Name <- reduce(map2(names(Data_SNOW.Ddf$OutData), n_Out, rep), c)
 Variable_Name <- reduce(map(Data_SNOW.Ddf$OutData, names), c)
 Unit_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Unit_dataset[[a]][[b]]))
 Des_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Des_dataset[[a]][[b]]))
 Out_SNOW.Ddf <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = Unit_, Description = Des_)
-kable(In_SNOW.Ddf, caption = 'InData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(In_SNOW.Ddf, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
+
+***Param***
 
 ```{r t_P_SNOW.Ddf, echo = FALSE}
-kable(P_SNOW.Ddf, caption = 'Param', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(P_SNOW.Ddf, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+***OutData***
+
 ```{r t_Out_SNOW.Ddf, echo = FALSE}
-kable(Out_SNOW.Ddf, caption = 'OutData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(Out_SNOW.Ddf, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
 
 ## BASEFLOW
 
 ### BASEFLOW.ARNO
+
+This Module reference to the Literature: `r Data_BASEFLOW.ARNO$ref_title` [@`r Data_BASEFLOW.ARNO$ref_bib`].
+
+***InData***
 
 ```{r t_In_BASEFLOW.ARNO, echo = FALSE}
 n_In <- as.numeric(map(Data_BASEFLOW.ARNO$InData, length))
@@ -237,28 +311,38 @@ In_BASEFLOW.ARNO <- data.frame(Group = Group_Name, Variable = Variable_Name, Uni
 P_Name <- names(Data_BASEFLOW.ARNO$Param)
 P_min <- as.numeric(map(Data_BASEFLOW.ARNO$Param, function(a) a[1]))
 P_max <- as.numeric(map(Data_BASEFLOW.ARNO$Param, function(a) a[2]))
-P_BASEFLOW.ARNO <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max)
+P_unit <- as.character(map(Data_BASEFLOW.ARNO$Param, function(a) a[3]))
+P_des <- as.character(map(Data_BASEFLOW.ARNO$Param, function(a) a[4]))
+P_BASEFLOW.ARNO <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max, Unit = P_unit, Description = P_des)
 n_Out <- as.numeric(map(Data_BASEFLOW.ARNO$OutData, length))
 Group_Name <- reduce(map2(names(Data_BASEFLOW.ARNO$OutData), n_Out, rep), c)
 Variable_Name <- reduce(map(Data_BASEFLOW.ARNO$OutData, names), c)
 Unit_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Unit_dataset[[a]][[b]]))
 Des_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Des_dataset[[a]][[b]]))
 Out_BASEFLOW.ARNO <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = Unit_, Description = Des_)
-kable(In_BASEFLOW.ARNO, caption = 'InData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(In_BASEFLOW.ARNO, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
+
+***Param***
 
 ```{r t_P_BASEFLOW.ARNO, echo = FALSE}
-kable(P_BASEFLOW.ARNO, caption = 'Param', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(P_BASEFLOW.ARNO, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+***OutData***
+
 ```{r t_Out_BASEFLOW.ARNO, echo = FALSE}
-kable(Out_BASEFLOW.ARNO, caption = 'OutData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(Out_BASEFLOW.ARNO, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
 
 ## INTERCEPTION
 
 ### INTERCEPTION.Gash
+
+This Module reference to the Literature: `r Data_INTERCEPTION.Gash$ref_title` [@`r Data_INTERCEPTION.Gash$ref_bib`].
+
+***InData***
 
 ```{r t_In_INTERCEPTION.Gash, echo = FALSE}
 n_In <- as.numeric(map(Data_INTERCEPTION.Gash$InData, length))
@@ -270,28 +354,38 @@ In_INTERCEPTION.Gash <- data.frame(Group = Group_Name, Variable = Variable_Name,
 P_Name <- names(Data_INTERCEPTION.Gash$Param)
 P_min <- as.numeric(map(Data_INTERCEPTION.Gash$Param, function(a) a[1]))
 P_max <- as.numeric(map(Data_INTERCEPTION.Gash$Param, function(a) a[2]))
-P_INTERCEPTION.Gash <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max)
+P_unit <- as.character(map(Data_INTERCEPTION.Gash$Param, function(a) a[3]))
+P_des <- as.character(map(Data_INTERCEPTION.Gash$Param, function(a) a[4]))
+P_INTERCEPTION.Gash <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max, Unit = P_unit, Description = P_des)
 n_Out <- as.numeric(map(Data_INTERCEPTION.Gash$OutData, length))
 Group_Name <- reduce(map2(names(Data_INTERCEPTION.Gash$OutData), n_Out, rep), c)
 Variable_Name <- reduce(map(Data_INTERCEPTION.Gash$OutData, names), c)
 Unit_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Unit_dataset[[a]][[b]]))
 Des_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Des_dataset[[a]][[b]]))
 Out_INTERCEPTION.Gash <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = Unit_, Description = Des_)
-kable(In_INTERCEPTION.Gash, caption = 'InData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(In_INTERCEPTION.Gash, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
+
+***Param***
 
 ```{r t_P_INTERCEPTION.Gash, echo = FALSE}
-kable(P_INTERCEPTION.Gash, caption = 'Param', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(P_INTERCEPTION.Gash, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+***OutData***
+
 ```{r t_Out_INTERCEPTION.Gash, echo = FALSE}
-kable(Out_INTERCEPTION.Gash, caption = 'OutData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(Out_INTERCEPTION.Gash, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
 
 ## InfiltratRat
 
 ### InfiltratRat.GreenAmpt
+
+This Module reference to the Literature: `r Data_InfiltratRat.GreenAmpt$ref_title` [@`r Data_InfiltratRat.GreenAmpt$ref_bib`].
+
+***InData***
 
 ```{r t_In_InfiltratRat.GreenAmpt, echo = FALSE}
 n_In <- as.numeric(map(Data_InfiltratRat.GreenAmpt$InData, length))
@@ -303,28 +397,38 @@ In_InfiltratRat.GreenAmpt <- data.frame(Group = Group_Name, Variable = Variable_
 P_Name <- names(Data_InfiltratRat.GreenAmpt$Param)
 P_min <- as.numeric(map(Data_InfiltratRat.GreenAmpt$Param, function(a) a[1]))
 P_max <- as.numeric(map(Data_InfiltratRat.GreenAmpt$Param, function(a) a[2]))
-P_InfiltratRat.GreenAmpt <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max)
+P_unit <- as.character(map(Data_InfiltratRat.GreenAmpt$Param, function(a) a[3]))
+P_des <- as.character(map(Data_InfiltratRat.GreenAmpt$Param, function(a) a[4]))
+P_InfiltratRat.GreenAmpt <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max, Unit = P_unit, Description = P_des)
 n_Out <- as.numeric(map(Data_InfiltratRat.GreenAmpt$OutData, length))
 Group_Name <- reduce(map2(names(Data_InfiltratRat.GreenAmpt$OutData), n_Out, rep), c)
 Variable_Name <- reduce(map(Data_InfiltratRat.GreenAmpt$OutData, names), c)
 Unit_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Unit_dataset[[a]][[b]]))
 Des_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Des_dataset[[a]][[b]]))
 Out_InfiltratRat.GreenAmpt <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = Unit_, Description = Des_)
-kable(In_InfiltratRat.GreenAmpt, caption = 'InData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(In_InfiltratRat.GreenAmpt, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
+
+***Param***
 
 ```{r t_P_InfiltratRat.GreenAmpt, echo = FALSE}
-kable(P_InfiltratRat.GreenAmpt, caption = 'Param', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(P_InfiltratRat.GreenAmpt, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+***OutData***
+
 ```{r t_Out_InfiltratRat.GreenAmpt, echo = FALSE}
-kable(Out_InfiltratRat.GreenAmpt, caption = 'OutData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(Out_InfiltratRat.GreenAmpt, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
 
 ## Infiltration
 
 ### Infiltration.OIER
+
+This Module reference to the Literature: `r Data_Infiltration.OIER$ref_title` [@`r Data_Infiltration.OIER$ref_bib`].
+
+***InData***
 
 ```{r t_In_Infiltration.OIER, echo = FALSE}
 n_In <- as.numeric(map(Data_Infiltration.OIER$InData, length))
@@ -336,26 +440,36 @@ In_Infiltration.OIER <- data.frame(Group = Group_Name, Variable = Variable_Name,
 P_Name <- names(Data_Infiltration.OIER$Param)
 P_min <- as.numeric(map(Data_Infiltration.OIER$Param, function(a) a[1]))
 P_max <- as.numeric(map(Data_Infiltration.OIER$Param, function(a) a[2]))
-P_Infiltration.OIER <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max)
+P_unit <- as.character(map(Data_Infiltration.OIER$Param, function(a) a[3]))
+P_des <- as.character(map(Data_Infiltration.OIER$Param, function(a) a[4]))
+P_Infiltration.OIER <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max, Unit = P_unit, Description = P_des)
 n_Out <- as.numeric(map(Data_Infiltration.OIER$OutData, length))
 Group_Name <- reduce(map2(names(Data_Infiltration.OIER$OutData), n_Out, rep), c)
 Variable_Name <- reduce(map(Data_Infiltration.OIER$OutData, names), c)
 Unit_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Unit_dataset[[a]][[b]]))
 Des_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Des_dataset[[a]][[b]]))
 Out_Infiltration.OIER <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = Unit_, Description = Des_)
-kable(In_Infiltration.OIER, caption = 'InData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(In_Infiltration.OIER, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
+
+***Param***
 
 ```{r t_P_Infiltration.OIER, echo = FALSE}
-kable(P_Infiltration.OIER, caption = 'Param', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(P_Infiltration.OIER, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+***OutData***
+
 ```{r t_Out_Infiltration.OIER, echo = FALSE}
-kable(Out_Infiltration.OIER, caption = 'OutData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(Out_Infiltration.OIER, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
 
 ### Infiltration.SER
+
+This Module reference to the Literature: `r Data_Infiltration.SER$ref_title` [@`r Data_Infiltration.SER$ref_bib`].
+
+***InData***
 
 ```{r t_In_Infiltration.SER, echo = FALSE}
 n_In <- as.numeric(map(Data_Infiltration.SER$InData, length))
@@ -367,28 +481,38 @@ In_Infiltration.SER <- data.frame(Group = Group_Name, Variable = Variable_Name, 
 P_Name <- names(Data_Infiltration.SER$Param)
 P_min <- as.numeric(map(Data_Infiltration.SER$Param, function(a) a[1]))
 P_max <- as.numeric(map(Data_Infiltration.SER$Param, function(a) a[2]))
-P_Infiltration.SER <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max)
+P_unit <- as.character(map(Data_Infiltration.SER$Param, function(a) a[3]))
+P_des <- as.character(map(Data_Infiltration.SER$Param, function(a) a[4]))
+P_Infiltration.SER <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max, Unit = P_unit, Description = P_des)
 n_Out <- as.numeric(map(Data_Infiltration.SER$OutData, length))
 Group_Name <- reduce(map2(names(Data_Infiltration.SER$OutData), n_Out, rep), c)
 Variable_Name <- reduce(map(Data_Infiltration.SER$OutData, names), c)
 Unit_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Unit_dataset[[a]][[b]]))
 Des_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Des_dataset[[a]][[b]]))
 Out_Infiltration.SER <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = Unit_, Description = Des_)
-kable(In_Infiltration.SER, caption = 'InData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(In_Infiltration.SER, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
+
+***Param***
 
 ```{r t_P_Infiltration.SER, echo = FALSE}
-kable(P_Infiltration.SER, caption = 'Param', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(P_Infiltration.SER, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+***OutData***
+
 ```{r t_Out_Infiltration.SER, echo = FALSE}
-kable(Out_Infiltration.SER, caption = 'OutData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(Out_Infiltration.SER, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
 
 ## RUNOFF
 
 ### RUNOFF.Gr4j
+
+This Module reference to the Literature: `r Data_RUNOFF.Gr4j$ref_title` [@`r Data_RUNOFF.Gr4j$ref_bib`].
+
+***InData***
 
 ```{r t_In_RUNOFF.Gr4j, echo = FALSE}
 n_In <- as.numeric(map(Data_RUNOFF.Gr4j$InData, length))
@@ -400,26 +524,36 @@ In_RUNOFF.Gr4j <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit 
 P_Name <- names(Data_RUNOFF.Gr4j$Param)
 P_min <- as.numeric(map(Data_RUNOFF.Gr4j$Param, function(a) a[1]))
 P_max <- as.numeric(map(Data_RUNOFF.Gr4j$Param, function(a) a[2]))
-P_RUNOFF.Gr4j <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max)
+P_unit <- as.character(map(Data_RUNOFF.Gr4j$Param, function(a) a[3]))
+P_des <- as.character(map(Data_RUNOFF.Gr4j$Param, function(a) a[4]))
+P_RUNOFF.Gr4j <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max, Unit = P_unit, Description = P_des)
 n_Out <- as.numeric(map(Data_RUNOFF.Gr4j$OutData, length))
 Group_Name <- reduce(map2(names(Data_RUNOFF.Gr4j$OutData), n_Out, rep), c)
 Variable_Name <- reduce(map(Data_RUNOFF.Gr4j$OutData, names), c)
 Unit_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Unit_dataset[[a]][[b]]))
 Des_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Des_dataset[[a]][[b]]))
 Out_RUNOFF.Gr4j <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = Unit_, Description = Des_)
-kable(In_RUNOFF.Gr4j, caption = 'InData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(In_RUNOFF.Gr4j, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
+
+***Param***
 
 ```{r t_P_RUNOFF.Gr4j, echo = FALSE}
-kable(P_RUNOFF.Gr4j, caption = 'Param', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(P_RUNOFF.Gr4j, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+***OutData***
+
 ```{r t_Out_RUNOFF.Gr4j, echo = FALSE}
-kable(Out_RUNOFF.Gr4j, caption = 'OutData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(Out_RUNOFF.Gr4j, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
 
 ### RUNOFF.OIER
+
+This Module reference to the Literature: `r Data_RUNOFF.OIER$ref_title` [@`r Data_RUNOFF.OIER$ref_bib`].
+
+***InData***
 
 ```{r t_In_RUNOFF.OIER, echo = FALSE}
 n_In <- as.numeric(map(Data_RUNOFF.OIER$InData, length))
@@ -431,26 +565,36 @@ In_RUNOFF.OIER <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit 
 P_Name <- names(Data_RUNOFF.OIER$Param)
 P_min <- as.numeric(map(Data_RUNOFF.OIER$Param, function(a) a[1]))
 P_max <- as.numeric(map(Data_RUNOFF.OIER$Param, function(a) a[2]))
-P_RUNOFF.OIER <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max)
+P_unit <- as.character(map(Data_RUNOFF.OIER$Param, function(a) a[3]))
+P_des <- as.character(map(Data_RUNOFF.OIER$Param, function(a) a[4]))
+P_RUNOFF.OIER <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max, Unit = P_unit, Description = P_des)
 n_Out <- as.numeric(map(Data_RUNOFF.OIER$OutData, length))
 Group_Name <- reduce(map2(names(Data_RUNOFF.OIER$OutData), n_Out, rep), c)
 Variable_Name <- reduce(map(Data_RUNOFF.OIER$OutData, names), c)
 Unit_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Unit_dataset[[a]][[b]]))
 Des_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Des_dataset[[a]][[b]]))
 Out_RUNOFF.OIER <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = Unit_, Description = Des_)
-kable(In_RUNOFF.OIER, caption = 'InData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(In_RUNOFF.OIER, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
+
+***Param***
 
 ```{r t_P_RUNOFF.OIER, echo = FALSE}
-kable(P_RUNOFF.OIER, caption = 'Param', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(P_RUNOFF.OIER, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+***OutData***
+
 ```{r t_Out_RUNOFF.OIER, echo = FALSE}
-kable(Out_RUNOFF.OIER, caption = 'OutData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(Out_RUNOFF.OIER, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
 
 ### RUNOFF.SER
+
+This Module reference to the Literature: `r Data_RUNOFF.SER$ref_title` [@`r Data_RUNOFF.SER$ref_bib`].
+
+***InData***
 
 ```{r t_In_RUNOFF.SER, echo = FALSE}
 n_In <- as.numeric(map(Data_RUNOFF.SER$InData, length))
@@ -462,26 +606,36 @@ In_RUNOFF.SER <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit =
 P_Name <- names(Data_RUNOFF.SER$Param)
 P_min <- as.numeric(map(Data_RUNOFF.SER$Param, function(a) a[1]))
 P_max <- as.numeric(map(Data_RUNOFF.SER$Param, function(a) a[2]))
-P_RUNOFF.SER <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max)
+P_unit <- as.character(map(Data_RUNOFF.SER$Param, function(a) a[3]))
+P_des <- as.character(map(Data_RUNOFF.SER$Param, function(a) a[4]))
+P_RUNOFF.SER <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max, Unit = P_unit, Description = P_des)
 n_Out <- as.numeric(map(Data_RUNOFF.SER$OutData, length))
 Group_Name <- reduce(map2(names(Data_RUNOFF.SER$OutData), n_Out, rep), c)
 Variable_Name <- reduce(map(Data_RUNOFF.SER$OutData, names), c)
 Unit_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Unit_dataset[[a]][[b]]))
 Des_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Des_dataset[[a]][[b]]))
 Out_RUNOFF.SER <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = Unit_, Description = Des_)
-kable(In_RUNOFF.SER, caption = 'InData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(In_RUNOFF.SER, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
+
+***Param***
 
 ```{r t_P_RUNOFF.SER, echo = FALSE}
-kable(P_RUNOFF.SER, caption = 'Param', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(P_RUNOFF.SER, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+***OutData***
+
 ```{r t_Out_RUNOFF.SER, echo = FALSE}
-kable(Out_RUNOFF.SER, caption = 'OutData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(Out_RUNOFF.SER, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
 
 ### RUNOFF.Vic
+
+This Module reference to the Literature: `r Data_RUNOFF.Vic$ref_title` [@`r Data_RUNOFF.Vic$ref_bib`].
+
+***InData***
 
 ```{r t_In_RUNOFF.Vic, echo = FALSE}
 n_In <- as.numeric(map(Data_RUNOFF.Vic$InData, length))
@@ -493,26 +647,36 @@ In_RUNOFF.Vic <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit =
 P_Name <- names(Data_RUNOFF.Vic$Param)
 P_min <- as.numeric(map(Data_RUNOFF.Vic$Param, function(a) a[1]))
 P_max <- as.numeric(map(Data_RUNOFF.Vic$Param, function(a) a[2]))
-P_RUNOFF.Vic <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max)
+P_unit <- as.character(map(Data_RUNOFF.Vic$Param, function(a) a[3]))
+P_des <- as.character(map(Data_RUNOFF.Vic$Param, function(a) a[4]))
+P_RUNOFF.Vic <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max, Unit = P_unit, Description = P_des)
 n_Out <- as.numeric(map(Data_RUNOFF.Vic$OutData, length))
 Group_Name <- reduce(map2(names(Data_RUNOFF.Vic$OutData), n_Out, rep), c)
 Variable_Name <- reduce(map(Data_RUNOFF.Vic$OutData, names), c)
 Unit_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Unit_dataset[[a]][[b]]))
 Des_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Des_dataset[[a]][[b]]))
 Out_RUNOFF.Vic <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = Unit_, Description = Des_)
-kable(In_RUNOFF.Vic, caption = 'InData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(In_RUNOFF.Vic, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
+
+***Param***
 
 ```{r t_P_RUNOFF.Vic, echo = FALSE}
-kable(P_RUNOFF.Vic, caption = 'Param', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(P_RUNOFF.Vic, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+***OutData***
+
 ```{r t_Out_RUNOFF.Vic, echo = FALSE}
-kable(Out_RUNOFF.Vic, caption = 'OutData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(Out_RUNOFF.Vic, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
 
 ### RUNOFF.VM
+
+This Module reference to the Literature: `r Data_RUNOFF.VM$ref_title` [@`r Data_RUNOFF.VM$ref_bib`].
+
+***InData***
 
 ```{r t_In_RUNOFF.VM, echo = FALSE}
 n_In <- as.numeric(map(Data_RUNOFF.VM$InData, length))
@@ -524,28 +688,38 @@ In_RUNOFF.VM <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = 
 P_Name <- names(Data_RUNOFF.VM$Param)
 P_min <- as.numeric(map(Data_RUNOFF.VM$Param, function(a) a[1]))
 P_max <- as.numeric(map(Data_RUNOFF.VM$Param, function(a) a[2]))
-P_RUNOFF.VM <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max)
+P_unit <- as.character(map(Data_RUNOFF.VM$Param, function(a) a[3]))
+P_des <- as.character(map(Data_RUNOFF.VM$Param, function(a) a[4]))
+P_RUNOFF.VM <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max, Unit = P_unit, Description = P_des)
 n_Out <- as.numeric(map(Data_RUNOFF.VM$OutData, length))
 Group_Name <- reduce(map2(names(Data_RUNOFF.VM$OutData), n_Out, rep), c)
 Variable_Name <- reduce(map(Data_RUNOFF.VM$OutData, names), c)
 Unit_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Unit_dataset[[a]][[b]]))
 Des_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Des_dataset[[a]][[b]]))
 Out_RUNOFF.VM <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = Unit_, Description = Des_)
-kable(In_RUNOFF.VM, caption = 'InData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(In_RUNOFF.VM, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
+
+***Param***
 
 ```{r t_P_RUNOFF.VM, echo = FALSE}
-kable(P_RUNOFF.VM, caption = 'Param', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(P_RUNOFF.VM, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+***OutData***
+
 ```{r t_Out_RUNOFF.VM, echo = FALSE}
-kable(Out_RUNOFF.VM, caption = 'OutData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(Out_RUNOFF.VM, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
 
 ## GROUNDWATER
 
 ### GROUNDWATER.Vic
+
+This Module reference to the Literature: `r Data_GROUNDWATER.Vic$ref_title` [@`r Data_GROUNDWATER.Vic$ref_bib`].
+
+***InData***
 
 ```{r t_In_GROUNDWATER.Vic, echo = FALSE}
 n_In <- as.numeric(map(Data_GROUNDWATER.Vic$InData, length))
@@ -557,28 +731,38 @@ In_GROUNDWATER.Vic <- data.frame(Group = Group_Name, Variable = Variable_Name, U
 P_Name <- names(Data_GROUNDWATER.Vic$Param)
 P_min <- as.numeric(map(Data_GROUNDWATER.Vic$Param, function(a) a[1]))
 P_max <- as.numeric(map(Data_GROUNDWATER.Vic$Param, function(a) a[2]))
-P_GROUNDWATER.Vic <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max)
+P_unit <- as.character(map(Data_GROUNDWATER.Vic$Param, function(a) a[3]))
+P_des <- as.character(map(Data_GROUNDWATER.Vic$Param, function(a) a[4]))
+P_GROUNDWATER.Vic <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max, Unit = P_unit, Description = P_des)
 n_Out <- as.numeric(map(Data_GROUNDWATER.Vic$OutData, length))
 Group_Name <- reduce(map2(names(Data_GROUNDWATER.Vic$OutData), n_Out, rep), c)
 Variable_Name <- reduce(map(Data_GROUNDWATER.Vic$OutData, names), c)
 Unit_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Unit_dataset[[a]][[b]]))
 Des_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Des_dataset[[a]][[b]]))
 Out_GROUNDWATER.Vic <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = Unit_, Description = Des_)
-kable(In_GROUNDWATER.Vic, caption = 'InData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(In_GROUNDWATER.Vic, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
+
+***Param***
 
 ```{r t_P_GROUNDWATER.Vic, echo = FALSE}
-kable(P_GROUNDWATER.Vic, caption = 'Param', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(P_GROUNDWATER.Vic, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+***OutData***
+
 ```{r t_Out_GROUNDWATER.Vic, echo = FALSE}
-kable(Out_GROUNDWATER.Vic, caption = 'OutData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(Out_GROUNDWATER.Vic, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
 
 ## ROUTE
 
 ### ROUTE.G2RES
+
+This Module reference to the Literature: `r Data_ROUTE.G2RES$ref_title` [@`r Data_ROUTE.G2RES$ref_bib`].
+
+***InData***
 
 ```{r t_In_ROUTE.G2RES, echo = FALSE}
 n_In <- as.numeric(map(Data_ROUTE.G2RES$InData, length))
@@ -590,26 +774,36 @@ In_ROUTE.G2RES <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit 
 P_Name <- names(Data_ROUTE.G2RES$Param)
 P_min <- as.numeric(map(Data_ROUTE.G2RES$Param, function(a) a[1]))
 P_max <- as.numeric(map(Data_ROUTE.G2RES$Param, function(a) a[2]))
-P_ROUTE.G2RES <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max)
+P_unit <- as.character(map(Data_ROUTE.G2RES$Param, function(a) a[3]))
+P_des <- as.character(map(Data_ROUTE.G2RES$Param, function(a) a[4]))
+P_ROUTE.G2RES <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max, Unit = P_unit, Description = P_des)
 n_Out <- as.numeric(map(Data_ROUTE.G2RES$OutData, length))
 Group_Name <- reduce(map2(names(Data_ROUTE.G2RES$OutData), n_Out, rep), c)
 Variable_Name <- reduce(map(Data_ROUTE.G2RES$OutData, names), c)
 Unit_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Unit_dataset[[a]][[b]]))
 Des_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Des_dataset[[a]][[b]]))
 Out_ROUTE.G2RES <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = Unit_, Description = Des_)
-kable(In_ROUTE.G2RES, caption = 'InData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(In_ROUTE.G2RES, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
+
+***Param***
 
 ```{r t_P_ROUTE.G2RES, echo = FALSE}
-kable(P_ROUTE.G2RES, caption = 'Param', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(P_ROUTE.G2RES, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+***OutData***
+
 ```{r t_Out_ROUTE.G2RES, echo = FALSE}
-kable(Out_ROUTE.G2RES, caption = 'OutData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(Out_ROUTE.G2RES, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
 
 ### ROUTE.Gr4j
+
+This Module reference to the Literature: `r Data_ROUTE.Gr4j$ref_title` [@`r Data_ROUTE.Gr4j$ref_bib`].
+
+***InData***
 
 ```{r t_In_ROUTE.Gr4j, echo = FALSE}
 n_In <- as.numeric(map(Data_ROUTE.Gr4j$InData, length))
@@ -621,22 +815,28 @@ In_ROUTE.Gr4j <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit =
 P_Name <- names(Data_ROUTE.Gr4j$Param)
 P_min <- as.numeric(map(Data_ROUTE.Gr4j$Param, function(a) a[1]))
 P_max <- as.numeric(map(Data_ROUTE.Gr4j$Param, function(a) a[2]))
-P_ROUTE.Gr4j <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max)
+P_unit <- as.character(map(Data_ROUTE.Gr4j$Param, function(a) a[3]))
+P_des <- as.character(map(Data_ROUTE.Gr4j$Param, function(a) a[4]))
+P_ROUTE.Gr4j <- data.frame(Paramter = P_Name, Min = P_min, Max = P_max, Unit = P_unit, Description = P_des)
 n_Out <- as.numeric(map(Data_ROUTE.Gr4j$OutData, length))
 Group_Name <- reduce(map2(names(Data_ROUTE.Gr4j$OutData), n_Out, rep), c)
 Variable_Name <- reduce(map(Data_ROUTE.Gr4j$OutData, names), c)
 Unit_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Unit_dataset[[a]][[b]]))
 Des_ <- as.character(map2(Group_Name, Variable_Name, function(a, b) Des_dataset[[a]][[b]]))
 Out_ROUTE.Gr4j <- data.frame(Group = Group_Name, Variable = Variable_Name, Unit = Unit_, Description = Des_)
-kable(In_ROUTE.Gr4j, caption = 'InData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(In_ROUTE.Gr4j, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
+
+***Param***
 
 ```{r t_P_ROUTE.Gr4j, echo = FALSE}
-kable(P_ROUTE.Gr4j, caption = 'Param', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(P_ROUTE.Gr4j, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+***OutData***
+
 ```{r t_Out_ROUTE.Gr4j, echo = FALSE}
-kable(Out_ROUTE.Gr4j, caption = 'OutData', row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+kable(Out_ROUTE.Gr4j, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
 
