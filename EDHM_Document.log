@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.12)  14 APR 2021 01:37
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.12)  14 APR 2021 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -970,181 +970,114 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 \tf@toc=\write4
 \openout4 = `EDHM_Document.toc'.
 
-[4] [5
-
-] [6
+[4] [5] [6
 
 ]
+Overfull \hbox (557.83pt too wide) in paragraph at lines 213--238
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7] [8]
 Chapter 1.
-[7] [8
+[9
+
+] [10
 
 ]
 Chapter 2.
-[9] [10]
+[11] [12]
 Chapter 3.
-[11
+
+Overfull \hbox (557.83pt too wide) in paragraph at lines 339--364
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13
 
 ]
-Overfull \hbox (22.84999pt too wide) in paragraph at lines 289--304
+Overfull \hbox (22.84999pt too wide) in paragraph at lines 434--449
  [][] 
  []
 
 
-Overfull \hbox (21.07999pt too wide) in paragraph at lines 343--368
+Overfull \hbox (21.07999pt too wide) in paragraph at lines 490--515
  [][] 
  []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[12]
-Overfull \hbox (3.18pt too wide) in paragraph at lines 410--421
- [][] 
- []
-
-
-Package natbib Warning: Citation `none' on page 13 undefined on input line 454.
-
-
-
-Overfull \hbox (169.64998pt too wide) in paragraph at lines 460--483
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (269.49998pt too wide) in paragraph at lines 502--513
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[13]
-Overfull \hbox (1.04pt too wide) in paragraph at lines 527--550
- [][] 
- []
-
-
-Overfull \hbox (147.59pt too wide) in paragraph at lines 556--583
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Package natbib Warning: Citation `none' on page 14 undefined on input line 609.
-
 
 [14]
-Overfull \hbox (47.51pt too wide) in paragraph at lines 615--628
+Overfull \hbox (3.18pt too wide) in paragraph at lines 559--570
  [][] 
  []
 
 
-Overfull \hbox (28.15pt too wide) in paragraph at lines 647--656
- [][] 
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `none' on page 15 undefined on input line 605.
+
 
 [15]
-Underfull \hbox (badness 1960) in paragraph at lines 664--665
+Overfull \hbox (169.64998pt too wide) in paragraph at lines 611--634
+ [][] 
+ []
+
+
+Overfull \hbox (269.49998pt too wide) in paragraph at lines 653--664
+ [][] 
+ []
+
+
+Overfull \hbox (1.04pt too wide) in paragraph at lines 680--703
+ [][] 
+ []
+
+[16]
+Overfull \hbox (147.59pt too wide) in paragraph at lines 709--736
+ [][] 
+ []
+
+
+Package natbib Warning: Citation `none' on page 17 undefined on input line 764.
+
+
+
+Overfull \hbox (47.51pt too wide) in paragraph at lines 770--783
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (28.15pt too wide) in paragraph at lines 802--811
+ [][] 
+ []
+
+[17]
+Underfull \hbox (badness 1960) in paragraph at lines 821--822
 \TU/lmr/m/n/10 MODELING AND ASSESSMENT PART I: MODEL DEVELOPMENT
  []
 
-
-Overfull \hbox (156.67998pt too wide) in paragraph at lines 725--738
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[16]
-Overfull \hbox (43.38pt too wide) in paragraph at lines 814--821
- [][] 
- []
-
-
-Package natbib Warning: Citation `none' on page 17 undefined on input line 829.
-
-
-
-Overfull \hbox (43.38pt too wide) in paragraph at lines 835--844
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Package natbib Warning: Citation `none' on page 17 undefined on input line 875.
-
-
-[17]
-Overfull \hbox (24.18pt too wide) in paragraph at lines 881--892
- [][] 
- []
-
-
-Overfull \hbox (3.18pt too wide) in paragraph at lines 932--943
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (148.47pt too wide) in paragraph at lines 962--971
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Package natbib Warning: Citation `none' on page 18 undefined on input line 976.
-
-
 [18]
-Overfull \hbox (108.94pt too wide) in paragraph at lines 982--991
- [][] 
- []
-
-
-Overfull \hbox (125.37pt too wide) in paragraph at lines 1010--1019
- [][] 
- []
-
-
-Package natbib Warning: Citation `none' on page 19 undefined on input line 1024
-.
-
-
-Overfull \hbox (24.18pt too wide) in paragraph at lines 1030--1041
+Overfull \hbox (156.67998pt too wide) in paragraph at lines 884--897
  [][] 
  []
 
@@ -1152,26 +1085,26 @@ Overfull \hbox (24.18pt too wide) in paragraph at lines 1030--1041
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (125.37pt too wide) in paragraph at lines 1060--1069
+Overfull \hbox (43.38pt too wide) in paragraph at lines 975--982
  [][] 
  []
 
 [19]
-Overfull \hbox (82.18001pt too wide) in paragraph at lines 1080--1093
+
+Package natbib Warning: Citation `none' on page 20 undefined on input line 992.
+
+
+
+Overfull \hbox (43.38pt too wide) in paragraph at lines 998--1007
  [][] 
  []
 
 
-Overfull \hbox (125.37pt too wide) in paragraph at lines 1114--1123
- [][] 
- []
-
-
-Package natbib Warning: Citation `none' on page 20 undefined on input line 1128
+Package natbib Warning: Citation `none' on page 20 undefined on input line 1040
 .
 
 
-Overfull \hbox (123.85pt too wide) in paragraph at lines 1134--1147
+Overfull \hbox (24.18pt too wide) in paragraph at lines 1046--1057
  [][] 
  []
 
@@ -1180,77 +1113,155 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (125.37pt too wide) in paragraph at lines 1168--1177
- [][] 
- []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [20]
+Overfull \hbox (3.18pt too wide) in paragraph at lines 1099--1110
+ [][] 
+ []
 
-Package natbib Warning: Citation `none' on page 21 undefined on input line 1185
+
+Overfull \hbox (148.47pt too wide) in paragraph at lines 1129--1138
+ [][] 
+ []
+
+
+Package natbib Warning: Citation `none' on page 21 undefined on input line 1145
 .
 
 
-Overfull \hbox (174.17pt too wide) in paragraph at lines 1191--1210
- [][] 
- []
-
-
-Overfull \hbox (156.53pt too wide) in paragraph at lines 1229--1238
- [][] 
- []
-
-
-Package natbib Warning: Citation `none' on page 21 undefined on input line 1246
-.
-
-[21]
-Overfull \hbox (110.85999pt too wide) in paragraph at lines 1252--1265
- [][] 
- []
-
-
-Overfull \hbox (110.85999pt too wide) in paragraph at lines 1304--1317
- [][] 
- []
-
-
-Overfull \hbox (102.09999pt too wide) in paragraph at lines 1323--1336
+Overfull \hbox (108.94pt too wide) in paragraph at lines 1151--1160
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[22] [23] [24
 
-]
-Chapter 4.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (125.37pt too wide) in paragraph at lines 1179--1188
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[21]
+
+Package natbib Warning: Citation `none' on page 22 undefined on input line 1195
+.
+
+
+Overfull \hbox (24.18pt too wide) in paragraph at lines 1201--1212
+ [][] 
+ []
+
+
+Overfull \hbox (125.37pt too wide) in paragraph at lines 1231--1240
+ [][] 
+ []
+
+
+Overfull \hbox (82.18001pt too wide) in paragraph at lines 1253--1266
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[22]
+Overfull \hbox (125.37pt too wide) in paragraph at lines 1287--1296
+ [][] 
+ []
+
+
+Package natbib Warning: Citation `none' on page 23 undefined on input line 1303
+.
+
+
+Overfull \hbox (123.85pt too wide) in paragraph at lines 1309--1322
+ [][] 
+ []
+
+
+Overfull \hbox (125.37pt too wide) in paragraph at lines 1343--1352
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `none' on page 23 undefined on input line 1362
+.
+
+[23]
+Overfull \hbox (174.17pt too wide) in paragraph at lines 1368--1387
+ [][] 
+ []
+
+
+Overfull \hbox (156.53pt too wide) in paragraph at lines 1406--1415
+ [][] 
+ []
+
+
+Package natbib Warning: Citation `none' on page 24 undefined on input line 1425
+.
+
+
+Overfull \hbox (110.85999pt too wide) in paragraph at lines 1431--1444
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[24]
+Overfull \hbox (110.85999pt too wide) in paragraph at lines 1485--1498
+ [][] 
+ []
+
+
+Overfull \hbox (102.09999pt too wide) in paragraph at lines 1504--1517
+ [][] 
+ []
+
 [25] [26
 
 ]
+Chapter 4.
+[27] [28
+
+]
 Chapter 5.
-(./EDHM_Document.bbl [27] [28
+(./EDHM_Document.bbl [29] [30
 
 ])
 
 Package natbib Warning: There were undefined citations.
 
-[29] (./EDHM_Document.aux)
+[31] (./EDHM_Document.aux)
 Package rerunfilecheck Info: File `EDHM_Document.out' has not changed.
 (rerunfilecheck)             Checksum: D0449E961372F40E21628C4989101D53;3445.
  ) 
 Here is how much of TeX's memory you used:
  17611 strings out of 478881
  308970 string characters out of 5863172
- 783322 words of memory out of 5000000
+ 782332 words of memory out of 5000000
  37191 multiletter control sequences out of 15000+600000
  410003 words of font info for 83 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 98i,11n,122p,755b,387s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 98i,11n,122p,755b,466s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on EDHM_Document.pdf (29 pages).
+Output written on EDHM_Document.pdf (31 pages).
