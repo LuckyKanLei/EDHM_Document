@@ -107,6 +107,17 @@ df_Group <- data.frame(Variable = Variable_Name, Unit = Unit_, Description = Des
 kable(df_Group, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+***Intercept*** show in the following table:
+
+```{r t_G_Intercept, echo = FALSE}
+Gr_name <- 'Intercept'
+Variable_Name <- names(Pre_dataset[[Gr_name]])
+Unit_ <- as.character(map(Variable_Name, function(b) Unit_dataset[[Gr_name]][[b]]))
+Des_ <- as.character(map(Variable_Name, function(b) Des_dataset[[Gr_name]][[b]]))
+df_Group <- data.frame(Variable = Variable_Name, Unit = Unit_, Description = Des_)
+kable(df_Group, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+```
+
 ***Canopy*** show in the following table:
 
 ```{r t_G_Canopy, echo = FALSE}
@@ -118,7 +129,16 @@ df_Group <- data.frame(Variable = Variable_Name, Unit = Unit_, Description = Des
 kable(df_Group, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
 
+And ***Aerodyna*** show in the following table:
 
+```{r t_G_Aerodyna, echo = FALSE}
+Gr_name <- 'Aerodyna'
+Variable_Name <- names(Pre_dataset[[Gr_name]])
+Unit_ <- as.character(map(Variable_Name, function(b) Unit_dataset[[Gr_name]][[b]]))
+Des_ <- as.character(map(Variable_Name, function(b) Des_dataset[[Gr_name]][[b]]))
+df_Group <- data.frame(Variable = Variable_Name, Unit = Unit_, Description = Des_)
+kable(df_Group, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+```
 
 ### Surface (Runoff, Route) {#Surface1}
 
@@ -138,6 +158,28 @@ kable(df_Group, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_opti
 
 ***Unit hydrograph*** The hydrograph of direct runoff from a storm uni- formly distributed ever the drain- age basin during a specified unit of time; the hydrograph is reduced in vertical scale to correspond to a volume of runoff o* 1 inch from the drainage basin. (After Am. Soc. Civil Engineers 1949, p. 105.)
 
+In this layer PROCESS [RUNOFF](#RUNOFF), [ROUTE](#ROUTE) and GROUP ***Route*** show in the following table:
+
+```{r t_G_Route, echo = FALSE}
+Gr_name <- 'Route'
+Variable_Name <- names(Pre_dataset[[Gr_name]])
+Unit_ <- as.character(map(Variable_Name, function(b) Unit_dataset[[Gr_name]][[b]]))
+Des_ <- as.character(map(Variable_Name, function(b) Des_dataset[[Gr_name]][[b]]))
+df_Group <- data.frame(Variable = Variable_Name, Unit = Unit_, Description = Des_)
+kable(df_Group, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+```
+
+And ***GeoData*** show in the following table:
+
+```{r t_G_GeoData, echo = FALSE}
+Gr_name <- 'GeoData'
+Variable_Name <- names(Pre_dataset[[Gr_name]])
+Unit_ <- as.character(map(Variable_Name, function(b) Unit_dataset[[Gr_name]][[b]]))
+Des_ <- as.character(map(Variable_Name, function(b) Des_dataset[[Gr_name]][[b]]))
+df_Group <- data.frame(Variable = Variable_Name, Unit = Unit_, Description = Des_)
+kable(df_Group, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+```
+
 
 ### Subsurface (Subsur) {#Subsurface1}
 
@@ -147,6 +189,27 @@ kable(df_Group, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_opti
 
 ***Field-moisture:*** Water diffused in the soil, the upper part of the zone of aeration from which water is discharged by the trans- piration of plants or by soil evap- oration. See Field-moisture ca- pacity and Field-moisture defi- ciency.
 
+In this layer PROCESS [InfiltratRat](#InfiltratRat), [Infiltration](#Infiltration) and GROUP ***Infilt*** show in the following table:
+
+```{r t_G_Infilt, echo = FALSE}
+Gr_name <- 'Infilt'
+Variable_Name <- names(Pre_dataset[[Gr_name]])
+Unit_ <- as.character(map(Variable_Name, function(b) Unit_dataset[[Gr_name]][[b]]))
+Des_ <- as.character(map(Variable_Name, function(b) Des_dataset[[Gr_name]][[b]]))
+df_Group <- data.frame(Variable = Variable_Name, Unit = Unit_, Description = Des_)
+kable(df_Group, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+```
+
+And ***SoilData*** show in the following table:
+
+```{r t_G_SoilData, echo = FALSE}
+Gr_name <- 'SoilData'
+Variable_Name <- names(Pre_dataset[[Gr_name]])
+Unit_ <- as.character(map(Variable_Name, function(b) Unit_dataset[[Gr_name]][[b]]))
+Des_ <- as.character(map(Variable_Name, function(b) Des_dataset[[Gr_name]][[b]]))
+df_Group <- data.frame(Variable = Variable_Name, Unit = Unit_, Description = Des_)
+kable(df_Group, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+```
 
 ### Ground {#Ground1}
 
@@ -154,8 +217,28 @@ kable(df_Group, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_opti
 
 ***Groundwater:*** Water in the ground that is in the zone of saturation, from which wells, springs, and ground-water runoff are supplied. (After Meinzer, 1949, p. 38r,)
 
+In this layer PROCESS [GROUNDWATER](#GROUNDWATER) and GROUP ***Ground*** show in the following table:
 
-In EDHM **Baseflow** is the unified name of 
+```{r t_G_Ground, echo = FALSE}
+Gr_name <- 'Ground'
+Variable_Name <- names(Pre_dataset[[Gr_name]])
+Unit_ <- as.character(map(Variable_Name, function(b) Unit_dataset[[Gr_name]][[b]]))
+Des_ <- as.character(map(Variable_Name, function(b) Des_dataset[[Gr_name]][[b]]))
+df_Group <- data.frame(Variable = Variable_Name, Unit = Unit_, Description = Des_)
+kable(df_Group, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+```
+
+Except the above data GROUP, the ***TimeData*** describe the time information:
+
+```{r t_G_TimeData, echo = FALSE}
+Gr_name <- 'TimeData'
+Variable_Name <- names(Pre_dataset[[Gr_name]])
+Unit_ <- as.character(map(Variable_Name, function(b) Unit_dataset[[Gr_name]][[b]]))
+Des_ <- as.character(map(Variable_Name, function(b) Des_dataset[[Gr_name]][[b]]))
+df_Group <- data.frame(Variable = Variable_Name, Unit = Unit_, Description = Des_)
+kable(df_Group, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+```
+
 
 ## Important Concept of EDHM
 
