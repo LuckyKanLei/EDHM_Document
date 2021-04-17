@@ -1,31 +1,40 @@
 # Basic Concept {#base}
 
+
+
 Before using of the EDHM it's very important to know the basic concept and primary idea about EDHM.
 
 In EDHM the two mostly characters are **modularization** and **vectorization-arithmetic**, **modularization** focus on the coupling of the different *modules* of the hydrological *processes*, benefit by the modularization it's very convenience to change the method of process, what means the **editable** model; **vectorization-arithmetic** is very useful for the distributed hydrological model, it can greatly short the calculate time, especially when there are many grids (calculate units).
 
 The water cycle of the Earth system and its variability at global, regional and local scales are influenced by a range of processes and mutual interactions, feedback mechanisms and as well as affected by anthropogenic processes.[@Rast.2014]
 
-In EDHM a **PROCESS** is the mapping from those hydrological processes in a digital from, at the same time it's also the group (set) name of the some **MODULE**s those haven the same functions and same aims, and 
-a **MODULE** is the definite method of a **PROCESS**, for example [SNOW](#SNOW) is PROCESS mapping the process that snow melting, accumulate and the state variety, [SNOW.17](#SNOW.17) is then the true function that you can call in R, with the method by Andrson[@Anderson.1973] forward.
+In EDHM a **PROCESS** is the mapping from those hydrological processes in a digital from, at the same time it's also the group (set) name of the some **MODULE**s those haven the same functions and same aims, and a **MODULE** is the definite method of a **PROCESS**, it can also undersatnd as: 
+
+**MODULE** = **PROCESS** $\times$ **Method**
+
+![](fig/EDHM_module_draw.png)
+
+For example [SNOW](#SNOW) is PROCESS mapping the process that snow melting, accumulate and the state variety, [SNOW.17](#SNOW.17) is then the true function that you can call in R, with the method by Andrson[@Anderson.1973] forward.
 
 Besides the PROCESS based on the hydrological processes, but sometimes a little different, due to the calculate factors in the lang time, some like *evapotranspiration* is a typical hydrological process, but in EDHM es is diveded into [ReferenceET](#ReferenceET) (reference evapotranspiration) and [ActualET](#ActualET) (actual evapotranspiration) two parts, because the most conceptual models calculate evapotranspiration in the two steps.
 
 In the following section will show the meaning of hydrological processes and the mapped PROCESS.
 
-**MODEL** is a coupled complete process with some subprocesses (also possible only one process), in EDHM is a true function to simulation the designed model with definite methods. It's also a set of **MODULE**s, those realize different process and correctly  by the physical process.
-
-The **VARIABLE** is the data those describe the state or character of the environment and the volume or character of water in different process. And in order to quickly find the VARIABLE and avoid the duplicate name of VARIABLE, the **GROUP** is like the folder of VARIABLE designed, for example in GROUP *Evatrans* (evapotranspiration) include the VARIABLEs *RET* (reference evapotranspiration), *AET* (actual evapotranspiration) and so on.
-
-It can be summarized as:
-
-**MODULE** = **PROCESS** $\times$ **Method**
+**MODEL** is a coupled complete process with some subprocesses (also possible only one process), in EDHM is a true function to simulation the designed model with definite methods. It's also a set of **MODULE**s, those realize different process and correctly  by the physical process, it can also undersatnd as:
 
 **MODEL** = $\sum$ **MODULE**$_i$
 
+![](fig/EDHM_model_draw.png)
+
+The **VARIABLE** is the data those describe the state or character of the environment and the volume or character of water in different process. And in order to quickly find the VARIABLE and avoid the duplicate name of VARIABLE, the **GROUP** is like the folder of VARIABLE designed, for example in GROUP *Evatrans* (evapotranspiration) include the VARIABLEs *RET* (reference evapotranspiration), *AET* (actual evapotranspiration) and so on. 
+
 **VARIABLE** are putted in the **GROUP**
 
+![](fig/EDHM_group_draw.png)
+
 ## Basic Concept of Hydrological Cycle
+
+![](fig/EDHM_cycle.png)
 
 The hydrological cycle is composed of different components, which include evaporation from water surfaces and bare soil, evapotranspiration from vegetated land, transport of water vapour in the atmosphere, cloud droplet formation and cloud dynamics, the mechanisms leading to liquid and solid precipitation, the movement of water and change in soil moisture in the unsaturated soil, including root dynamics, surface and river run-off, and groundwater flow.[@Rast.2014]
 
@@ -247,9 +256,9 @@ kable(df_Group, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_opti
 ```
 
 
-## Important Concept of EDHM
+## Important ELements of EDHM
 
-
+![](fig/EDHM_element.png)
 
 In addition to the PROCESS, MODULE, MODEL there are also some other concept oabout EDHM, some like:
 
@@ -277,7 +286,7 @@ The aim to the division is in order to convenient get the data of one time step.
 
 But for some MODULE, those not contact with last time (e.g. all MODULE in PROCESS [ReferenceET](#ReferenceET)) or the full time data are known (e.g. [ROUTE.G2RES](#ROUTE.G2RES)), you can calculate the whole time series without loop.
 
-**Step** is special unit in EDHM, in EDHM the time serise is divided into many equal time interval, one time interval is a *Step*, the other units are given by [UCUM](https://ucum.org/trac).
+**Step** is special unit in EDHM, in EDHM the time serise is divided into many equal time interval, one time interval is a *Step*, the other units are given by [UCUM](https://ucum.org/trac). The most VAERIABLE like a rate, tempo those unit should be in [mm/Step], will simplify as [mm].
 
 
 

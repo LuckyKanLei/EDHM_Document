@@ -1,16 +1,54 @@
 # Model Use and Develop {#develop}
 
-Choose a Model 
+![](fig/EDHM_manual.png)
 
-virtue: convenience
+## MODEL / MODULE Structure
 
-shortage: poor adaptability
+Essentially a MODULE or a MODEL is a function in R, so in R a function make up of **name**, **arguments** and **body**, except the output **return** is also very important. 
 
-## Model Structure or Concept
+The **name** of a MODULE composed of a PROCESS and Method, lik `ReferenceET.Hargreaves`; the **name** of a MODEL composed of "MODEL" and a model method, like `MODEL.CVIC`.
 
-Design a Model
+The **arguments** of MODULE and MODEL are fest in the form "InData, Param, ..." for MODULE and "TimeVariData, TimeInvariData, Param, ..." for MODEL, so for the data transfer it's very important to set the same structure as "Data_" dataset.
+
+The **body** is the most important part of a function (MODULE or MODEL), generally it depended on the method.
+
+The **OutData** (output) is also so important that not ignore, it must use the GROUP-VARIBLE type as InData.  
+
+Excepted, the reference and a data set, that make up of InData, Param and OutData can't be omitted, especially when the MODULE or MODEL are also for the other aviable.
 
 ## Use Model with a MODEL or Run_MODEL
+
+The using of a MODEL is the basic, but the Param (parameters) import base on the name-index not number-index, so it's essencially to make a **Run_MODELL** to transfer the parameters, especially when use auto calibration program. In a Run_MODELL function you can set the parameters those need to calibrate or not.
+
+There shows the function `Run_MODEL.SERR`:
+
+```{r}
+Run_Model.SERR <- function(TimeVariData, TimeInvariData, Param,
+                           ParamterCalibrate){
+  ## 1.0 snow##
+  Param$Max_Snow_T = ParamterCalibrate[1]
+  Param$Min_Snow_T = ParamterCalibrate[2]
+  Param$Factor_Day_degree = ParamterCalibrate[3]  ## 2.7-12 [mm]
+  Param$Base_T = ParamterCalibrate[4]  ## -2-5.5 [Cel]
+  ## 1.1 ET ##
+  Param$CanopyCapacity = ParamterCalibrate[5]
+  Param$Coeff_ET_Capacity_Attenuat = ParamterCalibrate[6]
+  ## 1.2 Runoff ##
+  Param$Threshold_Runoff = ParamterCalibrate[7]
+  Param$Ratio_Runoff = ParamterCalibrate[8]
+  Param$Ratio_GW_Storage = ParamterCalibrate[9]
+  Param$Coeff_GW_Storage_Attenuat = ParamterCalibrate[10]
+  ## 1.3 Route ##
+  Param$UPPaList = ParamterCalibrate[11:17]
+
+  Result_ <- MODEL.SERR(TimeVariData, TimeInvariData, Param)
+  Result <- Result_$Route$StaFlow
+  return(Result)
+}
+```
+
+The workflow is show in the following figure:
+
 
 ### Check the InData list
 
@@ -37,7 +75,3 @@ Design a Model
 ### Set In/OutData and Parameter
 
 
-
-
-
-Here is a review of existing methods.
