@@ -4,7 +4,10 @@
 
 ## MODEL / MODULE Structure
 
-Essentially a MODULE or a MODEL is a function in R, so in R a function make up of **name**, **arguments** and **body**, except the output **return** is also very important. 
+Essentially a MODULE or a MODEL is a function in R, so in R a function make up of **name**, **arguments** and **body**, except the output **return / value** is also very important. 
+
+![](fig/EDHM_function_draw.png){width=50%}
+
 
 The **name** of a MODULE composed of a PROCESS and Method, lik `ReferenceET.Hargreaves`; the **name** of a MODEL composed of "MODEL" and a model method, like `MODEL.CVIC`.
 
@@ -12,13 +15,19 @@ The **arguments** of MODULE and MODEL are fest in the form "InData, Param, ..." 
 
 The **body** is the most important part of a function (MODULE or MODEL), generally it depended on the method.
 
-The **OutData** (output) is also so important that not ignore, it must use the GROUP-VARIBLE type as InData.  
+The **OutData** (value) is also so important that not ignore, it must use the GROUP-VARIBLE type as InData.  
+
+![](fig/EDHM_module_draw.png)
+
+![](fig/EDHM_model_draw.png)
 
 Excepted, the reference and a data set, that make up of InData, Param and OutData can't be omitted, especially when the MODULE or MODEL are also for the other aviable.
 
 ## Use Model with a MODEL or Run_MODEL
 
 The using of a MODEL is the basic, but the Param (parameters) import base on the name-index not number-index, so it's essencially to make a **Run_MODELL** to transfer the parameters, especially when use auto calibration program. In a Run_MODELL function you can set the parameters those need to calibrate or not.
+
+![](fig/EDHM_run_model_draw.png){width=80%}
 
 There shows the function `Run_MODEL.SERR`:
 

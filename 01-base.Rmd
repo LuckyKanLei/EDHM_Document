@@ -30,7 +30,7 @@ The **VARIABLE** is the data those describe the state or character of the enviro
 
 **VARIABLE** are putted in the **GROUP**
 
-![](fig/EDHM_group_draw.png)
+![](fig/EDHM_group_draw.png){width=50%}
 
 ## Basic Concept of Hydrological Cycle
 
