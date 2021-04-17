@@ -17,6 +17,13 @@ In the following section will show the meaning of hydrological processes and the
 
 The **VARIABLE** is the data those describe the state or character of the environment and the volume or character of water in different process. And in order to quickly find the VARIABLE and avoid the duplicate name of VARIABLE, the **GROUP** is like the folder of VARIABLE designed, for example in GROUP *Evatrans* (evapotranspiration) include the VARIABLEs *RET* (reference evapotranspiration), *AET* (actual evapotranspiration) and so on.
 
+It can be summarized as:
+
+**MODULE** = **PROCESS** $\times$ **Method**
+
+**MODEL** = $\sum$ **MODULE**$_i$
+
+**VARIABLE** are putted in the **GROUP**
 
 ## Basic Concept of Hydrological Cycle
 
@@ -24,7 +31,7 @@ The hydrological cycle is composed of different components, which include evapor
 
 Also from [@LANGBEIN.1960]: A convenient term to denote the circulation of water from the sea, through the atmos- phere, to the land; and thence, with many delays, back to the sea by overland and subterranean routes, and in part by way of the atmosphere; also the many short circuits of the water that is re- turned to the atmosphere without reaching the see.
 
-The whole cycle will spilt by the vertical layer in six groups which are [Atmosphe](#Atmosphe1), [Snow](#Snow1), [Canopy](#Canopy1), [Surface](#Surface), [Subsurface](#Subsurface1) and [Ground](#Ground1). There indeed are not the complete hydrological cycle components, limited by the first stage, in the first stage will focus on the conceptual models.
+The whole cycle will spilt by the vertical layer in six layers which are [Atmosphe](#Atmosphe1), [Snow](#Snow1), [Canopy](#Canopy1), [Surface](#Surface), [Subsurface](#Subsurface1) and [Ground](#Ground1). There indeed are not the complete hydrological cycle components, limited by the first stage, in the first stage will focus on the conceptual models.
 
 
 ### Atmosphere (Atmos) {#Atmosphe1}
@@ -242,24 +249,38 @@ kable(df_Group, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_opti
 
 ## Important Concept of EDHM
 
-Process
 
-Method
 
-Module
+In addition to the PROCESS, MODULE, MODEL there are also some other concept oabout EDHM, some like:
 
-Model
+The arguments of a MODULE of include: **InData** and **Param**
 
-Run_Model
+**InData** is a list of all VARIABLE the MODULE needed, like previous section explained the VARIABLEs must putted in the GROUP.
 
-Evaluate
+**Pram** is the parameter list of all the empirical parameters (different as function arguments) of the MODULE.
 
-Calibrate
+You can check the MODULE needed VARIABLE (InData) and parameters (Param) with "Data_" + MODULE name in R, some like `Data_ReferenceET.Linacre` and the same time every Param give the suggested maximal and minimal value of the parameter in this MODULE.
 
-## Data and Parameter
+You can also check the same content in the R Help windows with the MODULE name.
 
-### Variable naming
+The output of the MODELUE have the similar structure like InData, the VARIABLE of **OutData** is also include in the "**Data_**" dataset.
 
-### Data Structure
+The **Data_XXX** is a list that had added in EDHM package, the using about it will show in the next chapter.
 
-### Data or Parameter
+Different from MODULE the input variable of MODEL will divided in to **TimeVariData** and **TimeInvariData**:
+
+**TimeVariData** is the dataset of all VARIBLE those are variable in the time serie, e.g. *TAir*, *Precipitation* and other meteorological data.
+
+**TimeInvariData** is the dataset of all VARIBLE those are invariable in the time serie, e.g. *Latitude*, *Elevation* and other geological and topography data.
+
+The aim to the division is in order to convenient get the data of one time step. Actuly the most MODULE can only deal with on time step data, because the state is associated to the last time step, in the MODULE there are no timely loop, only in MODEL there is a loop.
+
+But for some MODULE, those not contact with last time (e.g. all MODULE in PROCESS [ReferenceET](#ReferenceET)) or the full time data are known (e.g. [ROUTE.G2RES](#ROUTE.G2RES)), you can calculate the whole time series without loop.
+
+**Step** is special unit in EDHM, in EDHM the time serise is divided into many equal time interval, one time interval is a *Step*, the other units are given by [UCUM](https://ucum.org/trac).
+
+
+
+
+
+
