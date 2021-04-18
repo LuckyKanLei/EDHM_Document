@@ -1,14 +1,16 @@
 # Basic Concept {#base}
 
-
-
 Before using of the EDHM it's very important to know the basic concept and primary idea about EDHM.
+
+## Important ELements of EDHM
+
+![](fig/EDHM_element.png)
 
 In EDHM the two mostly characters are **modularization** and **vectorization-arithmetic**, **modularization** focus on the coupling of the different *modules* of the hydrological *processes*, benefit by the modularization it's very convenience to change the method of process, what means the **editable** model; **vectorization-arithmetic** is very useful for the distributed hydrological model, it can greatly short the calculate time, especially when there are many grids (calculate units).
 
 The water cycle of the Earth system and its variability at global, regional and local scales are influenced by a range of processes and mutual interactions, feedback mechanisms and as well as affected by anthropogenic processes.[@Rast.2014]
 
-In EDHM a **PROCESS** is the mapping from those hydrological processes in a digital from, at the same time it's also the group (set) name of the some **MODULE**s those haven the same functions and same aims, and a **MODULE** is the definite method of a **PROCESS**, it can also undersatnd as: 
+In EDHM a **PROCESS** is the mapping from those hydrological processes in a digital from, at the same time it's also the group (set) name of the some **MODULE**s those haven the same problem to solve and same aims, and a **MODULE** is the definite method of a **PROCESS**, it can also undersatnd as: 
 
 **MODULE** = **PROCESS** $\times$ **Method**
 
@@ -16,7 +18,7 @@ In EDHM a **PROCESS** is the mapping from those hydrological processes in a digi
 
 For example [SNOW](#SNOW) is PROCESS mapping the process that snow melting, accumulate and the state variety, [SNOW.17](#SNOW.17) is then the true function that you can call in R, with the method by Andrson[@Anderson.1973] forward.
 
-Besides the PROCESS based on the hydrological processes, but sometimes a little different, due to the calculate factors in the lang time, some like *evapotranspiration* is a typical hydrological process, but in EDHM es is diveded into [ReferenceET](#ReferenceET) (reference evapotranspiration) and [ActualET](#ActualET) (actual evapotranspiration) two parts, because the most conceptual models calculate evapotranspiration in the two steps.
+The PROCESS based on the hydrological processes, but sometimes a little different, due to the manual calculate factors in the lang time, some like *evapotranspiration* is a typical hydrological process, but in EDHM es is diveded into [ReferenceET](#ReferenceET) (reference evapotranspiration) and [ActualET](#ActualET) (actual evapotranspiration) two parts, because the most conceptual models calculate evapotranspiration in the two steps.
 
 In the following section will show the meaning of hydrological processes and the mapped PROCESS.
 
@@ -26,11 +28,67 @@ In the following section will show the meaning of hydrological processes and the
 
 ![](fig/EDHM_model_draw.png)
 
+In addition to the PROCESS, MODULE, MODEL there are also some other concept oabout EDHM, some like: **function**, **Run_MODEL**, **EVALUTE** and **KALIBRATE**.
+
+Essentially a MODULE or a MODEL is a function in R, so in R a function make up of **name**, **arguments** and **body**, except the output **return / value** is also very important. 
+
+![](fig/EDHM_function_draw.png){width=50%}
+
+The **name** of a MODULE composed of a PROCESS and Method, lik `ReferenceET.Hargreaves`; the **name** of a MODEL composed of "MODEL" and a model method, like `MODEL.CVIC`.
+
+The **arguments** of MODULE and MODEL are fest in the form "InData, Param, ..." for MODULE and "TimeVariData, TimeInvariData, Param, ..." for MODEL, so for the data transfer it's very important to set the same structure as "Data_" dataset.
+
+The **body** is the most important part of a function (MODULE or MODEL), generally it depended on the method.
+
+The **OutData** (value) is also so important that not ignore, it must use the GROUP-VARIBLE type as InData. 
+
+Excepted, the **reference** and a **data set**, that make up of InData, Param and OutData can't be omitted, especially when the MODULE or MODEL are also for the other aviable.
+
+The arguments of a MODULE of include: **InData** and **Param**
+
 The **VARIABLE** is the data those describe the state or character of the environment and the volume or character of water in different process. And in order to quickly find the VARIABLE and avoid the duplicate name of VARIABLE, the **GROUP** is like the folder of VARIABLE designed, for example in GROUP *Evatrans* (evapotranspiration) include the VARIABLEs *RET* (reference evapotranspiration), *AET* (actual evapotranspiration) and so on. 
 
 **VARIABLE** are putted in the **GROUP**
 
 ![](fig/EDHM_group_draw.png){width=50%}
+
+**InData** is a list of all VARIABLE the MODULE needed, like previous section explained the VARIABLEs must putted in the GROUP.
+
+
+**Pram** is the parameter list of all the empirical parameters (different as function arguments) of the MODULE.
+
+You can check the MODULE needed VARIABLE (InData) and parameters (Param) with "Data_" + MODULE name in R, some like `Data_ReferenceET.Linacre` and the same time every Param give the suggested maximal and minimal value of the parameter in this MODULE.
+
+You can also check the same content in the R Help windows with the MODULE name.
+
+The output of the MODELUE have the similar structure like InData, the VARIABLE of **OutData** is also include in the "**Data_**" dataset.
+
+The **Data_XXX** is a list that had added in EDHM package, the using about it will show in the next chapter.
+
+Different from MODULE the input variable of MODEL will divided in to **TimeVariData** and **TimeInvariData**:
+
+**TimeVariData** is the dataset of all VARIBLE those are variable in the time serie, e.g. *TAir*, *Precipitation* and other meteorological data.
+
+**TimeInvariData** is the dataset of all VARIBLE those are invariable in the time serie, e.g. *Latitude*, *Elevation* and other geological and topography data.
+
+The aim to the division is in order to convenient get the data of one time step. Actuly the most MODULE can only deal with on time step data, because the state is associated to the last time step, in the MODULE there are no timely loop, only in MODEL there is a loop.
+
+But for some MODULE, those not contact with last time (e.g. all MODULE in PROCESS [ReferenceET](#ReferenceET)) or the full time data are known (e.g. [ROUTE.G2RES](#ROUTE.G2RES)), you can calculate the whole time series without loop.
+
+**Step** is special unit in EDHM, in EDHM the time serise is divided into many equal time interval, one time interval is a *Step*, the other units are given by [UCUM](https://ucum.org/trac). The most VAERIABLE like a rate, tempo those unit should be in [mm/Step], will simplify as [mm].
+
+The using of a MODEL is the basic, but the Param (parameters) import base on the name-index not number-index, so it's essencially to make a **Run_MODELL** to transfer the parameters, especially when use auto calibration program. In a Run_MODELL function you can set the parameters those need to calibrate or not.
+
+![](fig/EDHM_run_model_draw.png)
+
+**EVALUTE** is a process by the application of hydrological model, use the mathematical form to evaluate the results of simulation, scilicet the . The sime time it is slso the basic for **CALIBRATE**, the most effective method for CALIBRATE is calculated into a number, like *NSE*, *KGE*. 
+
+![](fig/EDHM_evalute_draw.png)
+
+**CALIBRATE** is also a process by the application of hydrological model, in this process the parameters of the model are varied to minimize the difference between simulation result and observed data.
+
+![](fig/EDHM_calibrate_draw.png)
+
 
 ## Basic Concept of Hydrological Cycle
 
@@ -254,42 +312,5 @@ Des_ <- as.character(map(Variable_Name, function(b) Des_dataset[[Gr_name]][[b]])
 df_Group <- data.frame(Variable = Variable_Name, Unit = Unit_, Description = Des_)
 kable(df_Group, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
 ```
-
-
-## Important ELements of EDHM
-
-![](fig/EDHM_element.png)
-
-In addition to the PROCESS, MODULE, MODEL there are also some other concept oabout EDHM, some like:
-
-The arguments of a MODULE of include: **InData** and **Param**
-
-**InData** is a list of all VARIABLE the MODULE needed, like previous section explained the VARIABLEs must putted in the GROUP.
-
-**Pram** is the parameter list of all the empirical parameters (different as function arguments) of the MODULE.
-
-You can check the MODULE needed VARIABLE (InData) and parameters (Param) with "Data_" + MODULE name in R, some like `Data_ReferenceET.Linacre` and the same time every Param give the suggested maximal and minimal value of the parameter in this MODULE.
-
-You can also check the same content in the R Help windows with the MODULE name.
-
-The output of the MODELUE have the similar structure like InData, the VARIABLE of **OutData** is also include in the "**Data_**" dataset.
-
-The **Data_XXX** is a list that had added in EDHM package, the using about it will show in the next chapter.
-
-Different from MODULE the input variable of MODEL will divided in to **TimeVariData** and **TimeInvariData**:
-
-**TimeVariData** is the dataset of all VARIBLE those are variable in the time serie, e.g. *TAir*, *Precipitation* and other meteorological data.
-
-**TimeInvariData** is the dataset of all VARIBLE those are invariable in the time serie, e.g. *Latitude*, *Elevation* and other geological and topography data.
-
-The aim to the division is in order to convenient get the data of one time step. Actuly the most MODULE can only deal with on time step data, because the state is associated to the last time step, in the MODULE there are no timely loop, only in MODEL there is a loop.
-
-But for some MODULE, those not contact with last time (e.g. all MODULE in PROCESS [ReferenceET](#ReferenceET)) or the full time data are known (e.g. [ROUTE.G2RES](#ROUTE.G2RES)), you can calculate the whole time series without loop.
-
-**Step** is special unit in EDHM, in EDHM the time serise is divided into many equal time interval, one time interval is a *Step*, the other units are given by [UCUM](https://ucum.org/trac). The most VAERIABLE like a rate, tempo those unit should be in [mm/Step], will simplify as [mm].
-
-
-
-
 
 
