@@ -2,32 +2,55 @@
 
 ![](fig/EDHM_manual.png)
 
-## MODEL / MODULE Structure
+## Basic Use of a complete MODELL
 
-Essentially a MODULE or a MODEL is a function in R, so in R a function make up of **name**, **arguments** and **body**, except the output **return / value** is also very important. 
+### RUn a MODEL
 
-![](fig/EDHM_function_draw.png){width=50%}
+The using of a MODEL will summarized as four step:
+
+![](fig/EDHM_model_wf.png)
+
+1. Get the InData & Param list by run `Data_MODEL.XXX` in R, the list of "Data_" is structured as:
+
+![](fig/EDHM_data_.png)
 
 
-The **name** of a MODULE composed of a PROCESS and Method, lik `ReferenceET.Hargreaves`; the **name** of a MODEL composed of "MODEL" and a model method, like `MODEL.CVIC`.
+2. Prepare the data and transfer into EDHM form and confirm a parameter set. 
 
-The **arguments** of MODULE and MODEL are fest in the form "InData, Param, ..." for MODULE and "TimeVariData, TimeInvariData, Param, ..." for MODEL, so for the data transfer it's very important to set the same structure as "Data_" dataset.
+Please must mark the time-variable and time-invariable VARIABLEs.
 
-The **body** is the most important part of a function (MODULE or MODEL), generally it depended on the method.
+Please use `Data_XXX$InData$GROUP$VARIABLE` check the VARIABLE structure, when the VARIABLE is not normal.
 
-The **OutData** (value) is also so important that not ignore, it must use the GROUP-VARIBLE type as InData.  
+3. Input the prepared data to InData and Param. 
 
-![](fig/EDHM_module_draw.png)
+For the time-variable VARIBLE must put into "TimeVari", some like "VARIABLE 1, 2" belong to "GROUP 1" and time-variable, "VARIABLE 3" belong to also "GROUP 1" but time-invariable. Then they will be structured as:
 
-![](fig/EDHM_model_draw.png)
+![](fig/EDHM_vari.png)
 
-Excepted, the reference and a data set, that make up of InData, Param and OutData can't be omitted, especially when the MODULE or MODEL are also for the other aviable.
+The code for this exemple like:
+```{}
+TimeVari <- t_vari.hm.list()
+TimeVari$GROUP1$VARIABLE1 <- mydata1
+TimeVari$GROUP1$VARIABLE2 <- mydata2
+TimeVari$GROUP2$VARIABLE4 <- mydata3
 
-## Use Model with a MODEL or Run_MODEL
+TimeInVari <- hm.list()
+TimeInVari$GROUP1$VARIABLE3 <- mydata4
 
-The using of a MODEL is the basic, but the Param (parameters) import base on the name-index not number-index, so it's essencially to make a **Run_MODELL** to transfer the parameters, especially when use auto calibration program. In a Run_MODELL function you can set the parameters those need to calibrate or not.
+Param <- list()
+Param$Paramter1 <- myparam1
+Param$Paramter2 <- myparam2
+```
 
-![](fig/EDHM_run_model_draw.png){width=80%}
+4. Run the MODEL.
+```{}
+my_simu <- MODELL.XXX(TimeVari, TimeInVari, Param)
+```
+
+
+### set a Run_MODEL
+
+![](fig/EDHM_run_model_wf.png)
 
 There shows the function `Run_MODEL.SERR`:
 
@@ -59,13 +82,18 @@ Run_Model.SERR <- function(TimeVariData, TimeInvariData, Param,
 The workflow is show in the following figure:
 
 
-### Check the InData list
-
-### Data Preparation
 
 ### Evaluate
 
+![](fig/EDHM_evalute_wf.png)
+
 ### Calibrate
+
+![](fig/EDHM_calibrate_wf.png)
+
+### Check the InData list
+
+### Data Preparation
 
 ## Copuling a new Model with MODULE
 
