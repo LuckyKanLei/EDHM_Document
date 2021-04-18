@@ -48,6 +48,8 @@ The arguments of a MODULE of include: **InData** and **Param**
 
 The **VARIABLE** is the data those describe the state or character of the environment and the volume or character of water in different process. And in order to quickly find the VARIABLE and avoid the duplicate name of VARIABLE, the **GROUP** is like the folder of VARIABLE designed, for example in GROUP *Evatrans* (evapotranspiration) include the VARIABLEs *RET* (reference evapotranspiration), *AET* (actual evapotranspiration) and so on. 
 
+In EDHM the **VARIABLE** saved as common type of for time-invariable VARIABLE, it depend on the MODEL or MODULE or "t_vari.array" that base on "array" type for time-variable VARIABLE. The first dimension must be the time-dimension. When it also has heterogeneity in horizontal spatial space, the second dimension slways is the space-dimension. In EDHM the spatial data are divided in to many **GRID**, in the using of MODEL the spatial contact between the GRIDs will ignored, all of GRIDs must have a ID (index) form 1 to number of GRIDs. But it's not important, how to divide the research region. For some VARIABLE there are also different layers, it can put in third demenision. 
+
 **VARIABLE** are putted in the **GROUP**
 
 ![](fig/EDHM_group_draw.png){width=50%}
