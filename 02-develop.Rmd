@@ -50,7 +50,7 @@ my_simu <- MODELL.XXX(TimeVari, TimeInVari, Param)
 
 ### set a Run_MODEL
 
-![](fig/EDHM_run_model_wf.png)
+In EDHM the parameters are index with the parameters name, but when we calibrate the parameters, we set the parameters in a vector, also for some research not all of the parameters need to calibrate, so there is a setting about parameters from vector transfer to list.
 
 There shows the function `Run_MODEL.SERR`:
 
@@ -81,21 +81,40 @@ Run_Model.SERR <- function(TimeVariData, TimeInvariData, Param,
 
 The workflow is show in the following figure:
 
+![](fig/EDHM_run_model_wf.png)
 
 
 ### Evaluate
 
+Usually bye EVALUTE evalute the simulation results, but when we kalibrate the parameters, the EVALUTE evalute actully the parameters, those need to calibrate, so the EVALUTE based on the Run_MODEL.
+
+The data flow is show in the following figure:
+
 ![](fig/EDHM_evalute_wf.png)
 
+The EVALUTE functions is very easy to code, and the R Package ***hydroGOF*** [@R-hydroGOF] is also recommend, in that there are some commen evalute methods for hydrological field, some like *NSE*, *KGE*, *mae* and soon.
+
 ### Calibrate
+
+The CALIBRATE help us choose the best parameter-set from a range, CALIBRATE will by the goodness of evaluate results and some algorithms to choose the parameters, at the end of algorithms find the best parameters-set, the "it" thinks.
+
+The R package ***mcga*** [@R-mcga] is recommend, it is a Machine coded genetic algorithm to calibrate multi-parameters problem.
+
+The data flow is show in the following figure:
 
 ![](fig/EDHM_calibrate_wf.png)
 
 ### Check the InData list
 
-### Data Preparation
+After the preparation of data must check the data, weather there is NA or other unlogical data.
+
+The check tools will provide in the fast future.
 
 ## Copuling a new Model with MODULE
+
+Generally researcher design a model for a basin or some specific environment, so in a new research region, we can use one model, the designed for this kind of basin or watershed and calibrate the empirical parameters. But sometimes by the calibrate of parameters can also not solve the problem, so researcher need change some of process to promote the simulation. In EDHM researcher are can use many MODULEs to build a new MODEL. The available PROCESSes and MODELs is show in the [table](#module).
+
+
 
 ### Choose MODULE
 
@@ -107,7 +126,7 @@ The workflow is show in the following figure:
 
 ### Method and Formula
 
-### Coding the Inhalt
+### Coding the body
 
 ### Set In/OutData and Parameter
 
