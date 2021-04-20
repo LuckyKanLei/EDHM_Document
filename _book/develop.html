@@ -24,7 +24,7 @@
 <meta name="author" content="Kan Lei" />
 
 
-<meta name="date" content="2021-04-14" />
+<meta name="date" content="2021-04-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,70 @@
 <script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -81,34 +145,40 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#edhm"><i class="fa fa-check"></i>EDHM</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="base.html"><a href="base.html"><i class="fa fa-check"></i><b>1</b> Basic Concept</a><ul>
-<li class="chapter" data-level="1.1" data-path="base.html"><a href="base.html#hydrological-cycle"><i class="fa fa-check"></i><b>1.1</b> Hydrological Cycle</a></li>
-<li class="chapter" data-level="1.2" data-path="base.html"><a href="base.html#important-concept-of-edhm"><i class="fa fa-check"></i><b>1.2</b> Important Concept of EDHM</a></li>
-<li class="chapter" data-level="1.3" data-path="base.html"><a href="base.html#data-and-parameter"><i class="fa fa-check"></i><b>1.3</b> Data and Parameter</a><ul>
-<li class="chapter" data-level="1.3.1" data-path="base.html"><a href="base.html#variable-naming"><i class="fa fa-check"></i><b>1.3.1</b> Variable naming</a></li>
-<li class="chapter" data-level="1.3.2" data-path="base.html"><a href="base.html#data-structure"><i class="fa fa-check"></i><b>1.3.2</b> Data Structure</a></li>
-<li class="chapter" data-level="1.3.3" data-path="base.html"><a href="base.html#data-or-parameter"><i class="fa fa-check"></i><b>1.3.3</b> Data or Parameter</a></li>
+<li class="chapter" data-level="1.1" data-path="base.html"><a href="base.html#element"><i class="fa fa-check"></i><b>1.1</b> Important Elements of EDHM</a></li>
+<li class="chapter" data-level="1.2" data-path="base.html"><a href="base.html#basic-concept-of-hydrological-cycle"><i class="fa fa-check"></i><b>1.2</b> Basic Concept of Hydrological Cycle</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="base.html"><a href="base.html#Atmosphe1"><i class="fa fa-check"></i><b>1.2.1</b> Atmosphere (Atmos)</a></li>
+<li class="chapter" data-level="1.2.2" data-path="base.html"><a href="base.html#Snow1"><i class="fa fa-check"></i><b>1.2.2</b> Snow</a></li>
+<li class="chapter" data-level="1.2.3" data-path="base.html"><a href="base.html#Canopy1"><i class="fa fa-check"></i><b>1.2.3</b> Canopy</a></li>
+<li class="chapter" data-level="1.2.4" data-path="base.html"><a href="base.html#Surface1"><i class="fa fa-check"></i><b>1.2.4</b> Surface (Runoff, Route)</a></li>
+<li class="chapter" data-level="1.2.5" data-path="base.html"><a href="base.html#Subsurface1"><i class="fa fa-check"></i><b>1.2.5</b> Subsurface (Subsur)</a></li>
+<li class="chapter" data-level="1.2.6" data-path="base.html"><a href="base.html#Ground1"><i class="fa fa-check"></i><b>1.2.6</b> Ground</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="develop.html"><a href="develop.html"><i class="fa fa-check"></i><b>2</b> Model Use and Develop</a><ul>
-<li class="chapter" data-level="2.1" data-path="develop.html"><a href="develop.html#model-structure-or-concept"><i class="fa fa-check"></i><b>2.1</b> Model Structure or Concept</a></li>
-<li class="chapter" data-level="2.2" data-path="develop.html"><a href="develop.html#use-model-with-a-model-or-run_model"><i class="fa fa-check"></i><b>2.2</b> Use Model with a MODEL or Run_MODEL</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="develop.html"><a href="develop.html#check-the-indata-list"><i class="fa fa-check"></i><b>2.2.1</b> Check the InData list</a></li>
-<li class="chapter" data-level="2.2.2" data-path="develop.html"><a href="develop.html#data-preparation"><i class="fa fa-check"></i><b>2.2.2</b> Data Preparation</a></li>
-<li class="chapter" data-level="2.2.3" data-path="develop.html"><a href="develop.html#evaluate"><i class="fa fa-check"></i><b>2.2.3</b> Evaluate</a></li>
-<li class="chapter" data-level="2.2.4" data-path="develop.html"><a href="develop.html#calibrate"><i class="fa fa-check"></i><b>2.2.4</b> Calibrate</a></li>
+<li class="chapter" data-level="2.1" data-path="develop.html"><a href="develop.html#basic-use-of-a-complete-modell"><i class="fa fa-check"></i><b>2.1</b> Basic Use of a complete MODELL</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="develop.html"><a href="develop.html#run-a-model"><i class="fa fa-check"></i><b>2.1.1</b> RUn a MODEL</a></li>
+<li class="chapter" data-level="2.1.2" data-path="develop.html"><a href="develop.html#set-a-run_model"><i class="fa fa-check"></i><b>2.1.2</b> set a Run_MODEL</a></li>
+<li class="chapter" data-level="2.1.3" data-path="develop.html"><a href="develop.html#evaluate"><i class="fa fa-check"></i><b>2.1.3</b> Evaluate</a></li>
+<li class="chapter" data-level="2.1.4" data-path="develop.html"><a href="develop.html#calibrate"><i class="fa fa-check"></i><b>2.1.4</b> Calibrate</a></li>
+<li class="chapter" data-level="2.1.5" data-path="develop.html"><a href="develop.html#check-the-indata-list"><i class="fa fa-check"></i><b>2.1.5</b> Check the InData list</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="develop.html"><a href="develop.html#copuling-a-new-model-with-module"><i class="fa fa-check"></i><b>2.3</b> Copuling a new Model with MODULE</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="develop.html"><a href="develop.html#choose-module"><i class="fa fa-check"></i><b>2.3.1</b> Choose MODULE</a></li>
-<li class="chapter" data-level="2.3.2" data-path="develop.html"><a href="develop.html#set-the-data-flow"><i class="fa fa-check"></i><b>2.3.2</b> Set the Data-FLow</a></li>
-<li class="chapter" data-level="2.3.3" data-path="develop.html"><a href="develop.html#build-the-model-and-run_model"><i class="fa fa-check"></i><b>2.3.3</b> Build the MODEL and Run_MODEL</a></li>
+<li class="chapter" data-level="2.2" data-path="develop.html"><a href="develop.html#coupling-a-new-model-with-module"><i class="fa fa-check"></i><b>2.2</b> Coupling a new Model with MODULE</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="develop.html"><a href="develop.html#choose-module"><i class="fa fa-check"></i><b>2.2.1</b> Choose MODULE</a></li>
+<li class="chapter" data-level="2.2.2" data-path="develop.html"><a href="develop.html#set-the-order"><i class="fa fa-check"></i><b>2.2.2</b> Set the Order</a></li>
+<li class="chapter" data-level="2.2.3" data-path="develop.html"><a href="develop.html#deal-with-indata-and-param"><i class="fa fa-check"></i><b>2.2.3</b> Deal with InData and Param</a></li>
+<li class="chapter" data-level="2.2.4" data-path="develop.html"><a href="develop.html#set-outdata"><i class="fa fa-check"></i><b>2.2.4</b> Set OutData</a></li>
+<li class="chapter" data-level="2.2.5" data-path="develop.html"><a href="develop.html#deal-with-middle-variable"><i class="fa fa-check"></i><b>2.2.5</b> Deal with middle VARIABLE</a></li>
+<li class="chapter" data-level="2.2.6" data-path="develop.html"><a href="develop.html#name-and-data_"><i class="fa fa-check"></i><b>2.2.6</b> Name and Data_</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="develop.html"><a href="develop.html#design-a-new-module"><i class="fa fa-check"></i><b>2.4</b> Design a new MODULE</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="develop.html"><a href="develop.html#method-and-formula"><i class="fa fa-check"></i><b>2.4.1</b> Method and Formula</a></li>
-<li class="chapter" data-level="2.4.2" data-path="develop.html"><a href="develop.html#coding-the-inhalt"><i class="fa fa-check"></i><b>2.4.2</b> Coding the Inhalt</a></li>
-<li class="chapter" data-level="2.4.3" data-path="develop.html"><a href="develop.html#set-inoutdata-and-parameter"><i class="fa fa-check"></i><b>2.4.3</b> Set In/OutData and Parameter</a></li>
+<li class="chapter" data-level="2.3" data-path="develop.html"><a href="develop.html#design-a-new-module"><i class="fa fa-check"></i><b>2.3</b> Design a new MODULE</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="develop.html"><a href="develop.html#method-and-formula"><i class="fa fa-check"></i><b>2.3.1</b> Method and Formula</a></li>
+<li class="chapter" data-level="2.3.2" data-path="develop.html"><a href="develop.html#coding-the-body"><i class="fa fa-check"></i><b>2.3.2</b> Coding the body</a></li>
+<li class="chapter" data-level="2.3.3" data-path="develop.html"><a href="develop.html#set-inoutdata-and-parameter"><i class="fa fa-check"></i><b>2.3.3</b> Set In/OutData and Parameter</a></li>
+<li class="chapter" data-level="2.3.4" data-path="develop.html"><a href="develop.html#name-and-data_-1"><i class="fa fa-check"></i><b>2.3.4</b> Name and Data_</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="module.html"><a href="module.html"><i class="fa fa-check"></i><b>3</b> Modules</a><ul>
+<li class="chapter" data-level="3" data-path="module.html"><a href="module.html"><i class="fa fa-check"></i><b>3</b> Basic Information of MODULEs</a><ul>
 <li class="chapter" data-level="3.1" data-path="module.html"><a href="module.html#ReferenceET"><i class="fa fa-check"></i><b>3.1</b> ReferenceET</a><ul>
 <li class="chapter" data-level="3.1.1" data-path="module.html"><a href="module.html#ReferenceET.Hargreaves"><i class="fa fa-check"></i><b>3.1.1</b> ReferenceET.Hargreaves</a></li>
 <li class="chapter" data-level="3.1.2" data-path="module.html"><a href="module.html#ReferenceET.Linacre"><i class="fa fa-check"></i><b>3.1.2</b> ReferenceET.Linacre</a></li>
@@ -151,8 +221,11 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="model.html"><a href="model.html"><i class="fa fa-check"></i><b>4</b> Model</a><ul>
-<li class="chapter" data-level="4.1" data-path="model.html"><a href="model.html#classical-vic"><i class="fa fa-check"></i><b>4.1</b> Classical VIC</a></li>
-<li class="chapter" data-level="4.2" data-path="model.html"><a href="model.html#gr4j"><i class="fa fa-check"></i><b>4.2</b> GR4J</a></li>
+<li class="chapter" data-level="4.1" data-path="model.html"><a href="model.html#report-16.4"><i class="fa fa-check"></i><b>4.1</b> Report 16.4</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="model.html"><a href="model.html#snowmelt"><i class="fa fa-check"></i><b>4.1.1</b> Snowmelt</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="model.html"><a href="model.html#classical-vic"><i class="fa fa-check"></i><b>4.2</b> Classical VIC</a></li>
+<li class="chapter" data-level="4.3" data-path="model.html"><a href="model.html#gr4j"><i class="fa fa-check"></i><b>4.3</b> GR4J</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>5</b> Final Words</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -178,53 +251,344 @@
             <section class="normal" id="section-">
 <div id="develop" class="section level1">
 <h1><span class="header-section-number">Chapter 2</span> Model Use and Develop</h1>
-<p>Choose a Model</p>
-<p>virtue: convenience</p>
-<p>shortage: poor adaptability</p>
-<div id="model-structure-or-concept" class="section level2">
-<h2><span class="header-section-number">2.1</span> Model Structure or Concept</h2>
-<p>Design a Model</p>
+<p><img src="fig/EDHM_manual.png" /></p>
+<div id="basic-use-of-a-complete-modell" class="section level2">
+<h2><span class="header-section-number">2.1</span> Basic Use of a complete MODELL</h2>
+<div id="run-a-model" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> RUn a MODEL</h3>
+<p>The using of a MODEL will summarized as four steps:</p>
+<p><img src="fig/EDHM_model_wf.png" /></p>
+<ol style="list-style-type: decimal">
+<li>Get the InData &amp; Param list by run <code>Data_MODEL.XXX</code> in R, the list of “Data_” is structured as:</li>
+</ol>
+<p><img src="fig/EDHM_data_.png" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Prepare the data and transfer into EDHM form and confirm a parameter set.</li>
+</ol>
+<p>Please must mark the time-variable and time-invariable VARIABLEs.</p>
+<p>Please use <code>Data_XXX$InData$GROUP$VARIABLE</code> check the VARIABLE structure, when the VARIABLE is not normal.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Input the prepared data to InData and Param.</li>
+</ol>
+<p>For the time-variable VARIBLE must put into “TimeVari”, some like “VARIABLE 1, 2” belong to “GROUP 1” and time-variable, “VARIABLE 3” belong to also “GROUP 1” but time-invariable. Then they will be structured as:</p>
+<p><img src="fig/EDHM_vari.png" /></p>
+<p>The code for this exemple like:</p>
+<pre><code>TimeVari &lt;- t_vari.hm.list()
+TimeVari$GROUP1$VARIABLE1 &lt;- mydata1
+TimeVari$GROUP1$VARIABLE2 &lt;- mydata2
+TimeVari$GROUP2$VARIABLE4 &lt;- mydata3
+
+TimeInVari &lt;- hm.list()
+TimeInVari$GROUP1$VARIABLE3 &lt;- mydata4
+
+Param &lt;- list()
+Param$Paramter1 &lt;- myparam1
+Param$Paramter2 &lt;- myparam2</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Run the MODEL.</li>
+</ol>
+<pre><code>my_simu &lt;- MODELL.XXX(TimeVari, TimeInVari, Param)</code></pre>
 </div>
-<div id="use-model-with-a-model-or-run_model" class="section level2">
-<h2><span class="header-section-number">2.2</span> Use Model with a MODEL or Run_MODEL</h2>
-<div id="check-the-indata-list" class="section level3">
-<h3><span class="header-section-number">2.2.1</span> Check the InData list</h3>
-</div>
-<div id="data-preparation" class="section level3">
-<h3><span class="header-section-number">2.2.2</span> Data Preparation</h3>
+<div id="set-a-run_model" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> set a Run_MODEL</h3>
+<p>In EDHM the parameters are index with the parameters name, but when we calibrate the parameters, we set the parameters in a vector, also for some research not all of the parameters need to calibrate, so there is a setting about parameters from vector transfer to list.</p>
+<p>There shows the function <code>Run_MODEL.SERR</code>:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="develop.html#cb5-1"></a>Run_Model.SERR &lt;-<span class="st"> </span><span class="cf">function</span>(TimeVariData, TimeInvariData, Param,</span>
+<span id="cb5-2"><a href="develop.html#cb5-2"></a>                           ParamterCalibrate){</span>
+<span id="cb5-3"><a href="develop.html#cb5-3"></a>  <span class="co">## 1.0 snow##</span></span>
+<span id="cb5-4"><a href="develop.html#cb5-4"></a>  Param<span class="op">$</span>Max_Snow_T =<span class="st"> </span>ParamterCalibrate[<span class="dv">1</span>]</span>
+<span id="cb5-5"><a href="develop.html#cb5-5"></a>  Param<span class="op">$</span>Min_Snow_T =<span class="st"> </span>ParamterCalibrate[<span class="dv">2</span>]</span>
+<span id="cb5-6"><a href="develop.html#cb5-6"></a>  Param<span class="op">$</span>Factor_Day_degree =<span class="st"> </span>ParamterCalibrate[<span class="dv">3</span>]  <span class="co">## 2.7-12 [mm]</span></span>
+<span id="cb5-7"><a href="develop.html#cb5-7"></a>  Param<span class="op">$</span>Base_T =<span class="st"> </span>ParamterCalibrate[<span class="dv">4</span>]  <span class="co">## -2-5.5 [Cel]</span></span>
+<span id="cb5-8"><a href="develop.html#cb5-8"></a>  <span class="co">## 1.1 ET ##</span></span>
+<span id="cb5-9"><a href="develop.html#cb5-9"></a>  Param<span class="op">$</span>CanopyCapacity =<span class="st"> </span>ParamterCalibrate[<span class="dv">5</span>]</span>
+<span id="cb5-10"><a href="develop.html#cb5-10"></a>  Param<span class="op">$</span>Coeff_ET_Capacity_Attenuat =<span class="st"> </span>ParamterCalibrate[<span class="dv">6</span>]</span>
+<span id="cb5-11"><a href="develop.html#cb5-11"></a>  <span class="co">## 1.2 Runoff ##</span></span>
+<span id="cb5-12"><a href="develop.html#cb5-12"></a>  Param<span class="op">$</span>Threshold_Runoff =<span class="st"> </span>ParamterCalibrate[<span class="dv">7</span>]</span>
+<span id="cb5-13"><a href="develop.html#cb5-13"></a>  Param<span class="op">$</span>Ratio_Runoff =<span class="st"> </span>ParamterCalibrate[<span class="dv">8</span>]</span>
+<span id="cb5-14"><a href="develop.html#cb5-14"></a>  Param<span class="op">$</span>Ratio_GW_Storage =<span class="st"> </span>ParamterCalibrate[<span class="dv">9</span>]</span>
+<span id="cb5-15"><a href="develop.html#cb5-15"></a>  Param<span class="op">$</span>Coeff_GW_Storage_Attenuat =<span class="st"> </span>ParamterCalibrate[<span class="dv">10</span>]</span>
+<span id="cb5-16"><a href="develop.html#cb5-16"></a>  <span class="co">## 1.3 Route ##</span></span>
+<span id="cb5-17"><a href="develop.html#cb5-17"></a>  Param<span class="op">$</span>UPPaList =<span class="st"> </span>ParamterCalibrate[<span class="dv">11</span><span class="op">:</span><span class="dv">17</span>]</span>
+<span id="cb5-18"><a href="develop.html#cb5-18"></a></span>
+<span id="cb5-19"><a href="develop.html#cb5-19"></a>  Result_ &lt;-<span class="st"> </span><span class="kw">MODEL.SERR</span>(TimeVariData, TimeInvariData, Param)</span>
+<span id="cb5-20"><a href="develop.html#cb5-20"></a>  Result &lt;-<span class="st"> </span>Result_<span class="op">$</span>Route<span class="op">$</span>StaFlow</span>
+<span id="cb5-21"><a href="develop.html#cb5-21"></a>  <span class="kw">return</span>(Result)</span>
+<span id="cb5-22"><a href="develop.html#cb5-22"></a>}</span></code></pre></div>
+<p>The workflow is show in the following figure:</p>
+<p><img src="fig/EDHM_run_model_wf.png" /></p>
 </div>
 <div id="evaluate" class="section level3">
-<h3><span class="header-section-number">2.2.3</span> Evaluate</h3>
+<h3><span class="header-section-number">2.1.3</span> Evaluate</h3>
+<p>Usually bye EVALUTE evalute the simulation results, but when we kalibrate the parameters, the EVALUTE evalute actully the parameters, those need to calibrate, so the EVALUTE based on the Run_MODEL.</p>
+<p>The data flow is show in the following figure:</p>
+<p><img src="fig/EDHM_evalute_wf.png" /></p>
+<p>The EVALUTE functions is very easy to code, and the R Package <strong><em>hydroGOF</em></strong> <span class="citation">(Mauricio Zambrano-Bigiarini <a href="#ref-R-hydroGOF" role="doc-biblioref">2020</a>)</span> is also recommend, in that there are some commen evalute methods for hydrological field, some like <em>NSE</em>, <em>KGE</em>, <em>mae</em> and soon.</p>
+<p><code>EVALUTE()</code> is a function in EDHM, by setting <code>EVALUTE(..., fct_Evaluate = NSE)</code> set the evaluate method. The argument <code>fct_Evaluate</code> require a function, so give it just the function name without the quotation marks into a charater.</p>
 </div>
 <div id="calibrate" class="section level3">
-<h3><span class="header-section-number">2.2.4</span> Calibrate</h3>
+<h3><span class="header-section-number">2.1.4</span> Calibrate</h3>
+<p>The CALIBRATE help us choose the best parameter-set from a range, CALIBRATE will by the goodness of evaluate results and some algorithms to choose the parameters, at the end of algorithms find the best parameters-set, the “it” thinks.</p>
+<p>The data flow is show in the following figure:</p>
+<p><img src="fig/EDHM_calibrate_wf.png" /></p>
+<p>The R package <strong><em>mcga</em></strong> <span class="citation">(Satman <a href="#ref-R-mcga" role="doc-biblioref">2018</a>)</span> is recommend to calibrate, it is a Machine coded genetic algorithm to calibrate multi-parameters problem.</p>
+<p><code>mcga2()</code> is the main function, this function require at least three arguments: <code>fitness</code> a function that can return a value to evaluate the parameters-set, <code>min</code> minimal parameters-set in vector, <code>max</code> maximal parameters-set in vector, and other arguments those <code>fitness</code> require. The <code>fitness</code> in EDHM is just the function <code>EVALUTE()</code>.</p>
+<p>For example:</p>
+<pre><code>Fitness_GA = mcga2(fitness  = EVALUATE,
+                   fct_Run_Model = Run_Model.SERR,
+                   TimeVariData = TimeVariData_run,
+                   TimeInvariData = TimeInvariData,
+                   Paramter_fest = Param_Base,
+                   Observe = Observe_run,
+                   warmUPN = 500,
+                   fct_Evaluate = KGE,
+                   min = ParamterCalibrateMin,
+                   max = ParamterCalibrateMax,
+                   popSize = 15,
+                   maxiter = 18)</code></pre>
+</div>
+<div id="check-the-indata-list" class="section level3">
+<h3><span class="header-section-number">2.1.5</span> Check the InData list</h3>
+<p>After the preparation of data must check the data, weather there is NA or other unlogical data.</p>
+<p>The check tools will provide in the fast future.</p>
 </div>
 </div>
-<div id="copuling-a-new-model-with-module" class="section level2">
-<h2><span class="header-section-number">2.3</span> Copuling a new Model with MODULE</h2>
+<div id="coupling-a-new-model-with-module" class="section level2">
+<h2><span class="header-section-number">2.2</span> Coupling a new Model with MODULE</h2>
+<p><img src="fig/EDHM_design_model.png" /></p>
+<p>Generally researcher design a model for a basin or some specific environment, so in a new research region, we can use one model, the designed for this kind of basin or watershed and calibrate the empirical parameters. But sometimes by the calibrate of parameters can also not solve the problem, so researcher need change some of process to promote the simulation. In EDHM researcher are can use many MODULEs to build a new MODEL. The available PROCESSes and MODELs is show in the <a href="module.html#module">table</a>.</p>
+<p>The coupling of a new MODEL will summarized as six steps:</p>
+<p><img src="fig/EDHM_coupling_wf.png" /></p>
+<hr />
+<p>In this section a example <code>MODEL.GR4J</code> will show for explain.</p>
+<hr />
 <div id="choose-module" class="section level3">
-<h3><span class="header-section-number">2.3.1</span> Choose MODULE</h3>
+<h3><span class="header-section-number">2.2.1</span> Choose MODULE</h3>
+<p>After the new designed model, there will required some PROCESSes, check the PROCESS and MODULE <a href="module.html#module">table</a> and choose the relevant Methods to those PROCESS, also say the MODULEs. In this table you can click the MODULE name check the InData, Param and OutData in order to better understand the MODULE, also the literature of this Method is accessible.</p>
+<hr />
+<p>The MODULEs <code>ReferenceET.Hargreaves</code>, <code>ActualET.Gr4j</code>, <code>RUNOFF.Gr4j</code> and <code>ROUTE.Gr4j</code> are selected.</p>
+<hr />
 </div>
-<div id="set-the-data-flow" class="section level3">
-<h3><span class="header-section-number">2.3.2</span> Set the Data-FLow</h3>
+<div id="set-the-order" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Set the Order</h3>
+<p>Every PROCESS (MODULE) have the clear physical meaning, so by those you should set a correct order of those MODULEs.</p>
+<hr />
+<p>The PROCESS <code>ReferenceET</code> is certainly before <code>ActualET</code>, and <code>ROUTE</code> is the end PROCESS of a rainfall-runoff model. So the MODULE will set as:</p>
+<pre><code>## ET
+ETOut &lt;- ActualET.Gr4j(InData, Param) # S2
+## Runoff
+RFOut &lt;- RUNOFF.Gr4j(InData, Param) # S2
+## Route
+RTOut &lt;- ROUTE.Gr4j(InData, Param) # S2</code></pre>
+<hr />
 </div>
-<div id="build-the-model-and-run_model" class="section level3">
-<h3><span class="header-section-number">2.3.3</span> Build the MODEL and Run_MODEL</h3>
+<div id="deal-with-indata-and-param" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Deal with InData and Param</h3>
+<p>“<strong>Data Space</strong>” and “<strong>Parameter List</strong>” are the data-flow of the MODEL, the “Data Space” will save all of the VARIABLEs, it can be readied by the MODULE and use the function <code>left_merge()</code> write the OutData of MODULE into it.</p>
+<p>In the running of MODEL the InData will set into StepData for every step.</p>
+<p>The step will divided into five sub-steps:</p>
+<ol start="0" style="list-style-type: decimal">
+<li><p>Get the parameters from Param; [# S3-0]</p></li>
+<li><p>Initialize the StepData; [# S3-1]</p></li>
+<li><p>Set the initial boundary data; [# S3-2]</p></li>
+<li><p>Make loop for every step; [# S3-3]</p></li>
+<li><p>Merge the OutData into “Data Space” (StepData). [# S3-4]</p></li>
+</ol>
+<hr />
+<pre><code>  PeriodN &lt;- Param$PeriodN # S3-0
+  GridN &lt;- Param$GridN # S3-0
+  ## StepData
+  StepData &lt;- new(&#39;hm.list&#39;) # S3-1
+  StepData$Ground$MoistureVolume &lt;- rep(0, GridN) # S3-2
+  StepData &lt;- left_merge(StepData, TimeInvariData) # S3-2
+
+  for(i in 1: PeriodN){ # S3-3
+    Param$time_step_i &lt;- i
+    StepData &lt;- left_merge(StepData, TimeVariData[i]) # S3-4
+    ## ET
+    ETOut &lt;- ActualET.Gr4j(StepData, Param) # S2
+    StepData &lt;- left_merge(StepData, ETOut) # S3-4
+    ## Runoff
+    RFOut &lt;- RUNOFF.Gr4j(StepData, Param) # S2
+    StepData &lt;- left_merge(StepData, RFOut)
+    StepData$Route$WaterSource &lt;- StepData$Groud$Runoff * StepData$GridData$Area / Param$TimeStepSec / 1000
+    ## Route
+    RTOut &lt;- ROUTE.Gr4j(StepData, Param) # S2
+    StepData &lt;- left_merge(StepData, RTOut) # S3-4
+  }</code></pre>
+<hr />
+</div>
+<div id="set-outdata" class="section level3">
+<h3><span class="header-section-number">2.2.4</span> Set OutData</h3>
+<p>In EDHM which VARIABLE need to output are enable to choose, those are useful for research.</p>
+<p>The step will divided into two sub-steps:</p>
+<ol style="list-style-type: decimal">
+<li><p>Initialize the OutData; [# S4-1]</p></li>
+<li><p>Transfer from StepData into OutData. [# S4-2]</p></li>
+</ol>
+<hr />
+<pre><code>  PeriodN &lt;- Param$PeriodN # S3-0
+  GridN &lt;- Param$GridN # S3-0
+  ## StepData
+  StepData &lt;- new(&#39;hm.list&#39;) # S3-1
+  StepData$Ground$MoistureVolume &lt;- rep(0, GridN) # S3-2
+  StepData &lt;- left_merge(StepData, TimeInvariData) # S3-2
+  ## OutData
+  OutData &lt;- new(&quot;t_vari.hm.list&quot;) # S4-1
+  OutData$Route$StaFlow &lt;- t_vari.array(0, c(PeriodN, GridN)) # S4-1
+  
+  for(i in 1: PeriodN){ # S3-3
+    Param$time_step_i &lt;- i
+    StepData &lt;- left_merge(StepData, TimeVariData[i]) # S3-4
+    ## ET
+    ETOut &lt;- ActualET.Gr4j(StepData, Param) # S2
+    StepData &lt;- left_merge(StepData, ETOut) # S3-4
+    ## Runoff
+    RFOut &lt;- RUNOFF.Gr4j(StepData, Param) # S2
+    StepData &lt;- left_merge(StepData, RFOut)
+    StepData$Route$WaterSource &lt;- StepData$Groud$Runoff * StepData$GridData$Area / Param$TimeStepSec / 1000
+    ## Route
+    RTOut &lt;- ROUTE.Gr4j(StepData, Param) # S2
+    StepData &lt;- left_merge(StepData, RTOut) # S3-4
+    OutData[i] &lt;- StepData # S4-2
+  }</code></pre>
+<hr />
+</div>
+<div id="deal-with-middle-variable" class="section level3">
+<h3><span class="header-section-number">2.2.5</span> Deal with middle VARIABLE</h3>
+<p>The InData of MODULE naming by the regulation, that can clear many works, but there still are some VARIABLE those need to deal.</p>
+<hr />
+<p>In this Example, the <code>Ground$Runoff</code> is in [mm] calculated but <code>Route$WaterSource</code> require a unit [m3/s], so people must transfer the two VARIABLEs.</p>
+<pre><code>    ## Runoff
+    RFOut &lt;- RUNOFF.Gr4j(StepData, Param) # S2
+    StepData &lt;- left_merge(StepData, RFOut)
+    StepData$Route$WaterSource &lt;- StepData$Groud$Runoff * StepData$GridData$Area / Param$TimeStepSec / 1000 # S5
+    ## Route
+    RTOut &lt;- ROUTE.Gr4j(StepData, Param) # S2
+    StepData &lt;- left_merge(StepData, RTOut) # S3-4</code></pre>
+<hr />
+</div>
+<div id="name-and-data_" class="section level3">
+<h3><span class="header-section-number">2.2.6</span> Name and Data_</h3>
+<p>At the end only require a name for this MODEL, most importantly please not forget make the <strong>Data_</strong> dataset.</p>
+<hr />
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="develop.html#cb11-1"></a>MODEL.GR4J &lt;-<span class="st"> </span><span class="cf">function</span>(TimeVariData, TimeInvariData, Param, ...) {</span>
+<span id="cb11-2"><a href="develop.html#cb11-2"></a>  PeriodN &lt;-<span class="st"> </span>Param<span class="op">$</span>PeriodN <span class="co"># S3-0</span></span>
+<span id="cb11-3"><a href="develop.html#cb11-3"></a>  GridN &lt;-<span class="st"> </span>Param<span class="op">$</span>GridN <span class="co"># S3-0</span></span>
+<span id="cb11-4"><a href="develop.html#cb11-4"></a>  <span class="co">## StepData</span></span>
+<span id="cb11-5"><a href="develop.html#cb11-5"></a>  StepData &lt;-<span class="st"> </span><span class="kw">new</span>(<span class="st">&#39;hm.list&#39;</span>) <span class="co"># S3-1</span></span>
+<span id="cb11-6"><a href="develop.html#cb11-6"></a>  StepData<span class="op">$</span>Ground<span class="op">$</span>MoistureVolume &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">0</span>, GridN) <span class="co"># S3-2</span></span>
+<span id="cb11-7"><a href="develop.html#cb11-7"></a>  StepData &lt;-<span class="st"> </span><span class="kw">left_merge</span>(StepData, TimeInvariData) <span class="co"># S3-2</span></span>
+<span id="cb11-8"><a href="develop.html#cb11-8"></a>  <span class="co">## OutData</span></span>
+<span id="cb11-9"><a href="develop.html#cb11-9"></a>  OutData &lt;-<span class="st"> </span><span class="kw">new</span>(<span class="st">&quot;t_vari.hm.list&quot;</span>) <span class="co"># S4-1</span></span>
+<span id="cb11-10"><a href="develop.html#cb11-10"></a>  OutData<span class="op">$</span>Route<span class="op">$</span>StaFlow &lt;-<span class="st"> </span><span class="kw">t_vari.array</span>(<span class="dv">0</span>, <span class="kw">c</span>(PeriodN, GridN)) <span class="co"># S4-1</span></span>
+<span id="cb11-11"><a href="develop.html#cb11-11"></a>  </span>
+<span id="cb11-12"><a href="develop.html#cb11-12"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="st"> </span>PeriodN){ <span class="co"># S3-3</span></span>
+<span id="cb11-13"><a href="develop.html#cb11-13"></a>    Param<span class="op">$</span>time_step_i &lt;-<span class="st"> </span>i</span>
+<span id="cb11-14"><a href="develop.html#cb11-14"></a>    StepData &lt;-<span class="st"> </span><span class="kw">left_merge</span>(StepData, TimeVariData[i]) <span class="co"># S3-4</span></span>
+<span id="cb11-15"><a href="develop.html#cb11-15"></a>    <span class="co">## ET</span></span>
+<span id="cb11-16"><a href="develop.html#cb11-16"></a>    ETOut &lt;-<span class="st"> </span><span class="kw">ActualET.Gr4j</span>(StepData, Param) <span class="co"># S2</span></span>
+<span id="cb11-17"><a href="develop.html#cb11-17"></a>    StepData &lt;-<span class="st"> </span><span class="kw">left_merge</span>(StepData, ETOut) <span class="co"># S3-4</span></span>
+<span id="cb11-18"><a href="develop.html#cb11-18"></a>    <span class="co">## Runoff</span></span>
+<span id="cb11-19"><a href="develop.html#cb11-19"></a>    RFOut &lt;-<span class="st"> </span><span class="kw">RUNOFF.Gr4j</span>(StepData, Param) <span class="co"># S2</span></span>
+<span id="cb11-20"><a href="develop.html#cb11-20"></a>    StepData &lt;-<span class="st"> </span><span class="kw">left_merge</span>(StepData, RFOut)</span>
+<span id="cb11-21"><a href="develop.html#cb11-21"></a>    StepData<span class="op">$</span>Route<span class="op">$</span>WaterSource &lt;-<span class="st"> </span>StepData<span class="op">$</span>Groud<span class="op">$</span>Runoff <span class="op">*</span><span class="st"> </span>StepData<span class="op">$</span>GridData<span class="op">$</span>Area <span class="op">/</span><span class="st"> </span></span>
+<span id="cb11-22"><a href="develop.html#cb11-22"></a><span class="st">      </span>Param<span class="op">$</span>TimeStepSec <span class="op">/</span><span class="st"> </span><span class="dv">1000</span> <span class="co"># S5</span></span>
+<span id="cb11-23"><a href="develop.html#cb11-23"></a>    <span class="co">## Route</span></span>
+<span id="cb11-24"><a href="develop.html#cb11-24"></a>    RTOut &lt;-<span class="st"> </span><span class="kw">ROUTE.Gr4j</span>(StepData, Param) <span class="co"># S2</span></span>
+<span id="cb11-25"><a href="develop.html#cb11-25"></a>    StepData &lt;-<span class="st"> </span><span class="kw">left_merge</span>(StepData, RTOut) <span class="co"># S3-4</span></span>
+<span id="cb11-26"><a href="develop.html#cb11-26"></a>    OutData[i] &lt;-<span class="st"> </span>StepData <span class="co"># S4-2</span></span>
+<span id="cb11-27"><a href="develop.html#cb11-27"></a>  }</span>
+<span id="cb11-28"><a href="develop.html#cb11-28"></a>  </span>
+<span id="cb11-29"><a href="develop.html#cb11-29"></a>  <span class="kw">return</span>(OutData)</span>
+<span id="cb11-30"><a href="develop.html#cb11-30"></a>}</span></code></pre></div>
+<hr />
 </div>
 </div>
 <div id="design-a-new-module" class="section level2">
-<h2><span class="header-section-number">2.4</span> Design a new MODULE</h2>
+<h2><span class="header-section-number">2.3</span> Design a new MODULE</h2>
+<p><img src="fig/EDHM_design_module.png" /></p>
+<p>Not only the coupling of MODULEs but also design a new MODULE very easy with EDHM. And one point need to mark that the MODULE should support the <strong>vectorization-arithmetic</strong>.</p>
+<p>The workflow show in following figure:</p>
+<p><img src="fig/EDHM_design_module_wf.png" />
+The design of a new MODULE will summarized as five steps:</p>
+<hr />
+<p>In this section will show the example <code>ActualET.Gr4j</code>.</p>
+<hr />
 <div id="method-and-formula" class="section level3">
-<h3><span class="header-section-number">2.4.1</span> Method and Formula</h3>
+<h3><span class="header-section-number">2.3.1</span> Method and Formula</h3>
+<p>The method and formulas for a PROCESS can collected from all kinds of books and literature.</p>
+<hr />
+<p>The calculate method of GR4J shows in the <a href="https://webgr.inrae.fr/en/models/daily-hydrological-model-gr4j/description-of-the-gr4j-model/">link</a>.</p>
+<hr />
 </div>
-<div id="coding-the-inhalt" class="section level3">
-<h3><span class="header-section-number">2.4.2</span> Coding the Inhalt</h3>
+<div id="coding-the-body" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> Coding the body</h3>
+<p>By the formulas can program the function body easily.</p>
+<hr />
+<pre><code>  judge_PbE &lt;- P &gt; E # S1
+  Pn &lt;- judge_PbE * (P - E) # S1
+  En &lt;- (!judge_PbE) * (E - P) # S1
+  Es &lt;- S * (2 - S / X1) * tanh(En / X1) / (1 + (1 - S / X1) * tanh(En / X1)) # S1</code></pre>
+<hr />
 </div>
 <div id="set-inoutdata-and-parameter" class="section level3">
-<h3><span class="header-section-number">2.4.3</span> Set In/OutData and Parameter</h3>
-<p>Here is a review of existing methods.</p>
+<h3><span class="header-section-number">2.3.3</span> Set In/OutData and Parameter</h3>
+<p>The most important of the design is the naming of InData and OutData, all of them should select from <code>Pre_dataset</code>, include the GROUP name and VARIABLE name, when the VARIABLE is only used for this MODULE, the naming is not rigid.</p>
+<hr />
+<pre><code>  X1 &lt;- Param$Gr4j_X1 # S2-1
+  E &lt;- InData$Evatrans$RET # S2-1
+  S &lt;- InData$Ground$MoistureVolume # S2-1
+  P &lt;- InData$Prec$Precipitation # S2-1
+  judge_PbE &lt;- P &gt; E # S1
+  Pn &lt;- judge_PbE * (P - E) # S1
+  En &lt;- (!judge_PbE) * (E - P) # S1
+  Es &lt;- S * (2 - S / X1) * tanh(En / X1) / (1 + (1 - S / X1) * tanh(En / X1)) # S1
+  return(list(Evatrans = list(AET = Es), Prec = list(Precipitation = Pn))) # S2-2</code></pre>
+<hr />
+</div>
+<div id="name-and-data_-1" class="section level3">
+<h3><span class="header-section-number">2.3.4</span> Name and Data_</h3>
+<p>The name of a MODULE should base on the PROCESS name and add the mark of this method.</p>
+<hr />
+<p>In the example the PROCESS is “ActualET”, and the method can mark as “Gr4j”, so get the MODLUE name “ActualET.Gr4j”</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="develop.html#cb14-1"></a>ActualET.Gr4j &lt;-<span class="st"> </span><span class="cf">function</span>(InData, Param, ...){ <span class="co"># S3</span></span>
+<span id="cb14-2"><a href="develop.html#cb14-2"></a>  X1 &lt;-<span class="st"> </span>Param<span class="op">$</span>Gr4j_X1 <span class="co"># S2-1</span></span>
+<span id="cb14-3"><a href="develop.html#cb14-3"></a>  E &lt;-<span class="st"> </span>InData<span class="op">$</span>Evatrans<span class="op">$</span>RET <span class="co"># S2-1</span></span>
+<span id="cb14-4"><a href="develop.html#cb14-4"></a>  S &lt;-<span class="st"> </span>InData<span class="op">$</span>Ground<span class="op">$</span>MoistureVolume <span class="co"># S2-1</span></span>
+<span id="cb14-5"><a href="develop.html#cb14-5"></a>  P &lt;-<span class="st"> </span>InData<span class="op">$</span>Prec<span class="op">$</span>Precipitation <span class="co"># S2-1</span></span>
+<span id="cb14-6"><a href="develop.html#cb14-6"></a>  judge_PbE &lt;-<span class="st"> </span>P <span class="op">&gt;</span><span class="st"> </span>E <span class="co"># S1</span></span>
+<span id="cb14-7"><a href="develop.html#cb14-7"></a>  Pn &lt;-<span class="st"> </span>judge_PbE <span class="op">*</span><span class="st"> </span>(P <span class="op">-</span><span class="st"> </span>E) <span class="co"># S1</span></span>
+<span id="cb14-8"><a href="develop.html#cb14-8"></a>  En &lt;-<span class="st"> </span>(<span class="op">!</span>judge_PbE) <span class="op">*</span><span class="st"> </span>(E <span class="op">-</span><span class="st"> </span>P) <span class="co"># S1</span></span>
+<span id="cb14-9"><a href="develop.html#cb14-9"></a>  Es &lt;-<span class="st"> </span>S <span class="op">*</span><span class="st"> </span>(<span class="dv">2</span> <span class="op">-</span><span class="st"> </span>S <span class="op">/</span><span class="st"> </span>X1) <span class="op">*</span><span class="st"> </span><span class="kw">tanh</span>(En <span class="op">/</span><span class="st"> </span>X1) <span class="op">/</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">+</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>S <span class="op">/</span><span class="st"> </span>X1) <span class="op">*</span><span class="st"> </span><span class="kw">tanh</span>(En <span class="op">/</span><span class="st"> </span>X1)) <span class="co"># S1</span></span>
+<span id="cb14-10"><a href="develop.html#cb14-10"></a>  <span class="kw">return</span>(<span class="kw">list</span>(<span class="dt">Evatrans =</span> <span class="kw">list</span>(<span class="dt">AET =</span> Es), <span class="dt">Prec =</span> <span class="kw">list</span>(<span class="dt">Precipitation =</span> Pn))) <span class="co"># S2-2</span></span>
+<span id="cb14-11"><a href="develop.html#cb14-11"></a>}</span></code></pre></div>
+<hr />
+<hr />
+<p>The Data_ActualET.Gr4j can be write as:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="develop.html#cb15-1"></a>Data_ActualET.Gr4j &lt;-</span>
+<span id="cb15-2"><a href="develop.html#cb15-2"></a><span class="st">  </span><span class="kw">list</span>(<span class="dt">ref_title =</span> <span class="st">&#39;Improvement of a parsimonious model for streamflow simulation&#39;</span>,</span>
+<span id="cb15-3"><a href="develop.html#cb15-3"></a>       <span class="dt">ref_bib =</span> <span class="st">&#39;Perrin.2003&#39;</span>,</span>
+<span id="cb15-4"><a href="develop.html#cb15-4"></a>       <span class="dt">InData =</span> <span class="kw">left_merge</span>(<span class="kw">t_vari.hm.list</span>(),</span>
+<span id="cb15-5"><a href="develop.html#cb15-5"></a>                           <span class="kw">list</span>(<span class="dt">Evatrans =</span> <span class="kw">list</span>(<span class="dt">RET =</span> <span class="kw">t_vari.array</span>(<span class="dv">0</span>, <span class="kw">c</span>(<span class="dv">3</span>))),</span>
+<span id="cb15-6"><a href="develop.html#cb15-6"></a>                                <span class="dt">Ground =</span> <span class="kw">list</span>(<span class="dt">MoistureVolume =</span> <span class="kw">t_vari.array</span>(<span class="dv">0</span>, <span class="kw">c</span>(<span class="dv">3</span>))),</span>
+<span id="cb15-7"><a href="develop.html#cb15-7"></a>                                <span class="dt">Prec =</span> <span class="kw">list</span>(<span class="dt">Precipitation =</span> <span class="kw">t_vari.array</span>(<span class="dv">0</span>, <span class="kw">c</span>(<span class="dv">3</span>))))),</span>
+<span id="cb15-8"><a href="develop.html#cb15-8"></a>       <span class="dt">Param =</span> <span class="kw">list</span>(<span class="dt">Gr4j_X1 =</span> <span class="kw">c</span>(<span class="fl">0.1</span>, <span class="fl">9.99</span>, <span class="st">&#39;mm&#39;</span>)),</span>
+<span id="cb15-9"><a href="develop.html#cb15-9"></a>       <span class="dt">OutData =</span> <span class="kw">left_merge</span>(<span class="kw">t_vari.hm.list</span>(),</span>
+<span id="cb15-10"><a href="develop.html#cb15-10"></a>                            <span class="kw">list</span>(<span class="dt">Evatrans =</span> <span class="kw">list</span>(<span class="dt">AET =</span> <span class="kw">t_vari.array</span>(<span class="dv">0</span>, <span class="kw">c</span>(<span class="dv">3</span>))),</span>
+<span id="cb15-11"><a href="develop.html#cb15-11"></a>                                 <span class="dt">Prec =</span> <span class="kw">list</span>(<span class="dt">Precipitation =</span> <span class="kw">t_vari.array</span>(<span class="dv">0</span>, <span class="kw">c</span>(<span class="dv">3</span>))))))</span></code></pre></div>
+<hr />
 
 </div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-R-hydroGOF">
+<p>Mauricio Zambrano-Bigiarini. 2020. <em>HydroGOF: Goodness-of-Fit Functions for Comparison of Simulated and Observed Hydrological Time Series</em>. <a href="https://github.com/hzambran/hydroGOF">https://github.com/hzambran/hydroGOF</a>.</p>
+</div>
+<div id="ref-R-mcga">
+<p>Satman, Mehmet Hakan. 2018. <em>Mcga: Machine Coded Genetic Algorithms for Real-Valued Optimization Problems</em>. <a href="https://CRAN.R-project.org/package=mcga">https://CRAN.R-project.org/package=mcga</a>.</p>
 </div>
 </div>
             </section>
@@ -275,7 +639,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["EDHM_Document.pdf"],
+"download": ["EDHM_Document.pdf", "EDHM_Document.epub"],
 "toc": {
 "collapse": "subsection"
 }
@@ -283,6 +647,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

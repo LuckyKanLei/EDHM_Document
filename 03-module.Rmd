@@ -1,5 +1,7 @@
 # Basic Information of MODULEs {#module}
 
+![](fig/EDHM_module.png)
+
 Overview of **MODULEs**
 
 ```{r t_Md_table, echo = FALSE}

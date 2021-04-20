@@ -1,10 +1,54 @@
 # Model {#model}
 
+![](fig/EDHM_model.png)
+
+## Report 16.4
+
+
+```{r dataset4, echo = F}
+
+Process_list <- c('ReferenceET',
+                  'ActualET',
+                  'SNOW',
+                  'RUNOFF',
+                  'ROUTE')
+Module_list <- map(Process_list, function(m) as.character(methods(m)))
+names(Module_list) <- Process_list
+
+Module_list$ROUTE <- c("ROUTE.G2RES", "ROUTE.Gr4j")
+
+table_Md <- as.character(map(Process_list,
+                             function(pc, md)
+                               paste(paste0('[', md[[pc]], '](#', md[[pc]], ') '), collapse = '| '),
+                             md = Module_list))
+df_Md_table <- data.frame(PROCESS = Process_list, MODULE = table_Md)
+kable(df_Md_table, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")
+
+```
+
+
+
+### Snowmelt 
+
+Type 1 **Temperature**
+
+$$SM=(T-T_s)\times c_f$$
+where $SM$ is the snowmelt [mm] (of water), $cf$ is the factor of melt [mm/Cel d], T is the mean air temperature [Cel], and $T_s$ is a threshold temperature value [Cel].
+
+Type 2 **Energy (radition)**
+
+$$SM=\frac{ISR\times(1-\alpha)+C_0+C_1\times T}{\rho \times L_f}$$
+where $\alpha$ is the snow albedo, $ISR$ is the incoming shortwave radiation [W/m2], $C_0$ and $C_1$ are factors accounting for the temperature-dependent energy fluxes ([W/m2] and [W/m2Cel], respectively), $\rho$ is the density of snow [kg/m3], and $L_f$ is the fusion latent heat [J/kg].
+
+More information see the literarure [@Troin.2018]
+
+
 ## Classical VIC
 
-
+Chapter \@ref(ReferenceET)
 
 
 [Section](#ReferenceET)
 
 ## GR4J
+

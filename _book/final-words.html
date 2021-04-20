@@ -24,7 +24,7 @@
 <meta name="author" content="Kan Lei" />
 
 
-<meta name="date" content="2021-04-14" />
+<meta name="date" content="2021-04-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,70 @@
 <script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -81,34 +145,40 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#edhm"><i class="fa fa-check"></i>EDHM</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="base.html"><a href="base.html"><i class="fa fa-check"></i><b>1</b> Basic Concept</a><ul>
-<li class="chapter" data-level="1.1" data-path="base.html"><a href="base.html#hydrological-cycle"><i class="fa fa-check"></i><b>1.1</b> Hydrological Cycle</a></li>
-<li class="chapter" data-level="1.2" data-path="base.html"><a href="base.html#important-concept-of-edhm"><i class="fa fa-check"></i><b>1.2</b> Important Concept of EDHM</a></li>
-<li class="chapter" data-level="1.3" data-path="base.html"><a href="base.html#data-and-parameter"><i class="fa fa-check"></i><b>1.3</b> Data and Parameter</a><ul>
-<li class="chapter" data-level="1.3.1" data-path="base.html"><a href="base.html#variable-naming"><i class="fa fa-check"></i><b>1.3.1</b> Variable naming</a></li>
-<li class="chapter" data-level="1.3.2" data-path="base.html"><a href="base.html#data-structure"><i class="fa fa-check"></i><b>1.3.2</b> Data Structure</a></li>
-<li class="chapter" data-level="1.3.3" data-path="base.html"><a href="base.html#data-or-parameter"><i class="fa fa-check"></i><b>1.3.3</b> Data or Parameter</a></li>
+<li class="chapter" data-level="1.1" data-path="base.html"><a href="base.html#element"><i class="fa fa-check"></i><b>1.1</b> Important Elements of EDHM</a></li>
+<li class="chapter" data-level="1.2" data-path="base.html"><a href="base.html#basic-concept-of-hydrological-cycle"><i class="fa fa-check"></i><b>1.2</b> Basic Concept of Hydrological Cycle</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="base.html"><a href="base.html#Atmosphe1"><i class="fa fa-check"></i><b>1.2.1</b> Atmosphere (Atmos)</a></li>
+<li class="chapter" data-level="1.2.2" data-path="base.html"><a href="base.html#Snow1"><i class="fa fa-check"></i><b>1.2.2</b> Snow</a></li>
+<li class="chapter" data-level="1.2.3" data-path="base.html"><a href="base.html#Canopy1"><i class="fa fa-check"></i><b>1.2.3</b> Canopy</a></li>
+<li class="chapter" data-level="1.2.4" data-path="base.html"><a href="base.html#Surface1"><i class="fa fa-check"></i><b>1.2.4</b> Surface (Runoff, Route)</a></li>
+<li class="chapter" data-level="1.2.5" data-path="base.html"><a href="base.html#Subsurface1"><i class="fa fa-check"></i><b>1.2.5</b> Subsurface (Subsur)</a></li>
+<li class="chapter" data-level="1.2.6" data-path="base.html"><a href="base.html#Ground1"><i class="fa fa-check"></i><b>1.2.6</b> Ground</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="develop.html"><a href="develop.html"><i class="fa fa-check"></i><b>2</b> Model Use and Develop</a><ul>
-<li class="chapter" data-level="2.1" data-path="develop.html"><a href="develop.html#model-structure-or-concept"><i class="fa fa-check"></i><b>2.1</b> Model Structure or Concept</a></li>
-<li class="chapter" data-level="2.2" data-path="develop.html"><a href="develop.html#use-model-with-a-model-or-run_model"><i class="fa fa-check"></i><b>2.2</b> Use Model with a MODEL or Run_MODEL</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="develop.html"><a href="develop.html#check-the-indata-list"><i class="fa fa-check"></i><b>2.2.1</b> Check the InData list</a></li>
-<li class="chapter" data-level="2.2.2" data-path="develop.html"><a href="develop.html#data-preparation"><i class="fa fa-check"></i><b>2.2.2</b> Data Preparation</a></li>
-<li class="chapter" data-level="2.2.3" data-path="develop.html"><a href="develop.html#evaluate"><i class="fa fa-check"></i><b>2.2.3</b> Evaluate</a></li>
-<li class="chapter" data-level="2.2.4" data-path="develop.html"><a href="develop.html#calibrate"><i class="fa fa-check"></i><b>2.2.4</b> Calibrate</a></li>
+<li class="chapter" data-level="2.1" data-path="develop.html"><a href="develop.html#basic-use-of-a-complete-modell"><i class="fa fa-check"></i><b>2.1</b> Basic Use of a complete MODELL</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="develop.html"><a href="develop.html#run-a-model"><i class="fa fa-check"></i><b>2.1.1</b> RUn a MODEL</a></li>
+<li class="chapter" data-level="2.1.2" data-path="develop.html"><a href="develop.html#set-a-run_model"><i class="fa fa-check"></i><b>2.1.2</b> set a Run_MODEL</a></li>
+<li class="chapter" data-level="2.1.3" data-path="develop.html"><a href="develop.html#evaluate"><i class="fa fa-check"></i><b>2.1.3</b> Evaluate</a></li>
+<li class="chapter" data-level="2.1.4" data-path="develop.html"><a href="develop.html#calibrate"><i class="fa fa-check"></i><b>2.1.4</b> Calibrate</a></li>
+<li class="chapter" data-level="2.1.5" data-path="develop.html"><a href="develop.html#check-the-indata-list"><i class="fa fa-check"></i><b>2.1.5</b> Check the InData list</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="develop.html"><a href="develop.html#copuling-a-new-model-with-module"><i class="fa fa-check"></i><b>2.3</b> Copuling a new Model with MODULE</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="develop.html"><a href="develop.html#choose-module"><i class="fa fa-check"></i><b>2.3.1</b> Choose MODULE</a></li>
-<li class="chapter" data-level="2.3.2" data-path="develop.html"><a href="develop.html#set-the-data-flow"><i class="fa fa-check"></i><b>2.3.2</b> Set the Data-FLow</a></li>
-<li class="chapter" data-level="2.3.3" data-path="develop.html"><a href="develop.html#build-the-model-and-run_model"><i class="fa fa-check"></i><b>2.3.3</b> Build the MODEL and Run_MODEL</a></li>
+<li class="chapter" data-level="2.2" data-path="develop.html"><a href="develop.html#coupling-a-new-model-with-module"><i class="fa fa-check"></i><b>2.2</b> Coupling a new Model with MODULE</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="develop.html"><a href="develop.html#choose-module"><i class="fa fa-check"></i><b>2.2.1</b> Choose MODULE</a></li>
+<li class="chapter" data-level="2.2.2" data-path="develop.html"><a href="develop.html#set-the-order"><i class="fa fa-check"></i><b>2.2.2</b> Set the Order</a></li>
+<li class="chapter" data-level="2.2.3" data-path="develop.html"><a href="develop.html#deal-with-indata-and-param"><i class="fa fa-check"></i><b>2.2.3</b> Deal with InData and Param</a></li>
+<li class="chapter" data-level="2.2.4" data-path="develop.html"><a href="develop.html#set-outdata"><i class="fa fa-check"></i><b>2.2.4</b> Set OutData</a></li>
+<li class="chapter" data-level="2.2.5" data-path="develop.html"><a href="develop.html#deal-with-middle-variable"><i class="fa fa-check"></i><b>2.2.5</b> Deal with middle VARIABLE</a></li>
+<li class="chapter" data-level="2.2.6" data-path="develop.html"><a href="develop.html#name-and-data_"><i class="fa fa-check"></i><b>2.2.6</b> Name and Data_</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="develop.html"><a href="develop.html#design-a-new-module"><i class="fa fa-check"></i><b>2.4</b> Design a new MODULE</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="develop.html"><a href="develop.html#method-and-formula"><i class="fa fa-check"></i><b>2.4.1</b> Method and Formula</a></li>
-<li class="chapter" data-level="2.4.2" data-path="develop.html"><a href="develop.html#coding-the-inhalt"><i class="fa fa-check"></i><b>2.4.2</b> Coding the Inhalt</a></li>
-<li class="chapter" data-level="2.4.3" data-path="develop.html"><a href="develop.html#set-inoutdata-and-parameter"><i class="fa fa-check"></i><b>2.4.3</b> Set In/OutData and Parameter</a></li>
+<li class="chapter" data-level="2.3" data-path="develop.html"><a href="develop.html#design-a-new-module"><i class="fa fa-check"></i><b>2.3</b> Design a new MODULE</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="develop.html"><a href="develop.html#method-and-formula"><i class="fa fa-check"></i><b>2.3.1</b> Method and Formula</a></li>
+<li class="chapter" data-level="2.3.2" data-path="develop.html"><a href="develop.html#coding-the-body"><i class="fa fa-check"></i><b>2.3.2</b> Coding the body</a></li>
+<li class="chapter" data-level="2.3.3" data-path="develop.html"><a href="develop.html#set-inoutdata-and-parameter"><i class="fa fa-check"></i><b>2.3.3</b> Set In/OutData and Parameter</a></li>
+<li class="chapter" data-level="2.3.4" data-path="develop.html"><a href="develop.html#name-and-data_-1"><i class="fa fa-check"></i><b>2.3.4</b> Name and Data_</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="module.html"><a href="module.html"><i class="fa fa-check"></i><b>3</b> Modules</a><ul>
+<li class="chapter" data-level="3" data-path="module.html"><a href="module.html"><i class="fa fa-check"></i><b>3</b> Basic Information of MODULEs</a><ul>
 <li class="chapter" data-level="3.1" data-path="module.html"><a href="module.html#ReferenceET"><i class="fa fa-check"></i><b>3.1</b> ReferenceET</a><ul>
 <li class="chapter" data-level="3.1.1" data-path="module.html"><a href="module.html#ReferenceET.Hargreaves"><i class="fa fa-check"></i><b>3.1.1</b> ReferenceET.Hargreaves</a></li>
 <li class="chapter" data-level="3.1.2" data-path="module.html"><a href="module.html#ReferenceET.Linacre"><i class="fa fa-check"></i><b>3.1.2</b> ReferenceET.Linacre</a></li>
@@ -151,8 +221,11 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="model.html"><a href="model.html"><i class="fa fa-check"></i><b>4</b> Model</a><ul>
-<li class="chapter" data-level="4.1" data-path="model.html"><a href="model.html#classical-vic"><i class="fa fa-check"></i><b>4.1</b> Classical VIC</a></li>
-<li class="chapter" data-level="4.2" data-path="model.html"><a href="model.html#gr4j"><i class="fa fa-check"></i><b>4.2</b> GR4J</a></li>
+<li class="chapter" data-level="4.1" data-path="model.html"><a href="model.html#report-16.4"><i class="fa fa-check"></i><b>4.1</b> Report 16.4</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="model.html"><a href="model.html#snowmelt"><i class="fa fa-check"></i><b>4.1.1</b> Snowmelt</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="model.html"><a href="model.html#classical-vic"><i class="fa fa-check"></i><b>4.2</b> Classical VIC</a></li>
+<li class="chapter" data-level="4.3" data-path="model.html"><a href="model.html#gr4j"><i class="fa fa-check"></i><b>4.3</b> GR4J</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>5</b> Final Words</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -178,7 +251,7 @@
             <section class="normal" id="section-">
 <div id="final-words" class="section level1">
 <h1><span class="header-section-number">Chapter 5</span> Final Words</h1>
-<p>We have finished a nice book.</p>
+<p>We have finished a book.</p>
 
 </div>
             </section>
@@ -229,7 +302,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["EDHM_Document.pdf"],
+"download": ["EDHM_Document.pdf", "EDHM_Document.epub"],
 "toc": {
 "collapse": "subsection"
 }
@@ -237,6 +310,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

@@ -134,26 +134,36 @@ The check tools will provide in the fast future.
 
 ## Coupling a new Model with MODULE
 
+![](fig/EDHM_design_model.png)
+
 Generally researcher design a model for a basin or some specific environment, so in a new research region, we can use one model, the designed for this kind of basin or watershed and calibrate the empirical parameters. But sometimes by the calibrate of parameters can also not solve the problem, so researcher need change some of process to promote the simulation. In EDHM researcher are can use many MODULEs to build a new MODEL. The available PROCESSes and MODELs is show in the [table](#module).
 
 The coupling of a new MODEL will summarized as six steps:
 
 ![](fig/EDHM_coupling_wf.png)
+
 ---
+
 In this section a example `MODEL.GR4J` will show for explain.
+
+---
 
 ### Choose MODULE
 
 After the new designed model, there will required some PROCESSes, check the PROCESS and MODULE [table](#module) and choose the relevant Methods to those PROCESS, also say the MODULEs. In this table you can click the MODULE name check the InData, Param and OutData in order to better understand the MODULE, also the literature of this Method is accessible.
 
 ---
+
 The MODULEs `ReferenceET.Hargreaves`, `ActualET.Gr4j`, `	RUNOFF.Gr4j` and `ROUTE.Gr4j` are selected.
+
+---
 
 ### Set the Order
 
 Every PROCESS (MODULE) have the clear physical meaning, so by those you should set a correct order of those MODULEs.
 
 ---
+
 The PROCESS `ReferenceET` is certainly before `ActualET`, and `ROUTE` is the end PROCESS of a rainfall-runoff model. So the MODULE will set as:
 
 ```{}
@@ -165,6 +175,8 @@ RFOut <- RUNOFF.Gr4j(InData, Param) # S2
 RTOut <- ROUTE.Gr4j(InData, Param) # S2
 ```
 
+---
+
 ### Deal with InData and Param
 
 "**Data Space**" and "**Parameter List**" are the data-flow of the MODEL, the "Data Space" will save all of the VARIABLEs, it can be readied by the MODULE and use the function `left_merge()` write the OutData of MODULE into it.
@@ -173,11 +185,17 @@ In the running of MODEL the InData will set into StepData for every step.
 
 
 The step will divided into five sub-steps:
+
 0. Get the parameters from Param; [# S3-0]
+
 1. Initialize the StepData; [# S3-1]
+
 2. Set the initial boundary data; [# S3-2]
+
 3. Make loop for every step; [# S3-3]
+
 4. Merge the OutData into "Data Space" (StepData). [# S3-4]
+
 
 ---
 
@@ -205,13 +223,16 @@ The step will divided into five sub-steps:
   }
 ```
 
+---
+
 ### Set OutData
 
 In EDHM which VARIABLE need to output are enable to choose, those are useful for research.
 
-The step will divided into five sub-steps:
+The step will divided into two sub-steps:
 
 1. Initialize the OutData; [# S4-1]
+
 2. Transfer from StepData into OutData. [# S4-2]
 
 ---
@@ -244,29 +265,34 @@ The step will divided into five sub-steps:
   }
 ```
 
+---
+
 ### Deal with middle VARIABLE
 
 The InData of MODULE naming by the regulation, that can clear many works, but there still are some VARIABLE those need to deal.
 
 ---
+
 In this Example, the `Ground$Runoff` is in [mm] calculated but `Route$WaterSource` require a unit [m3/s], so people must transfer the two VARIABLEs.
 
 ```{}
     ## Runoff
     RFOut <- RUNOFF.Gr4j(StepData, Param) # S2
     StepData <- left_merge(StepData, RFOut)
-    StepData$Route$WaterSource <- StepData$Groud$Runoff * StepData$GridData$Area / 
-      Param$TimeStepSec / 1000 # S5
+    StepData$Route$WaterSource <- StepData$Groud$Runoff * StepData$GridData$Area / Param$TimeStepSec / 1000 # S5
     ## Route
     RTOut <- ROUTE.Gr4j(StepData, Param) # S2
     StepData <- left_merge(StepData, RTOut) # S3-4
 ```
+
+---
 
 ### Name and Data_
 
 At the end only require a name for this MODEL, most importantly please not forget make the **Data_** dataset.
 
 ---
+
 ```{r model_gr4j, cache=FALSE}
 MODEL.GR4J <- function(TimeVariData, TimeInvariData, Param, ...) {
   PeriodN <- Param$PeriodN # S3-0
@@ -288,8 +314,7 @@ MODEL.GR4J <- function(TimeVariData, TimeInvariData, Param, ...) {
     ## Runoff
     RFOut <- RUNOFF.Gr4j(StepData, Param) # S2
     StepData <- left_merge(StepData, RFOut)
-    StepData$Route$WaterSource <- StepData$Groud$Runoff * StepData$GridData$Area / 
-      Param$TimeStepSec / 1000 # S5
+    StepData$Route$WaterSource <- StepData$Groud$Runoff * StepData$GridData$Area / Param$TimeStepSec / 1000 # S5
     ## Route
     RTOut <- ROUTE.Gr4j(StepData, Param) # S2
     StepData <- left_merge(StepData, RTOut) # S3-4
@@ -300,8 +325,12 @@ MODEL.GR4J <- function(TimeVariData, TimeInvariData, Param, ...) {
 }
 ```
 
+---
+
 
 ## Design a new MODULE
+
+![](fig/EDHM_design_module.png)
 
 Not only the coupling of MODULEs but also design a new MODULE very easy with EDHM. And one point need to mark that the MODULE should support the **vectorization-arithmetic**.
 
@@ -314,6 +343,8 @@ The design of a new MODULE will summarized as five steps:
 
 In this section will show the example `ActualET.Gr4j`.
 
+---
+
 ### Method and Formula
 
 The method and formulas for a PROCESS can collected from all kinds of books and literature.
@@ -321,6 +352,8 @@ The method and formulas for a PROCESS can collected from all kinds of books and 
 ---
 
 The calculate method of GR4J shows in the [link](https://webgr.inrae.fr/en/models/daily-hydrological-model-gr4j/description-of-the-gr4j-model/).
+
+---
 
 ### Coding the body
 
@@ -334,6 +367,8 @@ By the formulas can program the function body easily.
   En <- (!judge_PbE) * (E - P) # S1
   Es <- S * (2 - S / X1) * tanh(En / X1) / (1 + (1 - S / X1) * tanh(En / X1)) # S1
 ```
+
+---
 
 ### Set In/OutData and Parameter
 
@@ -352,6 +387,8 @@ The most important of the design is the naming of InData and OutData, all of the
   Es <- S * (2 - S / X1) * tanh(En / X1) / (1 + (1 - S / X1) * tanh(En / X1)) # S1
   return(list(Evatrans = list(AET = Es), Prec = list(Precipitation = Pn))) # S2-2
 ```
+
+---
 
 ### Name and Data_
 
@@ -378,6 +415,8 @@ ActualET.Gr4j <- function(InData, Param, ...){ # S3
 
 ---
 
+---
+
 The Data_ActualET.Gr4j can be write as:
 
 ```{r}
@@ -393,6 +432,8 @@ Data_ActualET.Gr4j <-
                             list(Evatrans = list(AET = t_vari.array(0, c(3))),
                                  Prec = list(Precipitation = t_vari.array(0, c(3))))))
 ```
+
+---
 
 
 

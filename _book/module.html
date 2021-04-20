@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Modules | Editable Distributed Hydrological Model</title>
+  <title>Chapter 3 Basic Information of MODULEs | Editable Distributed Hydrological Model</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Modules | Editable Distributed Hydrological Model" />
+  <meta property="og:title" content="Chapter 3 Basic Information of MODULEs | Editable Distributed Hydrological Model" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Modules | Editable Distributed Hydrological Model" />
+  <meta name="twitter:title" content="Chapter 3 Basic Information of MODULEs | Editable Distributed Hydrological Model" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Kan Lei" />
 
 
-<meta name="date" content="2021-04-14" />
+<meta name="date" content="2021-04-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,70 @@
 <script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -81,34 +145,40 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#edhm"><i class="fa fa-check"></i>EDHM</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="base.html"><a href="base.html"><i class="fa fa-check"></i><b>1</b> Basic Concept</a><ul>
-<li class="chapter" data-level="1.1" data-path="base.html"><a href="base.html#hydrological-cycle"><i class="fa fa-check"></i><b>1.1</b> Hydrological Cycle</a></li>
-<li class="chapter" data-level="1.2" data-path="base.html"><a href="base.html#important-concept-of-edhm"><i class="fa fa-check"></i><b>1.2</b> Important Concept of EDHM</a></li>
-<li class="chapter" data-level="1.3" data-path="base.html"><a href="base.html#data-and-parameter"><i class="fa fa-check"></i><b>1.3</b> Data and Parameter</a><ul>
-<li class="chapter" data-level="1.3.1" data-path="base.html"><a href="base.html#variable-naming"><i class="fa fa-check"></i><b>1.3.1</b> Variable naming</a></li>
-<li class="chapter" data-level="1.3.2" data-path="base.html"><a href="base.html#data-structure"><i class="fa fa-check"></i><b>1.3.2</b> Data Structure</a></li>
-<li class="chapter" data-level="1.3.3" data-path="base.html"><a href="base.html#data-or-parameter"><i class="fa fa-check"></i><b>1.3.3</b> Data or Parameter</a></li>
+<li class="chapter" data-level="1.1" data-path="base.html"><a href="base.html#element"><i class="fa fa-check"></i><b>1.1</b> Important Elements of EDHM</a></li>
+<li class="chapter" data-level="1.2" data-path="base.html"><a href="base.html#basic-concept-of-hydrological-cycle"><i class="fa fa-check"></i><b>1.2</b> Basic Concept of Hydrological Cycle</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="base.html"><a href="base.html#Atmosphe1"><i class="fa fa-check"></i><b>1.2.1</b> Atmosphere (Atmos)</a></li>
+<li class="chapter" data-level="1.2.2" data-path="base.html"><a href="base.html#Snow1"><i class="fa fa-check"></i><b>1.2.2</b> Snow</a></li>
+<li class="chapter" data-level="1.2.3" data-path="base.html"><a href="base.html#Canopy1"><i class="fa fa-check"></i><b>1.2.3</b> Canopy</a></li>
+<li class="chapter" data-level="1.2.4" data-path="base.html"><a href="base.html#Surface1"><i class="fa fa-check"></i><b>1.2.4</b> Surface (Runoff, Route)</a></li>
+<li class="chapter" data-level="1.2.5" data-path="base.html"><a href="base.html#Subsurface1"><i class="fa fa-check"></i><b>1.2.5</b> Subsurface (Subsur)</a></li>
+<li class="chapter" data-level="1.2.6" data-path="base.html"><a href="base.html#Ground1"><i class="fa fa-check"></i><b>1.2.6</b> Ground</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="develop.html"><a href="develop.html"><i class="fa fa-check"></i><b>2</b> Model Use and Develop</a><ul>
-<li class="chapter" data-level="2.1" data-path="develop.html"><a href="develop.html#model-structure-or-concept"><i class="fa fa-check"></i><b>2.1</b> Model Structure or Concept</a></li>
-<li class="chapter" data-level="2.2" data-path="develop.html"><a href="develop.html#use-model-with-a-model-or-run_model"><i class="fa fa-check"></i><b>2.2</b> Use Model with a MODEL or Run_MODEL</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="develop.html"><a href="develop.html#check-the-indata-list"><i class="fa fa-check"></i><b>2.2.1</b> Check the InData list</a></li>
-<li class="chapter" data-level="2.2.2" data-path="develop.html"><a href="develop.html#data-preparation"><i class="fa fa-check"></i><b>2.2.2</b> Data Preparation</a></li>
-<li class="chapter" data-level="2.2.3" data-path="develop.html"><a href="develop.html#evaluate"><i class="fa fa-check"></i><b>2.2.3</b> Evaluate</a></li>
-<li class="chapter" data-level="2.2.4" data-path="develop.html"><a href="develop.html#calibrate"><i class="fa fa-check"></i><b>2.2.4</b> Calibrate</a></li>
+<li class="chapter" data-level="2.1" data-path="develop.html"><a href="develop.html#basic-use-of-a-complete-modell"><i class="fa fa-check"></i><b>2.1</b> Basic Use of a complete MODELL</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="develop.html"><a href="develop.html#run-a-model"><i class="fa fa-check"></i><b>2.1.1</b> RUn a MODEL</a></li>
+<li class="chapter" data-level="2.1.2" data-path="develop.html"><a href="develop.html#set-a-run_model"><i class="fa fa-check"></i><b>2.1.2</b> set a Run_MODEL</a></li>
+<li class="chapter" data-level="2.1.3" data-path="develop.html"><a href="develop.html#evaluate"><i class="fa fa-check"></i><b>2.1.3</b> Evaluate</a></li>
+<li class="chapter" data-level="2.1.4" data-path="develop.html"><a href="develop.html#calibrate"><i class="fa fa-check"></i><b>2.1.4</b> Calibrate</a></li>
+<li class="chapter" data-level="2.1.5" data-path="develop.html"><a href="develop.html#check-the-indata-list"><i class="fa fa-check"></i><b>2.1.5</b> Check the InData list</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="develop.html"><a href="develop.html#copuling-a-new-model-with-module"><i class="fa fa-check"></i><b>2.3</b> Copuling a new Model with MODULE</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="develop.html"><a href="develop.html#choose-module"><i class="fa fa-check"></i><b>2.3.1</b> Choose MODULE</a></li>
-<li class="chapter" data-level="2.3.2" data-path="develop.html"><a href="develop.html#set-the-data-flow"><i class="fa fa-check"></i><b>2.3.2</b> Set the Data-FLow</a></li>
-<li class="chapter" data-level="2.3.3" data-path="develop.html"><a href="develop.html#build-the-model-and-run_model"><i class="fa fa-check"></i><b>2.3.3</b> Build the MODEL and Run_MODEL</a></li>
+<li class="chapter" data-level="2.2" data-path="develop.html"><a href="develop.html#coupling-a-new-model-with-module"><i class="fa fa-check"></i><b>2.2</b> Coupling a new Model with MODULE</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="develop.html"><a href="develop.html#choose-module"><i class="fa fa-check"></i><b>2.2.1</b> Choose MODULE</a></li>
+<li class="chapter" data-level="2.2.2" data-path="develop.html"><a href="develop.html#set-the-order"><i class="fa fa-check"></i><b>2.2.2</b> Set the Order</a></li>
+<li class="chapter" data-level="2.2.3" data-path="develop.html"><a href="develop.html#deal-with-indata-and-param"><i class="fa fa-check"></i><b>2.2.3</b> Deal with InData and Param</a></li>
+<li class="chapter" data-level="2.2.4" data-path="develop.html"><a href="develop.html#set-outdata"><i class="fa fa-check"></i><b>2.2.4</b> Set OutData</a></li>
+<li class="chapter" data-level="2.2.5" data-path="develop.html"><a href="develop.html#deal-with-middle-variable"><i class="fa fa-check"></i><b>2.2.5</b> Deal with middle VARIABLE</a></li>
+<li class="chapter" data-level="2.2.6" data-path="develop.html"><a href="develop.html#name-and-data_"><i class="fa fa-check"></i><b>2.2.6</b> Name and Data_</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="develop.html"><a href="develop.html#design-a-new-module"><i class="fa fa-check"></i><b>2.4</b> Design a new MODULE</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="develop.html"><a href="develop.html#method-and-formula"><i class="fa fa-check"></i><b>2.4.1</b> Method and Formula</a></li>
-<li class="chapter" data-level="2.4.2" data-path="develop.html"><a href="develop.html#coding-the-inhalt"><i class="fa fa-check"></i><b>2.4.2</b> Coding the Inhalt</a></li>
-<li class="chapter" data-level="2.4.3" data-path="develop.html"><a href="develop.html#set-inoutdata-and-parameter"><i class="fa fa-check"></i><b>2.4.3</b> Set In/OutData and Parameter</a></li>
+<li class="chapter" data-level="2.3" data-path="develop.html"><a href="develop.html#design-a-new-module"><i class="fa fa-check"></i><b>2.3</b> Design a new MODULE</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="develop.html"><a href="develop.html#method-and-formula"><i class="fa fa-check"></i><b>2.3.1</b> Method and Formula</a></li>
+<li class="chapter" data-level="2.3.2" data-path="develop.html"><a href="develop.html#coding-the-body"><i class="fa fa-check"></i><b>2.3.2</b> Coding the body</a></li>
+<li class="chapter" data-level="2.3.3" data-path="develop.html"><a href="develop.html#set-inoutdata-and-parameter"><i class="fa fa-check"></i><b>2.3.3</b> Set In/OutData and Parameter</a></li>
+<li class="chapter" data-level="2.3.4" data-path="develop.html"><a href="develop.html#name-and-data_-1"><i class="fa fa-check"></i><b>2.3.4</b> Name and Data_</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="module.html"><a href="module.html"><i class="fa fa-check"></i><b>3</b> Modules</a><ul>
+<li class="chapter" data-level="3" data-path="module.html"><a href="module.html"><i class="fa fa-check"></i><b>3</b> Basic Information of MODULEs</a><ul>
 <li class="chapter" data-level="3.1" data-path="module.html"><a href="module.html#ReferenceET"><i class="fa fa-check"></i><b>3.1</b> ReferenceET</a><ul>
 <li class="chapter" data-level="3.1.1" data-path="module.html"><a href="module.html#ReferenceET.Hargreaves"><i class="fa fa-check"></i><b>3.1.1</b> ReferenceET.Hargreaves</a></li>
 <li class="chapter" data-level="3.1.2" data-path="module.html"><a href="module.html#ReferenceET.Linacre"><i class="fa fa-check"></i><b>3.1.2</b> ReferenceET.Linacre</a></li>
@@ -151,8 +221,11 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="model.html"><a href="model.html"><i class="fa fa-check"></i><b>4</b> Model</a><ul>
-<li class="chapter" data-level="4.1" data-path="model.html"><a href="model.html#classical-vic"><i class="fa fa-check"></i><b>4.1</b> Classical VIC</a></li>
-<li class="chapter" data-level="4.2" data-path="model.html"><a href="model.html#gr4j"><i class="fa fa-check"></i><b>4.2</b> GR4J</a></li>
+<li class="chapter" data-level="4.1" data-path="model.html"><a href="model.html#report-16.4"><i class="fa fa-check"></i><b>4.1</b> Report 16.4</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="model.html"><a href="model.html#snowmelt"><i class="fa fa-check"></i><b>4.1.1</b> Snowmelt</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="model.html"><a href="model.html#classical-vic"><i class="fa fa-check"></i><b>4.2</b> Classical VIC</a></li>
+<li class="chapter" data-level="4.3" data-path="model.html"><a href="model.html#gr4j"><i class="fa fa-check"></i><b>4.3</b> GR4J</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>5</b> Final Words</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -177,16 +250,17 @@
 
             <section class="normal" id="section-">
 <div id="module" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Modules</h1>
-<p>Overview of <strong><em>Modules</em></strong></p>
+<h1><span class="header-section-number">Chapter 3</span> Basic Information of MODULEs</h1>
+<p><img src="fig/EDHM_module.png" /></p>
+<p>Overview of <strong>MODULEs</strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
-Process
+PROCESS
 </th>
 <th style="text-align:left;">
-Module
+MODULE
 </th>
 </tr>
 </thead>
@@ -277,7 +351,7 @@ ROUTE
 <h2><span class="header-section-number">3.1</span> ReferenceET</h2>
 <div id="ReferenceET.Hargreaves" class="section level3">
 <h3><span class="header-section-number">3.1.1</span> ReferenceET.Hargreaves</h3>
-<p>This Module reference to the Literature: Reference Crop Evapotranspiration from Temperature <span class="citation">(George H. Hargreaves and Zohrab A. Samani <a href="#ref-GeorgeH.Hargreaves.1985" role="doc-biblioref">1985</a>)</span>.</p>
+<p>This MODULE reference to the Literature: Reference Crop Evapotranspiration from Temperature <span class="citation">(George H. Hargreaves and Zohrab A. Samani <a href="#ref-GeorgeH.Hargreaves.1985" role="doc-biblioref">1985</a>)</span>.</p>
 <p><strong><em>InData</em></strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -456,11 +530,11 @@ Reference evapotranspiration
 </tr>
 </tbody>
 </table>
-<p>Return to the <a href="module.html#module">Overview</a> of Modules.</p>
+<p>Return to the <a href="module.html#module">Overview</a> of MODULEs.</p>
 </div>
 <div id="ReferenceET.Linacre" class="section level3">
 <h3><span class="header-section-number">3.1.2</span> ReferenceET.Linacre</h3>
-<p>This Module reference to the Literature: A simple formula for estimating evaporation rates in various climates, using temperature data alone <span class="citation">(Linacre <a href="#ref-Linacre.1977" role="doc-biblioref">1977</a>)</span>.</p>
+<p>This MODULE reference to the Literature: A simple formula for estimating evaporation rates in various climates, using temperature data alone <span class="citation">(Linacre <a href="#ref-Linacre.1977" role="doc-biblioref">1977</a>)</span>.</p>
 <p><strong><em>InData</em></strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -639,11 +713,11 @@ Reference evapotranspiration
 </tr>
 </tbody>
 </table>
-<p>Return to the <a href="module.html#module">Overview</a> of Modules.</p>
+<p>Return to the <a href="module.html#module">Overview</a> of MODULEs.</p>
 </div>
 <div id="ReferenceET.PenMon" class="section level3">
 <h3><span class="header-section-number">3.1.3</span> ReferenceET.PenMon</h3>
-<p>This Module reference to the Literature: Step by Step Calculation of the Penman-Monteith Evapotranspiration (FAO-56) <span class="citation">(Lincoln Zotarelli <a href="#ref-LincolnZotarelli.2014" role="doc-biblioref">2014</a>)</span>.</p>
+<p>This MODULE reference to the Literature: Step by Step Calculation of the Penman-Monteith Evapotranspiration (FAO-56) <span class="citation">(Lincoln Zotarelli <a href="#ref-LincolnZotarelli.2014" role="doc-biblioref">2014</a>)</span>.</p>
 <p><strong><em>InData</em></strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -877,14 +951,14 @@ Reference evapotranspiration
 </tr>
 </tbody>
 </table>
-<p>Return to the <a href="module.html#module">Overview</a> of Modules.</p>
+<p>Return to the <a href="module.html#module">Overview</a> of MODULEs.</p>
 </div>
 </div>
 <div id="ActualET" class="section level2">
 <h2><span class="header-section-number">3.2</span> ActualET</h2>
 <div id="ActualET.Gr4j" class="section level3">
 <h3><span class="header-section-number">3.2.1</span> ActualET.Gr4j</h3>
-<p>This Module reference to the Literature: Improvement of a parsimonious model for streamflow simulation <span class="citation">(Perrin, Michel, and Andréassian <a href="#ref-Perrin.2003" role="doc-biblioref">2003</a>)</span>.</p>
+<p>This MODULE reference to the Literature: Improvement of a parsimonious model for streamflow simulation <span class="citation">(Perrin, Michel, and Andréassian <a href="#ref-Perrin.2003" role="doc-biblioref">2003</a>)</span>.</p>
 <p><strong><em>InData</em></strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -1038,11 +1112,11 @@ Precipitation, summe of rain and snow
 </tr>
 </tbody>
 </table>
-<p>Return to the <a href="module.html#module">Overview</a> of Modules.</p>
+<p>Return to the <a href="module.html#module">Overview</a> of MODULEs.</p>
 </div>
 <div id="ActualET.Vic" class="section level3">
 <h3><span class="header-section-number">3.2.2</span> ActualET.Vic</h3>
-<p>This Module reference to the Literature: none <span class="citation">(<span class="citeproc-not-found" data-reference-id="none"><strong>???</strong></span>)</span>.</p>
+<p>This MODULE reference to the Literature: none <span class="citation">(<span class="citeproc-not-found" data-reference-id="none"><strong>???</strong></span>)</span>.</p>
 <p><strong><em>InData</em></strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -1279,14 +1353,14 @@ Evaporation from Landsurface (sometimes cotain the Evaporation from Watersurface
 </tr>
 </tbody>
 </table>
-<p>Return to the <a href="module.html#module">Overview</a> of Modules.</p>
+<p>Return to the <a href="module.html#module">Overview</a> of MODULEs.</p>
 </div>
 </div>
 <div id="SNOW" class="section level2">
 <h2><span class="header-section-number">3.3</span> SNOW</h2>
 <div id="SNOW.17" class="section level3">
 <h3><span class="header-section-number">3.3.1</span> SNOW.17</h3>
-<p>This Module reference to the Literature: National Weather Service river forecast system: snow accumulation and ablation model <span class="citation">(Anderson <a href="#ref-Anderson.1973" role="doc-biblioref">1973</a>)</span>.</p>
+<p>This MODULE reference to the Literature: National Weather Service river forecast system: snow accumulation and ablation model <span class="citation">(Anderson <a href="#ref-Anderson.1973" role="doc-biblioref">1973</a>)</span>.</p>
 <p><strong><em>InData</em></strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -1715,11 +1789,11 @@ Precipitation, summe of rain and snow
 </tr>
 </tbody>
 </table>
-<p>Return to the <a href="module.html#module">Overview</a> of Modules.</p>
+<p>Return to the <a href="module.html#module">Overview</a> of MODULEs.</p>
 </div>
 <div id="SNOW.Ddf" class="section level3">
 <h3><span class="header-section-number">3.3.2</span> SNOW.Ddf</h3>
-<p>This Module reference to the Literature: none <span class="citation">(<span class="citeproc-not-found" data-reference-id="none"><strong>???</strong></span>)</span>.</p>
+<p>This MODULE reference to the Literature: none <span class="citation">(<span class="citeproc-not-found" data-reference-id="none"><strong>???</strong></span>)</span>.</p>
 <p><strong><em>InData</em></strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -1884,14 +1958,14 @@ Precipitation, summe of rain and snow
 </tr>
 </tbody>
 </table>
-<p>Return to the <a href="module.html#module">Overview</a> of Modules.</p>
+<p>Return to the <a href="module.html#module">Overview</a> of MODULEs.</p>
 </div>
 </div>
 <div id="BASEFLOW" class="section level2">
 <h2><span class="header-section-number">3.4</span> BASEFLOW</h2>
 <div id="BASEFLOW.ARNO" class="section level3">
 <h3><span class="header-section-number">3.4.1</span> BASEFLOW.ARNO</h3>
-<p>This Module reference to the Literature: LARGE AREA HYDROLOGIC MODELING AND ASSESSMENT PART I: MODEL DEVELOPMENT <span class="citation">(Arnold et al. <a href="#ref-Arnold.1998" role="doc-biblioref">1998</a>)</span>.</p>
+<p>This MODULE reference to the Literature: LARGE AREA HYDROLOGIC MODELING AND ASSESSMENT PART I: MODEL DEVELOPMENT <span class="citation">(Arnold et al. <a href="#ref-Arnold.1998" role="doc-biblioref">1998</a>)</span>.</p>
 <p><strong><em>InData</em></strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -2065,14 +2139,14 @@ Base Flow
 </tr>
 </tbody>
 </table>
-<p>Return to the <a href="module.html#module">Overview</a> of Modules.</p>
+<p>Return to the <a href="module.html#module">Overview</a> of MODULEs.</p>
 </div>
 </div>
 <div id="INTERCEPTION" class="section level2">
 <h2><span class="header-section-number">3.5</span> INTERCEPTION</h2>
 <div id="INTERCEPTION.Gash" class="section level3">
 <h3><span class="header-section-number">3.5.1</span> INTERCEPTION.Gash</h3>
-<p>This Module reference to the Literature: An analytical model of rainfall interception by forests <span class="citation">(Gash <a href="#ref-Gash.1979" role="doc-biblioref">1979</a>)</span>.</p>
+<p>This MODULE reference to the Literature: An analytical model of rainfall interception by forests <span class="citation">(Gash <a href="#ref-Gash.1979" role="doc-biblioref">1979</a>)</span>.</p>
 <p><strong><em>InData</em></strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -2240,14 +2314,14 @@ Precipitation, summe of rain and snow
 </tr>
 </tbody>
 </table>
-<p>Return to the <a href="module.html#module">Overview</a> of Modules.</p>
+<p>Return to the <a href="module.html#module">Overview</a> of MODULEs.</p>
 </div>
 </div>
 <div id="InfiltratRat" class="section level2">
 <h2><span class="header-section-number">3.6</span> InfiltratRat</h2>
 <div id="InfiltratRat.GreenAmpt" class="section level3">
 <h3><span class="header-section-number">3.6.1</span> InfiltratRat.GreenAmpt</h3>
-<p>This Module reference to the Literature: Drainage to a water table analysed by the Green-Ampt approach <span class="citation">(Youngs and Aggelides <a href="#ref-Youngs.1976" role="doc-biblioref">1976</a>)</span>.</p>
+<p>This MODULE reference to the Literature: Drainage to a water table analysed by the Green-Ampt approach <span class="citation">(Youngs and Aggelides <a href="#ref-Youngs.1976" role="doc-biblioref">1976</a>)</span>.</p>
 <p><strong><em>InData</em></strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -2406,14 +2480,14 @@ Infiltration Rate (for some INFITRATION Module)
 </tr>
 </tbody>
 </table>
-<p>Return to the <a href="module.html#module">Overview</a> of Modules.</p>
+<p>Return to the <a href="module.html#module">Overview</a> of MODULEs.</p>
 </div>
 </div>
 <div id="Infiltration" class="section level2">
 <h2><span class="header-section-number">3.7</span> Infiltration</h2>
 <div id="Infiltration.OIER" class="section level3">
 <h3><span class="header-section-number">3.7.1</span> Infiltration.OIER</h3>
-<p>This Module reference to the Literature: none <span class="citation">(<span class="citeproc-not-found" data-reference-id="none"><strong>???</strong></span>)</span>.</p>
+<p>This MODULE reference to the Literature: none <span class="citation">(<span class="citeproc-not-found" data-reference-id="none"><strong>???</strong></span>)</span>.</p>
 <p><strong><em>InData</em></strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -2539,11 +2613,11 @@ Infiltration
 </tr>
 </tbody>
 </table>
-<p>Return to the <a href="module.html#module">Overview</a> of Modules.</p>
+<p>Return to the <a href="module.html#module">Overview</a> of MODULEs.</p>
 </div>
 <div id="Infiltration.SER" class="section level3">
 <h3><span class="header-section-number">3.7.2</span> Infiltration.SER</h3>
-<p>This Module reference to the Literature: none <span class="citation">(<span class="citeproc-not-found" data-reference-id="none"><strong>???</strong></span>)</span>.</p>
+<p>This MODULE reference to the Literature: none <span class="citation">(<span class="citeproc-not-found" data-reference-id="none"><strong>???</strong></span>)</span>.</p>
 <p><strong><em>InData</em></strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -2680,14 +2754,14 @@ Infiltration
 </tr>
 </tbody>
 </table>
-<p>Return to the <a href="module.html#module">Overview</a> of Modules.</p>
+<p>Return to the <a href="module.html#module">Overview</a> of MODULEs.</p>
 </div>
 </div>
 <div id="RUNOFF" class="section level2">
 <h2><span class="header-section-number">3.8</span> RUNOFF</h2>
 <div id="RUNOFF.Gr4j" class="section level3">
 <h3><span class="header-section-number">3.8.1</span> RUNOFF.Gr4j</h3>
-<p>This Module reference to the Literature: Improvement of a parsimonious model for streamflow simulation <span class="citation">(Perrin, Michel, and Andréassian <a href="#ref-Perrin.2003" role="doc-biblioref">2003</a>)</span>.</p>
+<p>This MODULE reference to the Literature: Improvement of a parsimonious model for streamflow simulation <span class="citation">(Perrin, Michel, and Andréassian <a href="#ref-Perrin.2003" role="doc-biblioref">2003</a>)</span>.</p>
 <p><strong><em>InData</em></strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -2838,11 +2912,11 @@ Moisture volume
 </tr>
 </tbody>
 </table>
-<p>Return to the <a href="module.html#module">Overview</a> of Modules.</p>
+<p>Return to the <a href="module.html#module">Overview</a> of MODULEs.</p>
 </div>
 <div id="RUNOFF.OIER" class="section level3">
 <h3><span class="header-section-number">3.8.2</span> RUNOFF.OIER</h3>
-<p>This Module reference to the Literature: none <span class="citation">(<span class="citeproc-not-found" data-reference-id="none"><strong>???</strong></span>)</span>.</p>
+<p>This MODULE reference to the Literature: none <span class="citation">(<span class="citeproc-not-found" data-reference-id="none"><strong>???</strong></span>)</span>.</p>
 <p><strong><em>InData</em></strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -2982,11 +3056,11 @@ Infiltration
 </tr>
 </tbody>
 </table>
-<p>Return to the <a href="module.html#module">Overview</a> of Modules.</p>
+<p>Return to the <a href="module.html#module">Overview</a> of MODULEs.</p>
 </div>
 <div id="RUNOFF.SER" class="section level3">
 <h3><span class="header-section-number">3.8.3</span> RUNOFF.SER</h3>
-<p>This Module reference to the Literature: none <span class="citation">(<span class="citeproc-not-found" data-reference-id="none"><strong>???</strong></span>)</span>.</p>
+<p>This MODULE reference to the Literature: none <span class="citation">(<span class="citeproc-not-found" data-reference-id="none"><strong>???</strong></span>)</span>.</p>
 <p><strong><em>InData</em></strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -3137,11 +3211,11 @@ Infiltration
 </tr>
 </tbody>
 </table>
-<p>Return to the <a href="module.html#module">Overview</a> of Modules.</p>
+<p>Return to the <a href="module.html#module">Overview</a> of MODULEs.</p>
 </div>
 <div id="RUNOFF.Vic" class="section level3">
 <h3><span class="header-section-number">3.8.4</span> RUNOFF.Vic</h3>
-<p>This Module reference to the Literature: A new surface runoff parameterization with subgrid-scale soil heterogeneity for land surface models <span class="citation">(Liang and Xie <a href="#ref-Liang.2001" role="doc-biblioref">2001</a>)</span>.</p>
+<p>This MODULE reference to the Literature: A new surface runoff parameterization with subgrid-scale soil heterogeneity for land surface models <span class="citation">(Liang and Xie <a href="#ref-Liang.2001" role="doc-biblioref">2001</a>)</span>.</p>
 <p><strong><em>InData</em></strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -3323,11 +3397,11 @@ Infiltration
 </tr>
 </tbody>
 </table>
-<p>Return to the <a href="module.html#module">Overview</a> of Modules.</p>
+<p>Return to the <a href="module.html#module">Overview</a> of MODULEs.</p>
 </div>
 <div id="RUNOFF.VM" class="section level3">
 <h3><span class="header-section-number">3.8.5</span> RUNOFF.VM</h3>
-<p>This Module reference to the Literature: none <span class="citation">(<span class="citeproc-not-found" data-reference-id="none"><strong>???</strong></span>)</span>.</p>
+<p>This MODULE reference to the Literature: none <span class="citation">(<span class="citeproc-not-found" data-reference-id="none"><strong>???</strong></span>)</span>.</p>
 <p><strong><em>InData</em></strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -3509,14 +3583,14 @@ Infiltration
 </tr>
 </tbody>
 </table>
-<p>Return to the <a href="module.html#module">Overview</a> of Modules.</p>
+<p>Return to the <a href="module.html#module">Overview</a> of MODULEs.</p>
 </div>
 </div>
 <div id="GROUNDWATER" class="section level2">
 <h2><span class="header-section-number">3.9</span> GROUNDWATER</h2>
 <div id="GROUNDWATER.Vic" class="section level3">
 <h3><span class="header-section-number">3.9.1</span> GROUNDWATER.Vic</h3>
-<p>This Module reference to the Literature: none <span class="citation">(<span class="citeproc-not-found" data-reference-id="none"><strong>???</strong></span>)</span>.</p>
+<p>This MODULE reference to the Literature: none <span class="citation">(<span class="citeproc-not-found" data-reference-id="none"><strong>???</strong></span>)</span>.</p>
 <p><strong><em>InData</em></strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -3714,14 +3788,14 @@ Moisture volume, when the Ground is in more than one Layer divided
 </tr>
 </tbody>
 </table>
-<p>Return to the <a href="module.html#module">Overview</a> of Modules.</p>
+<p>Return to the <a href="module.html#module">Overview</a> of MODULEs.</p>
 </div>
 </div>
 <div id="ROUTE" class="section level2">
 <h2><span class="header-section-number">3.10</span> ROUTE</h2>
 <div id="ROUTE.G2RES" class="section level3">
 <h3><span class="header-section-number">3.10.1</span> ROUTE.G2RES</h3>
-<p>This Module reference to the Literature: none <span class="citation">(<span class="citeproc-not-found" data-reference-id="none"><strong>???</strong></span>)</span>.</p>
+<p>This MODULE reference to the Literature: none <span class="citation">(<span class="citeproc-not-found" data-reference-id="none"><strong>???</strong></span>)</span>.</p>
 <p><strong><em>InData</em></strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -3883,11 +3957,11 @@ Station Flow in the seted grid
 </tr>
 </tbody>
 </table>
-<p>Return to the <a href="module.html#module">Overview</a> of Modules.</p>
+<p>Return to the <a href="module.html#module">Overview</a> of MODULEs.</p>
 </div>
 <div id="ROUTE.Gr4j" class="section level3">
 <h3><span class="header-section-number">3.10.2</span> ROUTE.Gr4j</h3>
-<p>This Module reference to the Literature: Improvement of a parsimonious model for streamflow simulation <span class="citation">(Perrin, Michel, and Andréassian <a href="#ref-Perrin.2003" role="doc-biblioref">2003</a>)</span>.</p>
+<p>This MODULE reference to the Literature: Improvement of a parsimonious model for streamflow simulation <span class="citation">(Perrin, Michel, and Andréassian <a href="#ref-Perrin.2003" role="doc-biblioref">2003</a>)</span>.</p>
 <p><strong><em>InData</em></strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -4094,7 +4168,7 @@ Store in the Route (for some Module)
 </tr>
 </tbody>
 </table>
-<p>Return to the <a href="module.html#module">Overview</a> of Modules.</p>
+<p>Return to the <a href="module.html#module">Overview</a> of MODULEs.</p>
 
 </div>
 </div>
@@ -4177,7 +4251,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["EDHM_Document.pdf"],
+"download": ["EDHM_Document.pdf", "EDHM_Document.epub"],
 "toc": {
 "collapse": "subsection"
 }
@@ -4185,6 +4259,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

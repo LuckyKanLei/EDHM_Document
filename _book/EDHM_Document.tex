@@ -94,7 +94,7 @@
 
 \title{Editable Distributed Hydrological Model}
 \author{Kan Lei}
-\date{2021-04-14}
+\date{2021-04-15}
 
 \begin{document}
 \maketitle
@@ -192,7 +192,7 @@
 \section*{The Document}\label{the-document}}
 \addcontentsline{toc}{section}{The Document}
 
-This document is the use guide for EDHM and some other information about the hydrological models (\textbf{HM}) building.
+This document is the use guide for EDHM and some other concept about the hydrological models (\textbf{HM}) building. In Chapter \ref{base} explain the basic concept of hydrological cycle and the important concept and idea of EDHM. In chapter \ref{develop} show the workflow of using a hydrological model with EDHM and the way to explain a new model. Chapter \ref{module} and \ref{model} show the basic information, e.g.~input data, parameters and output data of every module or model.
 
 \hypertarget{edhm}{%
 \section*{EDHM}\label{edhm}}
@@ -212,7 +212,7 @@ The summary of the Processes and Modules show in the following table:
 \centering
 \begin{tabular}{l|l}
 \hline
-Process & Module\\
+PROCESS & MODULE\\
 \hline
 ReferenceET & [ReferenceET.Hargreaves](\#ReferenceET.Hargreaves) | [ReferenceET.Linacre](\#ReferenceET.Linacre) | [ReferenceET.PenMon](\#ReferenceET.PenMon)\\
 \cline{1-2}
@@ -243,7 +243,27 @@ ROUTE & [ROUTE.G2RES](\#ROUTE.G2RES) | [ROUTE.Gr4j](\#ROUTE.Gr4j)\\
 \hypertarget{hydrological-cycle}{%
 \section{Hydrological Cycle}\label{hydrological-cycle}}
 
-Process
+\hypertarget{atmosphe-atmos}{%
+\subsection{Atmosphe (Atmos)}\label{atmosphe-atmos}}
+
+\hypertarget{snow}{%
+\subsection{Snow}\label{snow}}
+
+\hypertarget{canopy}{%
+\subsection{Canopy}\label{canopy}}
+
+\hypertarget{surface-runoff-route}{%
+\subsection{Surface (Runoff, Route)}\label{surface-runoff-route}}
+
+\hypertarget{subsurface-subsur}{%
+\subsection{Subsurface (Subsur)}\label{subsurface-subsur}}
+
+\hypertarget{ground}{%
+\subsection{Ground}\label{ground}}
+
+\textbf{\emph{Base flow / runoff:}} Sustained or fair weather runoff. In most streams, base base flow is composed largely of ground water effluent. (Langbein and others, 1947, p.~6.) The term base flow is often used in the same sense as base runoff. However, the distinction is the same as that between stream flow and runoff. When the concept in the terms base flow and base runoff is that of the natural flow in a stream, base runoff is the logical term.
+
+In EDHM \textbf{Baseflow} is the unified name of
 
 \hypertarget{important-concept-of-edhm}{%
 \section{Important Concept of EDHM}\label{important-concept-of-edhm}}
@@ -330,15 +350,15 @@ Design a Model
 Here is a review of existing methods.
 
 \hypertarget{module}{%
-\chapter{Modules}\label{module}}
+\chapter{Basic Information of MODULEs}\label{module}}
 
-Overview of \textbf{\emph{Modules}}
+Overview of \textbf{MODULEs}
 
 \begin{table}[!h]
 \centering
 \begin{tabular}{l|l}
 \hline
-Process & Module\\
+PROCESS & MODULE\\
 \hline
 ReferenceET & [ReferenceET.Hargreaves](\#ReferenceET.Hargreaves) | [ReferenceET.Linacre](\#ReferenceET.Linacre) | [ReferenceET.PenMon](\#ReferenceET.PenMon)\\
 \cline{1-2}
@@ -369,7 +389,7 @@ ROUTE & [ROUTE.G2RES](\#ROUTE.G2RES) | [ROUTE.Gr4j](\#ROUTE.Gr4j)\\
 \hypertarget{ReferenceET.Hargreaves}{%
 \subsection{ReferenceET.Hargreaves}\label{ReferenceET.Hargreaves}}
 
-This Module reference to the Literature: Reference Crop Evapotranspiration from Temperature \citep{GeorgeH.Hargreaves.1985}.
+This MODULE reference to the Literature: Reference Crop Evapotranspiration from Temperature \citep{GeorgeH.Hargreaves.1985}.
 
 \textbf{\emph{InData}}
 
@@ -420,12 +440,12 @@ Evatrans & RET & mm & Reference evapotranspiration\\
 \end{tabular}
 \end{table}
 
-Return to the \protect\hyperlink{module}{Overview} of Modules.
+Return to the \protect\hyperlink{module}{Overview} of MODULEs.
 
 \hypertarget{ReferenceET.Linacre}{%
 \subsection{ReferenceET.Linacre}\label{ReferenceET.Linacre}}
 
-This Module reference to the Literature: A simple formula for estimating evaporation rates in various climates, using temperature data alone \citep{Linacre.1977}.
+This MODULE reference to the Literature: A simple formula for estimating evaporation rates in various climates, using temperature data alone \citep{Linacre.1977}.
 
 \textbf{\emph{InData}}
 
@@ -476,12 +496,12 @@ Evatrans & RET & mm & Reference evapotranspiration\\
 \end{tabular}
 \end{table}
 
-Return to the \protect\hyperlink{module}{Overview} of Modules.
+Return to the \protect\hyperlink{module}{Overview} of MODULEs.
 
 \hypertarget{ReferenceET.PenMon}{%
 \subsection{ReferenceET.PenMon}\label{ReferenceET.PenMon}}
 
-This Module reference to the Literature: Step by Step Calculation of the Penman-Monteith Evapotranspiration (FAO-56) \citep{LincolnZotarelli.2014}.
+This MODULE reference to the Literature: Step by Step Calculation of the Penman-Monteith Evapotranspiration (FAO-56) \citep{LincolnZotarelli.2014}.
 
 \textbf{\emph{InData}}
 
@@ -542,7 +562,7 @@ Evatrans & RET & mm & Reference evapotranspiration\\
 \end{tabular}
 \end{table}
 
-Return to the \protect\hyperlink{module}{Overview} of Modules.
+Return to the \protect\hyperlink{module}{Overview} of MODULEs.
 
 \hypertarget{ActualET}{%
 \section{ActualET}\label{ActualET}}
@@ -550,7 +570,7 @@ Return to the \protect\hyperlink{module}{Overview} of Modules.
 \hypertarget{ActualET.Gr4j}{%
 \subsection{ActualET.Gr4j}\label{ActualET.Gr4j}}
 
-This Module reference to the Literature: Improvement of a parsimonious model for streamflow simulation \citep{Perrin.2003}.
+This MODULE reference to the Literature: Improvement of a parsimonious model for streamflow simulation \citep{Perrin.2003}.
 
 \textbf{\emph{InData}}
 
@@ -597,12 +617,12 @@ Prec & Precipitation & mm & Precipitation, summe of rain and snow\\
 \end{tabular}
 \end{table}
 
-Return to the \protect\hyperlink{module}{Overview} of Modules.
+Return to the \protect\hyperlink{module}{Overview} of MODULEs.
 
 \hypertarget{ActualET.Vic}{%
 \subsection{ActualET.Vic}\label{ActualET.Vic}}
 
-This Module reference to the Literature: none \citep{none}.
+This MODULE reference to the Literature: none \citep{none}.
 
 \textbf{\emph{InData}}
 
@@ -663,7 +683,7 @@ Group & Variable & Unit & Description\\
 \end{tabular}
 \end{table}
 
-Return to the \protect\hyperlink{module}{Overview} of Modules.
+Return to the \protect\hyperlink{module}{Overview} of MODULEs.
 
 \hypertarget{SNOW}{%
 \section{SNOW}\label{SNOW}}
@@ -671,7 +691,7 @@ Return to the \protect\hyperlink{module}{Overview} of Modules.
 \hypertarget{SNOW.17}{%
 \subsection{SNOW.17}\label{SNOW.17}}
 
-This Module reference to the Literature: National Weather Service river forecast system: snow accumulation and ablation model \citep{Anderson.1973}.
+This MODULE reference to the Literature: National Weather Service river forecast system: snow accumulation and ablation model \citep{Anderson.1973}.
 
 \textbf{\emph{InData}}
 
@@ -756,12 +776,12 @@ Prec & Precipitation & mm & Precipitation, summe of rain and snow\\
 \end{tabular}
 \end{table}
 
-Return to the \protect\hyperlink{module}{Overview} of Modules.
+Return to the \protect\hyperlink{module}{Overview} of MODULEs.
 
 \hypertarget{SNOW.Ddf}{%
 \subsection{SNOW.Ddf}\label{SNOW.Ddf}}
 
-This Module reference to the Literature: none \citep{none}.
+This MODULE reference to the Literature: none \citep{none}.
 
 \textbf{\emph{InData}}
 
@@ -810,7 +830,7 @@ Prec & Precipitation & mm & Precipitation, summe of rain and snow\\
 \end{tabular}
 \end{table}
 
-Return to the \protect\hyperlink{module}{Overview} of Modules.
+Return to the \protect\hyperlink{module}{Overview} of MODULEs.
 
 \hypertarget{BASEFLOW}{%
 \section{BASEFLOW}\label{BASEFLOW}}
@@ -818,7 +838,7 @@ Return to the \protect\hyperlink{module}{Overview} of Modules.
 \hypertarget{BASEFLOW.ARNO}{%
 \subsection{BASEFLOW.ARNO}\label{BASEFLOW.ARNO}}
 
-This Module reference to the Literature: LARGE AREA HYDROLOGIC MODELING AND ASSESSMENT PART I: MODEL DEVELOPMENT \citep{Arnold.1998}.
+This MODULE reference to the Literature: LARGE AREA HYDROLOGIC MODELING AND ASSESSMENT PART I: MODEL DEVELOPMENT \citep{Arnold.1998}.
 
 \textbf{\emph{InData}}
 
@@ -867,7 +887,7 @@ Ground & BaseFlow & mm & Base Flow\\
 \end{tabular}
 \end{table}
 
-Return to the \protect\hyperlink{module}{Overview} of Modules.
+Return to the \protect\hyperlink{module}{Overview} of MODULEs.
 
 \hypertarget{INTERCEPTION}{%
 \section{INTERCEPTION}\label{INTERCEPTION}}
@@ -875,7 +895,7 @@ Return to the \protect\hyperlink{module}{Overview} of Modules.
 \hypertarget{INTERCEPTION.Gash}{%
 \subsection{INTERCEPTION.Gash}\label{INTERCEPTION.Gash}}
 
-This Module reference to the Literature: An analytical model of rainfall interception by forests \citep{Gash.1979}.
+This MODULE reference to the Literature: An analytical model of rainfall interception by forests \citep{Gash.1979}.
 
 \textbf{\emph{InData}}
 
@@ -924,7 +944,7 @@ Prec & Precipitation & mm & Precipitation, summe of rain and snow\\
 \end{tabular}
 \end{table}
 
-Return to the \protect\hyperlink{module}{Overview} of Modules.
+Return to the \protect\hyperlink{module}{Overview} of MODULEs.
 
 \hypertarget{InfiltratRat}{%
 \section{InfiltratRat}\label{InfiltratRat}}
@@ -932,7 +952,7 @@ Return to the \protect\hyperlink{module}{Overview} of Modules.
 \hypertarget{InfiltratRat.GreenAmpt}{%
 \subsection{InfiltratRat.GreenAmpt}\label{InfiltratRat.GreenAmpt}}
 
-This Module reference to the Literature: Drainage to a water table analysed by the Green-Ampt approach \citep{Youngs.1976}.
+This MODULE reference to the Literature: Drainage to a water table analysed by the Green-Ampt approach \citep{Youngs.1976}.
 
 \textbf{\emph{InData}}
 
@@ -981,7 +1001,7 @@ Infilt & InfiltrationRat & mm & Infiltration Rate (for some INFITRATION Module)\
 \end{tabular}
 \end{table}
 
-Return to the \protect\hyperlink{module}{Overview} of Modules.
+Return to the \protect\hyperlink{module}{Overview} of MODULEs.
 
 \hypertarget{Infiltration}{%
 \section{Infiltration}\label{Infiltration}}
@@ -989,7 +1009,7 @@ Return to the \protect\hyperlink{module}{Overview} of Modules.
 \hypertarget{Infiltration.OIER}{%
 \subsection{Infiltration.OIER}\label{Infiltration.OIER}}
 
-This Module reference to the Literature: none \citep{none}.
+This MODULE reference to the Literature: none \citep{none}.
 
 \textbf{\emph{InData}}
 
@@ -1032,12 +1052,12 @@ Infilt & Infiltration & mm & Infiltration\\
 \end{tabular}
 \end{table}
 
-Return to the \protect\hyperlink{module}{Overview} of Modules.
+Return to the \protect\hyperlink{module}{Overview} of MODULEs.
 
 \hypertarget{Infiltration.SER}{%
 \subsection{Infiltration.SER}\label{Infiltration.SER}}
 
-This Module reference to the Literature: none \citep{none}.
+This MODULE reference to the Literature: none \citep{none}.
 
 \textbf{\emph{InData}}
 
@@ -1082,7 +1102,7 @@ Infilt & Infiltration & mm & Infiltration\\
 \end{tabular}
 \end{table}
 
-Return to the \protect\hyperlink{module}{Overview} of Modules.
+Return to the \protect\hyperlink{module}{Overview} of MODULEs.
 
 \hypertarget{RUNOFF}{%
 \section{RUNOFF}\label{RUNOFF}}
@@ -1090,7 +1110,7 @@ Return to the \protect\hyperlink{module}{Overview} of Modules.
 \hypertarget{RUNOFF.Gr4j}{%
 \subsection{RUNOFF.Gr4j}\label{RUNOFF.Gr4j}}
 
-This Module reference to the Literature: Improvement of a parsimonious model for streamflow simulation \citep{Perrin.2003}.
+This MODULE reference to the Literature: Improvement of a parsimonious model for streamflow simulation \citep{Perrin.2003}.
 
 \textbf{\emph{InData}}
 
@@ -1137,12 +1157,12 @@ Group & Variable & Unit & Description\\
 \end{tabular}
 \end{table}
 
-Return to the \protect\hyperlink{module}{Overview} of Modules.
+Return to the \protect\hyperlink{module}{Overview} of MODULEs.
 
 \hypertarget{RUNOFF.OIER}{%
 \subsection{RUNOFF.OIER}\label{RUNOFF.OIER}}
 
-This Module reference to the Literature: none \citep{none}.
+This MODULE reference to the Literature: none \citep{none}.
 
 \textbf{\emph{InData}}
 
@@ -1187,12 +1207,12 @@ Infilt & Infiltration & mm & Infiltration\\
 \end{tabular}
 \end{table}
 
-Return to the \protect\hyperlink{module}{Overview} of Modules.
+Return to the \protect\hyperlink{module}{Overview} of MODULEs.
 
 \hypertarget{RUNOFF.SER}{%
 \subsection{RUNOFF.SER}\label{RUNOFF.SER}}
 
-This Module reference to the Literature: none \citep{none}.
+This MODULE reference to the Literature: none \citep{none}.
 
 \textbf{\emph{InData}}
 
@@ -1239,12 +1259,12 @@ Infilt & Infiltration & mm & Infiltration\\
 \end{tabular}
 \end{table}
 
-Return to the \protect\hyperlink{module}{Overview} of Modules.
+Return to the \protect\hyperlink{module}{Overview} of MODULEs.
 
 \hypertarget{RUNOFF.Vic}{%
 \subsection{RUNOFF.Vic}\label{RUNOFF.Vic}}
 
-This Module reference to the Literature: A new surface runoff parameterization with subgrid-scale soil heterogeneity for land surface models \citep{Liang.2001}.
+This MODULE reference to the Literature: A new surface runoff parameterization with subgrid-scale soil heterogeneity for land surface models \citep{Liang.2001}.
 
 \textbf{\emph{InData}}
 
@@ -1295,12 +1315,12 @@ Infilt & Infiltration & mm & Infiltration\\
 \end{tabular}
 \end{table}
 
-Return to the \protect\hyperlink{module}{Overview} of Modules.
+Return to the \protect\hyperlink{module}{Overview} of MODULEs.
 
 \hypertarget{RUNOFF.VM}{%
 \subsection{RUNOFF.VM}\label{RUNOFF.VM}}
 
-This Module reference to the Literature: none \citep{none}.
+This MODULE reference to the Literature: none \citep{none}.
 
 \textbf{\emph{InData}}
 
@@ -1351,7 +1371,7 @@ Infilt & Infiltration & mm & Infiltration\\
 \end{tabular}
 \end{table}
 
-Return to the \protect\hyperlink{module}{Overview} of Modules.
+Return to the \protect\hyperlink{module}{Overview} of MODULEs.
 
 \hypertarget{GROUNDWATER}{%
 \section{GROUNDWATER}\label{GROUNDWATER}}
@@ -1359,7 +1379,7 @@ Return to the \protect\hyperlink{module}{Overview} of Modules.
 \hypertarget{GROUNDWATER.Vic}{%
 \subsection{GROUNDWATER.Vic}\label{GROUNDWATER.Vic}}
 
-This Module reference to the Literature: none \citep{none}.
+This MODULE reference to the Literature: none \citep{none}.
 
 \textbf{\emph{InData}}
 
@@ -1414,7 +1434,7 @@ Group & Variable & Unit & Description\\
 \end{tabular}
 \end{table}
 
-Return to the \protect\hyperlink{module}{Overview} of Modules.
+Return to the \protect\hyperlink{module}{Overview} of MODULEs.
 
 \hypertarget{ROUTE}{%
 \section{ROUTE}\label{ROUTE}}
@@ -1422,7 +1442,7 @@ Return to the \protect\hyperlink{module}{Overview} of Modules.
 \hypertarget{ROUTE.G2RES}{%
 \subsection{ROUTE.G2RES}\label{ROUTE.G2RES}}
 
-This Module reference to the Literature: none \citep{none}.
+This MODULE reference to the Literature: none \citep{none}.
 
 \textbf{\emph{InData}}
 
@@ -1471,12 +1491,12 @@ Route & StaFlow & m3/s & Station Flow in the seted grid\\
 \end{tabular}
 \end{table}
 
-Return to the \protect\hyperlink{module}{Overview} of Modules.
+Return to the \protect\hyperlink{module}{Overview} of MODULEs.
 
 \hypertarget{ROUTE.Gr4j}{%
 \subsection{ROUTE.Gr4j}\label{ROUTE.Gr4j}}
 
-This Module reference to the Literature: Improvement of a parsimonious model for streamflow simulation \citep{Perrin.2003}.
+This MODULE reference to the Literature: Improvement of a parsimonious model for streamflow simulation \citep{Perrin.2003}.
 
 \textbf{\emph{InData}}
 
@@ -1531,13 +1551,15 @@ Group & Variable & Unit & Description\\
 \end{tabular}
 \end{table}
 
-Return to the \protect\hyperlink{module}{Overview} of Modules.
+Return to the \protect\hyperlink{module}{Overview} of MODULEs.
 
 \hypertarget{model}{%
 \chapter{Model}\label{model}}
 
 \hypertarget{classical-vic}{%
 \section{Classical VIC}\label{classical-vic}}
+
+Chapter \ref{ReferenceET}
 
 \protect\hyperlink{ReferenceET}{Section}
 

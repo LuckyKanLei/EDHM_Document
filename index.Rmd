@@ -23,7 +23,7 @@ library(bookdown)
 
 ```{r funktion, echo=F}
 write_Rmd_Module <- function(module_name, file_name){
-  string001 = 'This Module reference to the Literature: `r Data_'
+  string001 = 'This MODULE reference to the Literature: `r Data_'
   string002 = '$ref_title` [@`r Data_'
   string003 = '$ref_bib`].\n'
   string01 = 'n_In <- as.numeric(map(Data_'
@@ -94,7 +94,7 @@ write_Rmd_Module <- function(module_name, file_name){
          string0, string27, module_name, string1,
          string2, string27, module_name, string4,
          string5,
-         'Return to the [Overview](#module) of Modules.\n')
+         'Return to the [Overview](#module) of MODULEs.\n')
   write(string, file = file_name, append = T)
 }
 write_Rmd_Process <- function(process_name, Module_list, file_name){
@@ -104,7 +104,7 @@ write_Rmd_Process <- function(process_name, Module_list, file_name){
   map(Module_name, write_Rmd_Module, file_name = file_name)
 }
 write_Rmd_Module_all <- function(Process_list, Module_list, file_name){
-  string01 <- '# Modules {#module}\n\nOverview of ***Modules***\n\n```{r t_Md_table, echo = FALSE}\nkable(df_Md_table, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")\n```\n'
+  string01 <- '# Basic Information of MODULEs {#module}\n\n![](fig/EDHM_module.png)\n\nOverview of **MODULEs**\n\n```{r t_Md_table, echo = FALSE}\nkable(df_Md_table, row.names = F) %>% collapse_rows(1) %>% kable_styling(latex_options = "hold_position")\n```\n'
    write(string01, file_name)
    map(Process_list, write_Rmd_Process, Module_list, file_name)
 }
@@ -132,7 +132,7 @@ table_Md <- as.character(map(Process_list,
                              function(pc, md)
                                paste(paste0('[', md[[pc]], '](#', md[[pc]], ') '), collapse = '| '),
                              md = Module_list))
-df_Md_table <- data.frame(Process = Process_list, Module = table_Md)
+df_Md_table <- data.frame(PROCESS = Process_list, MODULE = table_Md)
 write_Rmd_Module_all(Process_list, Module_list, '03-module.Rmd')
 
 ```
@@ -142,9 +142,11 @@ write_Rmd_Module_all(Process_list, Module_list, '03-module.Rmd')
 
 ## The Document {-}
 
-This document is the use guide for EDHM and some other information about the hydrological models (**HM**) building.
+This document is the use guide for EDHM and some other concept about the hydrological models (**HM**) building. In Chapter \@ref(base) explain the basic concept of hydrological cycle and the important concept and idea of EDHM. In chapter \@ref(develop) show the workflow of using a hydrological model with EDHM and the way to explain a new model. Chapter \@ref(module) and \@ref(model) show the basic information, e.g. input data, parameters and output data of every module or model.
 
 ## EDHM {-}
+
+![](fig/EDHM_logo.png)
 
 EDHM is a R package for hydrological models in order to simplify the models building, specially the distributed hydrological model. In the package contain many complete **MODEL** that can used directly, and many **MODULE** that can a new MODEL to building. All of the MODELs and MODULEs are build with matrix-arithmetic, that can good deal with the distributed situation. In the package there are many tools to calibrate the parameters or build a new MODEL or a new MODULE. The Package is only in GitHub published, for the first time use, please install the package [EDHM](https://github.com/LuckyKanLei/EDHM) and [HMtools](https://github.com/LuckyKanLei/HMtools) use the following code:
 

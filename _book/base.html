@@ -24,7 +24,7 @@
 <meta name="author" content="Kan Lei" />
 
 
-<meta name="date" content="2021-04-14" />
+<meta name="date" content="2021-04-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,70 @@
 <script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -81,34 +145,40 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#edhm"><i class="fa fa-check"></i>EDHM</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="base.html"><a href="base.html"><i class="fa fa-check"></i><b>1</b> Basic Concept</a><ul>
-<li class="chapter" data-level="1.1" data-path="base.html"><a href="base.html#hydrological-cycle"><i class="fa fa-check"></i><b>1.1</b> Hydrological Cycle</a></li>
-<li class="chapter" data-level="1.2" data-path="base.html"><a href="base.html#important-concept-of-edhm"><i class="fa fa-check"></i><b>1.2</b> Important Concept of EDHM</a></li>
-<li class="chapter" data-level="1.3" data-path="base.html"><a href="base.html#data-and-parameter"><i class="fa fa-check"></i><b>1.3</b> Data and Parameter</a><ul>
-<li class="chapter" data-level="1.3.1" data-path="base.html"><a href="base.html#variable-naming"><i class="fa fa-check"></i><b>1.3.1</b> Variable naming</a></li>
-<li class="chapter" data-level="1.3.2" data-path="base.html"><a href="base.html#data-structure"><i class="fa fa-check"></i><b>1.3.2</b> Data Structure</a></li>
-<li class="chapter" data-level="1.3.3" data-path="base.html"><a href="base.html#data-or-parameter"><i class="fa fa-check"></i><b>1.3.3</b> Data or Parameter</a></li>
+<li class="chapter" data-level="1.1" data-path="base.html"><a href="base.html#element"><i class="fa fa-check"></i><b>1.1</b> Important Elements of EDHM</a></li>
+<li class="chapter" data-level="1.2" data-path="base.html"><a href="base.html#basic-concept-of-hydrological-cycle"><i class="fa fa-check"></i><b>1.2</b> Basic Concept of Hydrological Cycle</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="base.html"><a href="base.html#Atmosphe1"><i class="fa fa-check"></i><b>1.2.1</b> Atmosphere (Atmos)</a></li>
+<li class="chapter" data-level="1.2.2" data-path="base.html"><a href="base.html#Snow1"><i class="fa fa-check"></i><b>1.2.2</b> Snow</a></li>
+<li class="chapter" data-level="1.2.3" data-path="base.html"><a href="base.html#Canopy1"><i class="fa fa-check"></i><b>1.2.3</b> Canopy</a></li>
+<li class="chapter" data-level="1.2.4" data-path="base.html"><a href="base.html#Surface1"><i class="fa fa-check"></i><b>1.2.4</b> Surface (Runoff, Route)</a></li>
+<li class="chapter" data-level="1.2.5" data-path="base.html"><a href="base.html#Subsurface1"><i class="fa fa-check"></i><b>1.2.5</b> Subsurface (Subsur)</a></li>
+<li class="chapter" data-level="1.2.6" data-path="base.html"><a href="base.html#Ground1"><i class="fa fa-check"></i><b>1.2.6</b> Ground</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="develop.html"><a href="develop.html"><i class="fa fa-check"></i><b>2</b> Model Use and Develop</a><ul>
-<li class="chapter" data-level="2.1" data-path="develop.html"><a href="develop.html#model-structure-or-concept"><i class="fa fa-check"></i><b>2.1</b> Model Structure or Concept</a></li>
-<li class="chapter" data-level="2.2" data-path="develop.html"><a href="develop.html#use-model-with-a-model-or-run_model"><i class="fa fa-check"></i><b>2.2</b> Use Model with a MODEL or Run_MODEL</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="develop.html"><a href="develop.html#check-the-indata-list"><i class="fa fa-check"></i><b>2.2.1</b> Check the InData list</a></li>
-<li class="chapter" data-level="2.2.2" data-path="develop.html"><a href="develop.html#data-preparation"><i class="fa fa-check"></i><b>2.2.2</b> Data Preparation</a></li>
-<li class="chapter" data-level="2.2.3" data-path="develop.html"><a href="develop.html#evaluate"><i class="fa fa-check"></i><b>2.2.3</b> Evaluate</a></li>
-<li class="chapter" data-level="2.2.4" data-path="develop.html"><a href="develop.html#calibrate"><i class="fa fa-check"></i><b>2.2.4</b> Calibrate</a></li>
+<li class="chapter" data-level="2.1" data-path="develop.html"><a href="develop.html#basic-use-of-a-complete-modell"><i class="fa fa-check"></i><b>2.1</b> Basic Use of a complete MODELL</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="develop.html"><a href="develop.html#run-a-model"><i class="fa fa-check"></i><b>2.1.1</b> RUn a MODEL</a></li>
+<li class="chapter" data-level="2.1.2" data-path="develop.html"><a href="develop.html#set-a-run_model"><i class="fa fa-check"></i><b>2.1.2</b> set a Run_MODEL</a></li>
+<li class="chapter" data-level="2.1.3" data-path="develop.html"><a href="develop.html#evaluate"><i class="fa fa-check"></i><b>2.1.3</b> Evaluate</a></li>
+<li class="chapter" data-level="2.1.4" data-path="develop.html"><a href="develop.html#calibrate"><i class="fa fa-check"></i><b>2.1.4</b> Calibrate</a></li>
+<li class="chapter" data-level="2.1.5" data-path="develop.html"><a href="develop.html#check-the-indata-list"><i class="fa fa-check"></i><b>2.1.5</b> Check the InData list</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="develop.html"><a href="develop.html#copuling-a-new-model-with-module"><i class="fa fa-check"></i><b>2.3</b> Copuling a new Model with MODULE</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="develop.html"><a href="develop.html#choose-module"><i class="fa fa-check"></i><b>2.3.1</b> Choose MODULE</a></li>
-<li class="chapter" data-level="2.3.2" data-path="develop.html"><a href="develop.html#set-the-data-flow"><i class="fa fa-check"></i><b>2.3.2</b> Set the Data-FLow</a></li>
-<li class="chapter" data-level="2.3.3" data-path="develop.html"><a href="develop.html#build-the-model-and-run_model"><i class="fa fa-check"></i><b>2.3.3</b> Build the MODEL and Run_MODEL</a></li>
+<li class="chapter" data-level="2.2" data-path="develop.html"><a href="develop.html#coupling-a-new-model-with-module"><i class="fa fa-check"></i><b>2.2</b> Coupling a new Model with MODULE</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="develop.html"><a href="develop.html#choose-module"><i class="fa fa-check"></i><b>2.2.1</b> Choose MODULE</a></li>
+<li class="chapter" data-level="2.2.2" data-path="develop.html"><a href="develop.html#set-the-order"><i class="fa fa-check"></i><b>2.2.2</b> Set the Order</a></li>
+<li class="chapter" data-level="2.2.3" data-path="develop.html"><a href="develop.html#deal-with-indata-and-param"><i class="fa fa-check"></i><b>2.2.3</b> Deal with InData and Param</a></li>
+<li class="chapter" data-level="2.2.4" data-path="develop.html"><a href="develop.html#set-outdata"><i class="fa fa-check"></i><b>2.2.4</b> Set OutData</a></li>
+<li class="chapter" data-level="2.2.5" data-path="develop.html"><a href="develop.html#deal-with-middle-variable"><i class="fa fa-check"></i><b>2.2.5</b> Deal with middle VARIABLE</a></li>
+<li class="chapter" data-level="2.2.6" data-path="develop.html"><a href="develop.html#name-and-data_"><i class="fa fa-check"></i><b>2.2.6</b> Name and Data_</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="develop.html"><a href="develop.html#design-a-new-module"><i class="fa fa-check"></i><b>2.4</b> Design a new MODULE</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="develop.html"><a href="develop.html#method-and-formula"><i class="fa fa-check"></i><b>2.4.1</b> Method and Formula</a></li>
-<li class="chapter" data-level="2.4.2" data-path="develop.html"><a href="develop.html#coding-the-inhalt"><i class="fa fa-check"></i><b>2.4.2</b> Coding the Inhalt</a></li>
-<li class="chapter" data-level="2.4.3" data-path="develop.html"><a href="develop.html#set-inoutdata-and-parameter"><i class="fa fa-check"></i><b>2.4.3</b> Set In/OutData and Parameter</a></li>
+<li class="chapter" data-level="2.3" data-path="develop.html"><a href="develop.html#design-a-new-module"><i class="fa fa-check"></i><b>2.3</b> Design a new MODULE</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="develop.html"><a href="develop.html#method-and-formula"><i class="fa fa-check"></i><b>2.3.1</b> Method and Formula</a></li>
+<li class="chapter" data-level="2.3.2" data-path="develop.html"><a href="develop.html#coding-the-body"><i class="fa fa-check"></i><b>2.3.2</b> Coding the body</a></li>
+<li class="chapter" data-level="2.3.3" data-path="develop.html"><a href="develop.html#set-inoutdata-and-parameter"><i class="fa fa-check"></i><b>2.3.3</b> Set In/OutData and Parameter</a></li>
+<li class="chapter" data-level="2.3.4" data-path="develop.html"><a href="develop.html#name-and-data_-1"><i class="fa fa-check"></i><b>2.3.4</b> Name and Data_</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="module.html"><a href="module.html"><i class="fa fa-check"></i><b>3</b> Modules</a><ul>
+<li class="chapter" data-level="3" data-path="module.html"><a href="module.html"><i class="fa fa-check"></i><b>3</b> Basic Information of MODULEs</a><ul>
 <li class="chapter" data-level="3.1" data-path="module.html"><a href="module.html#ReferenceET"><i class="fa fa-check"></i><b>3.1</b> ReferenceET</a><ul>
 <li class="chapter" data-level="3.1.1" data-path="module.html"><a href="module.html#ReferenceET.Hargreaves"><i class="fa fa-check"></i><b>3.1.1</b> ReferenceET.Hargreaves</a></li>
 <li class="chapter" data-level="3.1.2" data-path="module.html"><a href="module.html#ReferenceET.Linacre"><i class="fa fa-check"></i><b>3.1.2</b> ReferenceET.Linacre</a></li>
@@ -151,8 +221,11 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="model.html"><a href="model.html"><i class="fa fa-check"></i><b>4</b> Model</a><ul>
-<li class="chapter" data-level="4.1" data-path="model.html"><a href="model.html#classical-vic"><i class="fa fa-check"></i><b>4.1</b> Classical VIC</a></li>
-<li class="chapter" data-level="4.2" data-path="model.html"><a href="model.html#gr4j"><i class="fa fa-check"></i><b>4.2</b> GR4J</a></li>
+<li class="chapter" data-level="4.1" data-path="model.html"><a href="model.html#report-16.4"><i class="fa fa-check"></i><b>4.1</b> Report 16.4</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="model.html"><a href="model.html#snowmelt"><i class="fa fa-check"></i><b>4.1.1</b> Snowmelt</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="model.html"><a href="model.html#classical-vic"><i class="fa fa-check"></i><b>4.2</b> Classical VIC</a></li>
+<li class="chapter" data-level="4.3" data-path="model.html"><a href="model.html#gr4j"><i class="fa fa-check"></i><b>4.3</b> GR4J</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>5</b> Final Words</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -178,32 +251,940 @@
             <section class="normal" id="section-">
 <div id="base" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> Basic Concept</h1>
-<div id="hydrological-cycle" class="section level2">
-<h2><span class="header-section-number">1.1</span> Hydrological Cycle</h2>
-<p>Process</p>
+<p>Before using of the EDHM it’s very important to know the basic concept and primary idea about EDHM.</p>
+<div id="element" class="section level2">
+<h2><span class="header-section-number">1.1</span> Important Elements of EDHM</h2>
+<p><img src="fig/EDHM_element.png" /></p>
+<p>In EDHM the two mostly characters are <strong>modularization</strong> and <strong>vectorization-arithmetic</strong>, <strong>modularization</strong> focus on the coupling of the different <em>modules</em> of the hydrological <em>processes</em>, benefit by the modularization it’s very convenience to change the method of process, what means the <strong>editable</strong> model; <strong>vectorization-arithmetic</strong> is very useful for the distributed hydrological model, it can greatly short the calculate time, especially when there are many grids (calculate units).</p>
+<p>The water cycle of the Earth system and its variability at global, regional and local scales are influenced by a range of processes and mutual interactions, feedback mechanisms and as well as affected by anthropogenic processes.<span class="citation">(Rast, Johannessen, and Mauser <a href="#ref-Rast.2014" role="doc-biblioref">2014</a>)</span></p>
+<p>In EDHM a <strong>PROCESS</strong> is the mapping from those hydrological processes in a digital from, at the same time it’s also the group (set) name of the some <strong>MODULE</strong>s those haven the same problem to solve and same aims, and a <strong>MODULE</strong> is the definite method of a <strong>PROCESS</strong>, it can also undersatnd as:</p>
+<p><strong>MODULE</strong> = <strong>PROCESS</strong> <span class="math inline">\(\times\)</span> <strong>Method</strong></p>
+<p><img src="fig/EDHM_module_draw.png" /></p>
+<p>For example <a href="module.html#SNOW">SNOW</a> is PROCESS mapping the process that snow melting, accumulate and the state variety, <a href="module.html#SNOW.17">SNOW.17</a> is then the true function that you can call in R, with the method by Andrson<span class="citation">(Anderson <a href="#ref-Anderson.1973" role="doc-biblioref">1973</a>)</span> forward.</p>
+<p>The PROCESS based on the hydrological processes, but sometimes a little different, due to the manual calculate factors in the lang time, some like <em>evapotranspiration</em> is a typical hydrological process, but in EDHM es is diveded into <a href="module.html#ReferenceET">ReferenceET</a> (reference evapotranspiration) and <a href="module.html#ActualET">ActualET</a> (actual evapotranspiration) two parts, because the most conceptual models calculate evapotranspiration in the two steps.</p>
+<p>In the following section will show the meaning of hydrological processes and the mapped PROCESS.</p>
+<p><strong>MODEL</strong> is a coupled complete process with some subprocesses (also possible only one process), in EDHM is a true function to simulation the designed model with definite methods. It’s also a set of <strong>MODULE</strong>s, those realize different process and correctly by the physical process, it can also undersatnd as:</p>
+<p><strong>MODEL</strong> = <span class="math inline">\(\sum\)</span> <strong>MODULE</strong><span class="math inline">\(_i\)</span></p>
+<p><img src="fig/EDHM_model_draw.png" /></p>
+<p>In addition to the PROCESS, MODULE, MODEL there are also some other concept oabout EDHM, some like: <strong>function</strong>, <strong>Run_MODEL</strong>, <strong>EVALUTE</strong> and <strong>KALIBRATE</strong>.</p>
+<p>Essentially a MODULE or a MODEL is a function in R, so in R a function make up of <strong>name</strong>, <strong>arguments</strong> and <strong>body</strong>, except the output <strong>return / value</strong> is also very important.</p>
+<p><img src="fig/EDHM_function_draw.png" style="width:50.0%" /></p>
+<p>The <strong>name</strong> of a MODULE composed of a PROCESS and Method, lik <code>ReferenceET.Hargreaves</code>; the <strong>name</strong> of a MODEL composed of “MODEL” and a model method, like <code>MODEL.CVIC</code>.</p>
+<p>The <strong>arguments</strong> of MODULE and MODEL are fest in the form “InData, Param, …” for MODULE and “TimeVariData, TimeInvariData, Param, …” for MODEL, so for the data transfer it’s very important to set the same structure as “Data_” dataset.</p>
+<p>The <strong>body</strong> is the most important part of a function (MODULE or MODEL), generally it depended on the method.</p>
+<p>The <strong>OutData</strong> (value) is also so important that not ignore, it must use the GROUP-VARIBLE type as InData.</p>
+<p>Excepted, the <strong>reference</strong> and a <strong>data set</strong>, that make up of InData, Param and OutData can’t be omitted, especially when the MODULE or MODEL are also for the other aviable.</p>
+<p>The arguments of a MODULE of include: <strong>InData</strong> and <strong>Param</strong></p>
+<p>The <strong>VARIABLE</strong> is the data those describe the state or character of the environment and the volume or character of water in different process. And in order to quickly find the VARIABLE and avoid the duplicate name of VARIABLE, the <strong>GROUP</strong> is like the folder of VARIABLE designed, for example in GROUP <em>Evatrans</em> (evapotranspiration) include the VARIABLEs <em>RET</em> (reference evapotranspiration), <em>AET</em> (actual evapotranspiration) and so on.</p>
+<p>In EDHM the <strong>VARIABLE</strong> saved as common type of for time-invariable VARIABLE, it depend on the MODEL or MODULE or “t_vari.array” that base on “array” type for time-variable VARIABLE. The first dimension must be the time-dimension. When it also has heterogeneity in horizontal spatial space, the second dimension slways is the space-dimension. In EDHM the spatial data are divided in to many <strong>GRID</strong>, in the using of MODEL the spatial contact between the GRIDs will ignored, all of GRIDs must have a ID (index) form 1 to number of GRIDs. But it’s not important, how to divide the research region. For some VARIABLE there are also different layers, it can put in third demenision.</p>
+<p><strong>VARIABLE</strong> are putted in the <strong>GROUP</strong></p>
+<p><img src="fig/EDHM_group_draw.png" style="width:50.0%" /></p>
+<p><strong>InData</strong> is a list of all VARIABLE the MODULE needed, like previous section explained the VARIABLEs must putted in the GROUP.</p>
+<p><strong>Pram</strong> is the parameter list of all the empirical parameters (different as function arguments) of the MODULE.</p>
+<p>You can check the MODULE needed VARIABLE (InData) and parameters (Param) with “Data_” + MODULE name in R, some like <code>Data_ReferenceET.Linacre</code> and the same time every Param give the suggested maximal and minimal value of the parameter in this MODULE.</p>
+<p>You can also check the same content in the R Help windows with the MODULE name.</p>
+<p>The output of the MODELUE have the similar structure like InData, the VARIABLE of <strong>OutData</strong> is also include in the “<strong>Data_</strong>” dataset.</p>
+<p>The <strong>Data_XXX</strong> is a list that had added in EDHM package, the using about it will show in the next chapter.</p>
+<p>Different from MODULE the input variable of MODEL will divided in to <strong>TimeVariData</strong> and <strong>TimeInvariData</strong>:</p>
+<p><strong>TimeVariData</strong> is the dataset of all VARIBLE those are variable in the time serie, e.g. <em>TAir</em>, <em>Precipitation</em> and other meteorological data.</p>
+<p><strong>TimeInvariData</strong> is the dataset of all VARIBLE those are invariable in the time serie, e.g. <em>Latitude</em>, <em>Elevation</em> and other geological and topography data.</p>
+<p>The aim to the division is in order to convenient get the data of one time step. Actuly the most MODULE can only deal with on time step data, because the state is associated to the last time step, in the MODULE there are no timely loop, only in MODEL there is a loop.</p>
+<p>But for some MODULE, those not contact with last time (e.g. all MODULE in PROCESS <a href="module.html#ReferenceET">ReferenceET</a>) or the full time data are known (e.g. <a href="module.html#ROUTE.G2RES">ROUTE.G2RES</a>), you can calculate the whole time series without loop.</p>
+<p><strong>Step</strong> is special unit in EDHM, in EDHM the time serise is divided into many equal time interval, one time interval is a <em>Step</em>, the other units are given by <a href="https://ucum.org/trac">UCUM</a>. The most VAERIABLE like a rate, tempo those unit should be in [mm/Step], will simplify as [mm].</p>
+<p>The using of a MODEL is the basic, but the Param (parameters) import base on the name-index not number-index, so it’s essencially to make a <strong>Run_MODELL</strong> to transfer the parameters, especially when use auto calibration program. In a Run_MODELL function you can set the parameters those need to calibrate or not.</p>
+<p><img src="fig/EDHM_run_model_draw.png" /></p>
+<p><strong>EVALUTE</strong> is a process by the application of hydrological model, use the mathematical form to evaluate the results of simulation, scilicet the . The sime time it is slso the basic for <strong>CALIBRATE</strong>, the most effective method for CALIBRATE is calculated into a number (efficiency), like <em>NSE</em> (Nash-Sutcliffe efficiency), <em>KGE</em> (Kling-Gupta Efficiency).</p>
+<p><img src="fig/EDHM_evalute_draw.png" /></p>
+<p><strong>CALIBRATE</strong> is also a process by the application of hydrological model, in this process the parameters of the model are varied to minimize the difference between simulation result and observed data.</p>
+<p><img src="fig/EDHM_calibrate_draw.png" /></p>
 </div>
-<div id="important-concept-of-edhm" class="section level2">
-<h2><span class="header-section-number">1.2</span> Important Concept of EDHM</h2>
-<p>Process</p>
-<p>Method</p>
-<p>Module</p>
-<p>Model</p>
-<p>Run_Model</p>
-<p>Evaluate</p>
-<p>Calibrate</p>
+<div id="basic-concept-of-hydrological-cycle" class="section level2">
+<h2><span class="header-section-number">1.2</span> Basic Concept of Hydrological Cycle</h2>
+<p><img src="fig/EDHM_cycle.png" /></p>
+<p>The hydrological cycle is composed of different components, which include evaporation from water surfaces and bare soil, evapotranspiration from vegetated land, transport of water vapour in the atmosphere, cloud droplet formation and cloud dynamics, the mechanisms leading to liquid and solid precipitation, the movement of water and change in soil moisture in the unsaturated soil, including root dynamics, surface and river run-off, and groundwater flow.<span class="citation">(Rast, Johannessen, and Mauser <a href="#ref-Rast.2014" role="doc-biblioref">2014</a>)</span></p>
+<p>Also from <span class="citation">(LANGBEIN and ISERI <a href="#ref-LANGBEIN.1960" role="doc-biblioref">1960</a>)</span>: A convenient term to denote the circulation of water from the sea, through the atmos- phere, to the land; and thence, with many delays, back to the sea by overland and subterranean routes, and in part by way of the atmosphere; also the many short circuits of the water that is re- turned to the atmosphere without reaching the see.</p>
+<p>The whole cycle will spilt by the vertical layer in six layers which are <a href="base.html#Atmosphe1">Atmosphe</a>, <a href="base.html#Snow1">Snow</a>, <a href="base.html#Canopy1">Canopy</a>, <a href="#Surface">Surface</a>, <a href="base.html#Subsurface1">Subsurface</a> and <a href="base.html#Ground1">Ground</a>. There indeed are not the complete hydrological cycle components, limited by the first stage, in the first stage will focus on the conceptual models.</p>
+<div id="Atmosphe1" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Atmosphere (Atmos)</h3>
+<p>In the Atmosphere major occur the process precipitation and part of the evapotranspiration, the concept of the evapotranspiration will show in section <a href="base.html#Canopy1">1.2.3</a> in Canopy group.</p>
+<p><strong><em>Precipitation:</em></strong> As used in hydrology, precipitation is the discharge of water, in liquid or solid state, out of the atmosphere, generally upon a land or water surface. It is the common process by which atmospheric water becomes surface or subsurface water * * *. The term “precipitation” is also commonly used to designate the quantity of water that is precipitated. (Meinzer, 1923, p. 15.) Precipitation includes rainfall, snow, hail, and sleet, and is therefore a more general terr than rainfall.</p>
+<p><strong><em>Effective precipitation:</em></strong> 1. That part of the precipitation that produces runoff. 2. A weighted average of current and antecedent precipitation that is “effective” in correlating with runoff.<span class="citation">(LANGBEIN and ISERI <a href="#ref-LANGBEIN.1960" role="doc-biblioref">1960</a>)</span></p>
+<p>The two most important forms of precipitation are rainfall and snowfall, the other form will not considered in general situation or simulation.</p>
+<p><strong><em>Rainfall:</em></strong> The quantity of water that falls as rain only. Not synonymous with precipitation.</p>
+<p><strong><em>Snowfall:</em></strong> A form of precipitation composed of ice crystals.</p>
+<p>In this layer PROCESS <a href="module.html#SNOW">PRECDicid</a> and GROUP <strong><em>Prec</em></strong> show in the following Table:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:left;">
+Unit
+</th>
+<th style="text-align:left;">
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Precipitation
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Precipitation, summe of rain and snow
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SnowFall
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Snow
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RainFall
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Rain
+</td>
+</tr>
+</tbody>
+</table>
+<p>And the typical meteorological data set <strong><em>MetData</em></strong></p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:left;">
+Unit
+</th>
+<th style="text-align:left;">
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+TAir
+</td>
+<td style="text-align:left;">
+Cel
+</td>
+<td style="text-align:left;">
+Average Air temperature in Timestep
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TMax
+</td>
+<td style="text-align:left;">
+Cel
+</td>
+<td style="text-align:left;">
+Maximal Air temperature in one day
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TMin
+</td>
+<td style="text-align:left;">
+Cel
+</td>
+<td style="text-align:left;">
+Minimul Air temperature in one day
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Actual_vapor_press
+</td>
+<td style="text-align:left;">
+mPa
+</td>
+<td style="text-align:left;">
+Actual vapor press
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RelativeHumidity
+</td>
+<td style="text-align:left;">
+%
+</td>
+<td style="text-align:left;">
+Relative Humidity, not greater than 100
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WindSpeed
+</td>
+<td style="text-align:left;">
+m/s
+</td>
+<td style="text-align:left;">
+Average Wind Speed
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WindH
+</td>
+<td style="text-align:left;">
+m
+</td>
+<td style="text-align:left;">
+The hight to mess the WindSpeed
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SunHour
+</td>
+<td style="text-align:left;">
+h
+</td>
+<td style="text-align:left;">
+Sunshine duration in one day
+</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="data-and-parameter" class="section level2">
-<h2><span class="header-section-number">1.3</span> Data and Parameter</h2>
-<div id="variable-naming" class="section level3">
-<h3><span class="header-section-number">1.3.1</span> Variable naming</h3>
+<div id="Snow1" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Snow</h3>
+<p><strong><em>waterequivalent of snow:</em></strong> Amount of water that would be obtained if the snow should be completely melted. Water content may be merely the amount of liquid water in the snow at the time of observation. (Wilson, 1942a, p. 153-154.)</p>
+<p>In this layer PROCESS <a href="module.html#SNOW">SNOW</a> and GROUP <strong><em>Snow</em></strong> show in the following Table:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:left;">
+Unit
+</th>
+<th style="text-align:left;">
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Ice_Volume
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Soild Ice Volume, not depth
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Liquid_Volume
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Liquid Volume
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SN17_ATI
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SN17_HD
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Volume
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Summe Volume of Ice and liquid water, not depth
+</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="data-structure" class="section level3">
-<h3><span class="header-section-number">1.3.2</span> Data Structure</h3>
+<div id="Canopy1" class="section level3">
+<h3><span class="header-section-number">1.2.3</span> Canopy</h3>
+<p><strong><em>Condensation:</em></strong> The process by which water changes from the vapor state into the liquid or solid state. It is the reverse of evaporation.<span class="citation">(LANGBEIN and ISERI <a href="#ref-LANGBEIN.1960" role="doc-biblioref">1960</a>)</span></p>
+<p><strong><em>Evaporation:</em></strong>The process by which water is changed from the liquid or the solid state into the vapor state. In hydrology, evaporation is vaporization that takes place at a temperature below the boiling point.<span class="citation">(LANGBEIN and ISERI <a href="#ref-LANGBEIN.1960" role="doc-biblioref">1960</a>)</span></p>
+<p><strong><em>Transpritation:</em></strong> The quantity of water absorbed and transpired and used directly in the bulling of plant tissue, in a specified time. It does not include soil evaporation. (After Blaney, I951a, p. 4.) The process by which water vapor escapes from the living plant, principally the leaves, and enters the atmosphere. As considered practically, transpiration also includes <em>guttation</em>. (Lee, 1949, p. 260.)</p>
+<p><strong><em>Evapotranspiration:</em></strong> Water withdrawn from a land area by evaporation from water surfaces and moist, soil and plant transpiration.<span class="citation">(LANGBEIN and ISERI <a href="#ref-LANGBEIN.1960" role="doc-biblioref">1960</a>)</span></p>
+<p><strong><em>Relative evaporation:</em></strong> The ratio of the rate of evaporation from a land or water surface in contact with the atmosphere, to the evaporativity under existing atmospheric conditions. It is the ratio of actual to potential rate of evaporation, generally stated as a percentage. (Derived from Meinzer, 1923, p. 14.) The opportunity for a given rate of evaporation to continue is determined by the available moisture supply. (Meyer, 1928, p. 244.)</p>
+<p><strong><em>Potential evaporation:</em></strong> Water loss that will occur if at no time there is a deficiency of water in the soil for use of vegetation. (Thornthwaite, 1944, p. 687.)</p>
+<p><strong><em>Interception:</em></strong> The process and the amount of rain or snow stored on leaves and branches and eventually evaporated back to the air. Interception equals the precipitation on the vegetation minus stem flow and throughfall (after Hoover, 1953, p. 1.)</p>
+<p>In this layer PROCESS <a href="module.html#ReferenceET">ReferenceET</a>, <a href="module.html#ActualET">ActualET</a>, <a href="module.html#INTERCEPTION">INTERCEPTION</a> and GROUP <strong><em>Evatrans</em></strong> show in the following table:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:left;">
+Unit
+</th>
+<th style="text-align:left;">
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+RET
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Reference evapotranspiration
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+EvaporationCanopy
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Evaporation from Canopy
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AET
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Actual evapotranspiration
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Transpiration
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Transpiration (water from Root layer of vegetation)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+EvaporationLand
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Evaporation from Landsurface (sometimes cotain the Evaporation from Watersurface like Lake)
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Intercept</em></strong> show in the following table:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:left;">
+Unit
+</th>
+<th style="text-align:left;">
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Interception
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Interception in Canopy
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Canopy</em></strong> show in the following table:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:left;">
+Unit
+</th>
+<th style="text-align:left;">
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+StorageCapacity
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Canopy Storage Capacity for Intercept and Evaporation from Canopy
+</td>
+</tr>
+</tbody>
+</table>
+<p>And <strong><em>Aerodyna</em></strong> show in the following table:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:left;">
+Unit
+</th>
+<th style="text-align:left;">
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+AerodynaResist
+</td>
+<td style="text-align:left;">
+s/m
+</td>
+<td style="text-align:left;">
+Aerodyna Resist
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ArchitecturalResist
+</td>
+<td style="text-align:left;">
+s/m
+</td>
+<td style="text-align:left;">
+Architectural Resist
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+StomatalResist
+</td>
+<td style="text-align:left;">
+s/m
+</td>
+<td style="text-align:left;">
+Stomatal Resist
+</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="data-or-parameter" class="section level3">
-<h3><span class="header-section-number">1.3.3</span> Data or Parameter</h3>
+<div id="Surface1" class="section level3">
+<h3><span class="header-section-number">1.2.4</span> Surface (Runoff, Route)</h3>
+<p><strong><em>Runoff:</em></strong> That part of the precipitation that appears in surface streams. It is the same as streamflow unaffected by artificial diversions, storage, or other works of man in or on the stream channels. Runoff may be classified as follows: Classification as to speed of appearance after rain- fall or snow melting: Direct runoff Base runoff Classification as to source: Surface runoff Storm seepage Groundwater runoff.</p>
+<p><strong><em>Surface runoff:</em></strong> That part of the runoff which travels over the soil surface to the nearest stream channel. It is also defined as that part of the runoff of a drainage basin that has not passed beneath the surface since precipitation. The term is misused when applied in the sense of direct runoff. See also, Runoff, Overland flow, Direct runoff, Groundwater runoff, and Surface water.</p>
+<p><strong><em>Direct runoff:</em></strong> The runoff entering stream channels promptly after rainfall or snowmelt. Superposed on base runoff, it forms the folk of the hydrograph of a flood. See also surface runoff. The terms base runoff and direct runoff are time classifications of runoff. The terms ground-water runoff and surface runoff are classifications according to source.<span class="citation">(LANGBEIN and ISERI <a href="#ref-LANGBEIN.1960" role="doc-biblioref">1960</a>)</span></p>
+<p><strong><em>Infiltration capacity:</em></strong> The maximum rate at which the soil, when in a given condition, can absorb falling rain or melting snow.<span class="citation">(Horton <a href="#ref-Horton.1933" role="doc-biblioref">1933</a>)</span></p>
+<p><strong><em>Infiltration:</em></strong> The flow of a fluid into a substance through pores or small openings. It connotes flow into a substance in cont distinction to the word percolation, which connotes flow through a porous sub- stance.<span class="citation">(Horton <a href="#ref-Horton.1941" role="doc-biblioref">1941</a>)</span></p>
+<p><strong><em>Overland flow:</em></strong> The flow of rainwater or snowmelt over the land surface toward stream channels. After it enters a stream, it becomes runoff.<span class="citation">(LANGBEIN and ISERI <a href="#ref-LANGBEIN.1960" role="doc-biblioref">1960</a>)</span></p>
+<p><strong><em>Streamflow:</em></strong> The discharge that occurs in a natural channel. Although the term discharge can be applied to the flow of a canal, the word streamflow uniquely describes the discharge in a surface stream course. The term “streamflow” is more general than runoff, as streamflow may be applied to dis- charge whether or not it is affected by diversion or regulation.<span class="citation">(LANGBEIN and ISERI <a href="#ref-LANGBEIN.1960" role="doc-biblioref">1960</a>)</span></p>
+<p><strong><em>Unit hydrograph</em></strong> The hydrograph of direct runoff from a storm uni- formly distributed ever the drain- age basin during a specified unit of time; the hydrograph is reduced in vertical scale to correspond to a volume of runoff o* 1 inch from the drainage basin. (After Am. Soc. Civil Engineers 1949, p. 105.)</p>
+<p>In this layer PROCESS <a href="module.html#RUNOFF">RUNOFF</a>, <a href="module.html#ROUTE">ROUTE</a> and GROUP <strong><em>Route</em></strong> show in the following table:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:left;">
+Unit
+</th>
+<th style="text-align:left;">
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+WaterSource
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Water Source for Routing, sometimes the same Data with the Runoff
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UHAll
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+All the UH data for all of the Grids for Routr with IUH
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TypeGridID
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+The grids type for Routr with IUH
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TransAll
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+All of the transform Matrix for all of the Grids for Routr with IUH
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Store
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Store in the Route (for some Module)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Gr4j_UH1
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+UH form 1 only for Module ROUTE.Gr4j, made by the function
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Gr4j_UH2
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+UH form 1 only for Module ROUTE.Gr4j
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+StaFlow
+</td>
+<td style="text-align:left;">
+m3/s
+</td>
+<td style="text-align:left;">
+Station Flow in the seted grid
+</td>
+</tr>
+</tbody>
+</table>
+<p>And <strong><em>GeoData</em></strong> show in the following table:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:left;">
+Unit
+</th>
+<th style="text-align:left;">
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Latitude
+</td>
+<td style="text-align:left;">
+deg
+</td>
+<td style="text-align:left;">
+Latitude
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Elevation
+</td>
+<td style="text-align:left;">
+m
+</td>
+<td style="text-align:left;">
+Elevation
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="Subsurface1" class="section level3">
+<h3><span class="header-section-number">1.2.5</span> Subsurface (Subsur)</h3>
+<p><strong><em>Field-moisture capacity:</em></strong> The quantity of water which can be permarently retained in the soil in opposition to the downward pull of gnvity.<span class="citation">(Horton <a href="#ref-Horton.1933" role="doc-biblioref">1933</a>)</span></p>
+<p><strong><em>Field-moisture deficiency:</em></strong> The quantity of water, which would be required to restore the soil moisture to field-moisture capacity.<span class="citation">(Horton <a href="#ref-Horton.1933" role="doc-biblioref">1933</a>)</span></p>
+<p><strong><em>Field-moisture:</em></strong> Water diffused in the soil, the upper part of the zone of aeration from which water is discharged by the trans- piration of plants or by soil evap- oration. See Field-moisture ca- pacity and Field-moisture defi- ciency.</p>
+<p>In this layer PROCESS <a href="module.html#InfiltratRat">InfiltratRat</a>, <a href="module.html#Infiltration">Infiltration</a> and GROUP <strong><em>Infilt</em></strong> show in the following table:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:left;">
+Unit
+</th>
+<th style="text-align:left;">
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Infiltration
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Infiltration
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+InfiltrationRat
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Infiltration Rate (for some INFITRATION Module)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+InfiltrationRateMax
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Maximal Infiltration Rate (for some INFITRATION Module)
+</td>
+</tr>
+</tbody>
+</table>
+<p>And <strong><em>SoilData</em></strong> show in the following table:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:left;">
+Unit
+</th>
+<th style="text-align:left;">
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Porosity
+</td>
+<td style="text-align:left;">
+100%
+</td>
+<td style="text-align:left;">
+Soil Porosity, not greater than 1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SaturatedConductivity
+</td>
+<td style="text-align:left;">
+m/s
+</td>
+<td style="text-align:left;">
+Soil Saturated Conductivity
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Conductivity
+</td>
+<td style="text-align:left;">
+m/s
+</td>
+<td style="text-align:left;">
+Soil actual Conductivity
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WettingFrontSuction
+</td>
+<td style="text-align:left;">
+m/s
+</td>
+<td style="text-align:left;">
+Wetting Front Suction
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="Ground1" class="section level3">
+<h3><span class="header-section-number">1.2.6</span> Ground</h3>
+<p><strong><em>Base flow / runoff:</em></strong> Sustained or fair weather runoff. In most streams, base base flow is composed largely of ground water effluent. (Langbein and others, 1947, p. 6.) The term base flow is often used in the same sense as base runoff. However, the distinction is the same as that between stream flow and runoff. When the concept in the terms base flow and base runoff is that of the natural flow in a stream, base runoff is the logical term.</p>
+<p><strong><em>Groundwater:</em></strong> Water in the ground that is in the zone of saturation, from which wells, springs, and ground-water runoff are supplied. (After Meinzer, 1949, p. 38r,)</p>
+<p>In this layer PROCESS <a href="module.html#GROUNDWATER">GROUNDWATER</a> and GROUP <strong><em>Ground</em></strong> show in the following table:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:left;">
+Unit
+</th>
+<th style="text-align:left;">
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+MoistureVolume
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Moisture volume
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MoistureCapacityMax
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Maximal Moisture Capacity
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ZoneMoistureVolume
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Moisture volume, when the Ground is in more than one Layer divided
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ZoneDepth
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Ground Depth, , when the Ground is in more than one Layer divided
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BaseFlow
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Base Flow
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MoistureCapacity
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Moisture Capacity
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Depth
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Ground Depth
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Overflow
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Overflow, when the caculated water volume greater than Capacity
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Runoff
+</td>
+<td style="text-align:left;">
+mm
+</td>
+<td style="text-align:left;">
+Runoff, it will be more wert, when the Runoff is in different form divided
+</td>
+</tr>
+</tbody>
+</table>
+<p>Except the above data GROUP, the <strong><em>TimeData</em></strong> describe the time information:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:left;">
+Unit
+</th>
+<th style="text-align:left;">
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+NDay
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+Day nummer in one year
+</td>
+</tr>
+</tbody>
+</table>
 
 </div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Anderson.1973">
+<p>Anderson, Eric A. 1973. <em>National Weather Service River Forecast System: Snow Accumulation and Ablation Model</em>. Vol. 17. NOAA Technical Memorandum Nws Hydro. <a href="https://repository.library.noaa.gov/view/noaa/13507">https://repository.library.noaa.gov/view/noaa/13507</a>.</p>
+</div>
+<div id="ref-Horton.1933">
+<p>Horton, Robert E. 1933. “The Rôle of Infiltration in the Hydrologic Cycle.” <em>Transactions, American Geophysical Union</em> 14 (1): 446. <a href="https://doi.org/10.1029/TR014i001p00446">https://doi.org/10.1029/TR014i001p00446</a>.</p>
+</div>
+<div id="ref-Horton.1941">
+<p>Horton, Robert E. 1941. “An Approach Toward a Physical Interpretation of Infiltration-Capacity.” <em>Soil Science Society of America Journal</em> 5 (C): 399–417. <a href="https://doi.org/10.2136/sssaj1941.036159950005000C0075x">https://doi.org/10.2136/sssaj1941.036159950005000C0075x</a>.</p>
+</div>
+<div id="ref-LANGBEIN.1960">
+<p>LANGBEIN, W. B., and KATHLEEN T. ISERI. 1960. “General Introduction and Hydrologic Definitions.” <a href="https://doi.org/10.3133/wsp1541A">https://doi.org/10.3133/wsp1541A</a>.</p>
+</div>
+<div id="ref-Rast.2014">
+<p>Rast, Michael, Johnny Johannessen, and Wolfram Mauser. 2014. “Review of Understanding of Earth’s Hydrological Cycle: Observations, Theory and Modelling.” <em>Surveys in Geophysics</em> 35 (3): 491–513. <a href="https://doi.org/10.1007/s10712-014-9279-x">https://doi.org/10.1007/s10712-014-9279-x</a>.</p>
 </div>
 </div>
             </section>
@@ -254,7 +1235,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["EDHM_Document.pdf"],
+"download": ["EDHM_Document.pdf", "EDHM_Document.epub"],
 "toc": {
 "collapse": "subsection"
 }
@@ -262,6 +1243,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

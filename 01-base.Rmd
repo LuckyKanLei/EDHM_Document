@@ -2,7 +2,7 @@
 
 Before using of the EDHM it's very important to know the basic concept and primary idea about EDHM.
 
-## Important ELements of EDHM
+## Important Elements of EDHM {#element}
 
 ![](fig/EDHM_element.png)
 
@@ -83,7 +83,7 @@ The using of a MODEL is the basic, but the Param (parameters) import base on the
 
 ![](fig/EDHM_run_model_draw.png)
 
-**EVALUTE** is a process by the application of hydrological model, use the mathematical form to evaluate the results of simulation, scilicet the . The sime time it is slso the basic for **CALIBRATE**, the most effective method for CALIBRATE is calculated into a number, like *NSE*, *KGE*. 
+**EVALUTE** is a process by the application of hydrological model, use the mathematical form to evaluate the results of simulation, scilicet the . The sime time it is slso the basic for **CALIBRATE**, the most effective method for CALIBRATE is calculated into a number (efficiency), like *NSE* (Nash-Sutcliffe efficiency), *KGE* (Kling-Gupta Efficiency). 
 
 ![](fig/EDHM_evalute_draw.png)
 
